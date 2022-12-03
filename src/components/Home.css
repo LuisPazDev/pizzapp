@@ -1,0 +1,45 @@
+main{
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  width: 100vw;
+  height: 600px;
+  display: flex;
+}
+
+.main-sec1{
+  text-align: center;
+  background-color: rgba(90, 79, 245, 0.04);
+  width: 50vw;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.p-title{
+  color: white;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.p-text{
+  color: rgb(249, 95, 24);
+  font-size: 14px;
+  padding: 10px;
+}
+
+.main-sec2{
+  width: 50vw;
+  height: 500px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img-flyer{
+  height: 500px;
+  width: 500px;
+}

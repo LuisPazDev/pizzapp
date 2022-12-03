@@ -1,0 +1,65 @@
+*{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-main{
+  height: 280px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+img{
+  height: 320px;
+  width: 300px;
+  margin-left: 20px;
+  padding: 5px;
+  position: absolute;
+}
+
+h2{
+  margin-left: 370px;
+  text-align: center;
+}
+
+
+nav{
+  font-family: 'Zen Dots', cursive;
+  height: 280px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.logo{
+  width: 200px;
+
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+}
+
+a{
+  font-size: 30px;
+  text-decoration: none;
+  margin: 30px;
+  color: white;
+}
+:hover{
+  color: rgb(242, 81, 6);
+}
+
+li{
+  list-style: none;
+}
+
+span{
+  color: greenyellow;
+}
