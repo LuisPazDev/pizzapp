@@ -25,6 +25,8 @@ main{
 }
 
 .p-text{
+  width: 500px;
+  text-align: center;
   color: rgb(192, 193, 192);
   font-size: 14px;
   padding: 10px;

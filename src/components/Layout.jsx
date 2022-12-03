@@ -21,10 +21,6 @@ export const Layout = () => {
           <li>
             <Link to='/reserve'> Reservation </Link>
           </li>
-          <span>|</span>
-          <li>
-            <Link to='/contact'> Contact </Link>
-          </li>
         </ul>
       </nav>    
     </div>
