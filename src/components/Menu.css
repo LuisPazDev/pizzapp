@@ -1,8 +1,20 @@
 .container-menu{
-  position: absolute;
+  margin-top: 60px;
+  padding: 20px;
+  height: 600px;
+  width: 900px;
   display: flex;
-  flex-direction: column;
-  color: white;
-  height: 100px;
-  width: 100vw;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;  
 }
+
+.img-menu1{
+  height: 500px;
+  width: 500px;
+}
+.img-menu2{
+  height: 500px;
+  width: 500px;
+}
+

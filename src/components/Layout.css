@@ -52,8 +52,8 @@ a{
   margin: 30px;
   color: white;
 }
-:hover{
-  color: rgb(242, 81, 6);
+a:hover{
+  color: rgb(244, 118, 60);
 }
 
 li{
