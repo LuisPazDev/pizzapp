@@ -3,7 +3,7 @@ export const Reserve = () => {
 
   return(
 
-    <h1> Reservation </h1>
+    <h1> Contact </h1>
 
 
   )

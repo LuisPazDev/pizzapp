@@ -19,7 +19,7 @@ export const Layout = () => {
           </li>
           <span>|</span>
           <li>
-            <Link to='/reserve'> Reservation </Link>
+            <Link to='/reserve'> Contact </Link>
           </li>
         </ul>
       </nav>    
