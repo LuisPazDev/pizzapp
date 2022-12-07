@@ -1,20 +1,33 @@
-import '../components/Menu.css';
-import menu1 from '../assets/menu1.png';
-import menu2 from '../assets/menu2.png';
+import { db } from '../components/Firebase';
+import { collection, onSnapshot, query } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
 
+import '../components/Menu.css';
 
 
 export const Menu = () => {
+  const [ list, setList ] = useState([]);
+
+  useEffect(() => {
+    const q = query( collection( db, 'users'));
+    onSnapshot( q, (querySnapshot) => {
+      setList(
+        querySnapshot.docs.map((item) => ({
+          id: item.id,
+          data: item.data(),
+        }))
+      )
+    });
+  },[]);
+
+  console.log(setList)
 
   return(
 
   <div className='container-menu'>
-    <div>
-      <img className='img-menu2' src={menu1} alt="menu" />
-    </div>
-    <div>
-      <img className='img-menu1' src={menu2} alt="menu2" />
-    </div>
+
   </div>
   )
 };
+
+

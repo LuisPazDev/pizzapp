@@ -1,14 +1,17 @@
-
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain:process.env.REACT_APP_AUTH_DOMAIN, 
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyCbXD7c7lnCWzgrwGIoI2BDmWdoKD_OefI",
+  authDomain: "ucamp-a4ad3.firebaseapp.com",
+  projectId: "ucamp-a4ad3",
+  storageBucket: "ucamp-a4ad3.appspot.com",
+  messagingSenderId: "715906993150",
+  appId: "1:715906993150:web:a5075547d14739994e8eaf"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+
   
