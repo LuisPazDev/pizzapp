@@ -9,7 +9,7 @@ export const Menu = () => {
   const [ list, setList ] = useState([]);
 
   useEffect(() => {
-    const q = query( collection( db, 'users'));
+    const q = query( collection( db, 'menu'));
     onSnapshot( q, (querySnapshot) => {
       setList(
         querySnapshot.docs.map((item) => ({
@@ -20,11 +20,19 @@ export const Menu = () => {
     });
   },[]);
 
-  console.log(setList)
-
   return(
 
   <div className='container-menu'>
+    {
+      list.map((item) => (
+        <div>
+            <p>{item.data.name}</p>
+            <p>{item.data.price}</p>
+
+        </div>
+      
+      ))
+    }
 
   </div>
   )
