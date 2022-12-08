@@ -1,19 +1,36 @@
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import '../components/Contact.css';
-import { useForm } from "react-hook-form";
 
 export function Contact() {
 
-  const { register, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+
+
 
   return (
+
     <div className='container-contact'>
-      <h1>Contact Us</h1>
-      <form className='container-form' onSubmit={handleSubmit(onSubmit)}>
-        <input placeholder='Name' {...register("firstName", { required: true, maxLength: 20 })} />
-        <input placeholder='Comment' className='form-email' {...register("Comment", { pattern: /^[A-Za-z]+$/i })} />
-        <input className='btn' type="submit" />
-      </form>  
+      <h1 className='title-contact'>Contact Us</h1>
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter your Name" />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicDescription">
+          <Form.Label>Comment</Form.Label>
+          <Form.Control className='comment' type="text" placeholder="Leave a Comment" />
+        </Form.Group>
+
+        <Button className='btn' variant="primary" type="submit">
+        Send
+        </Button>
+      </Form>
     </div>
-  )
+  );
 }
