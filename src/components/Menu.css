@@ -1,7 +1,6 @@
 .container-menu{
   color: white;
   margin-top: 40px;
-  padding: 10px;
   height: 400px;
   width: 700px;
   display: flex;
@@ -10,13 +9,14 @@
 }
 
 .menu-img{
-  margin-top: 40px;
+  margin-top: 70px;
   height: 500px;
   width: 500px;
 }
 
 .container-menu-text{
   width: 300px;
+  height: 200px;
   margin-left: 120px;
   background-color: transparent;
   text-align: center;
@@ -32,6 +32,7 @@
 }
 
 .p-menu-price{
-  font-size: 28px;
+  font-size: 26px;
+  font-weight: bolder;
 }
 

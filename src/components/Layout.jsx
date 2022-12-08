@@ -1,6 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
 import '../components/Layout.css';
-import logo from '../assets/logopizza.png'
+import logo from '../assets/pizzapplogo.png';
 
 export const Layout = () => {
 
