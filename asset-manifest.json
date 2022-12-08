@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pizzapp/static/css/main.63e65c3e.css",
-    "main.js": "/pizzapp/static/js/main.b5e30bea.js",
+    "main.js": "/pizzapp/static/js/main.ca7788a5.js",
     "static/media/pizzaflyer.png": "/pizzapp/static/media/pizzaflyer.5e0bd4fe1d247e19155b.png",
     "static/media/pizzapplogo.png": "/pizzapp/static/media/pizzapplogo.6280ed37084cacf0277e.png",
     "index.html": "/pizzapp/index.html",
     "main.63e65c3e.css.map": "/pizzapp/static/css/main.63e65c3e.css.map",
-    "main.b5e30bea.js.map": "/pizzapp/static/js/main.b5e30bea.js.map"
+    "main.ca7788a5.js.map": "/pizzapp/static/js/main.ca7788a5.js.map"
   },
   "entrypoints": [
     "static/css/main.63e65c3e.css",
-    "static/js/main.b5e30bea.js"
+    "static/js/main.ca7788a5.js"
   ]
 }
