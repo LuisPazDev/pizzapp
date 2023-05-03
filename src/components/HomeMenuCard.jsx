@@ -1,13 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Container } from "react-bootstrap"
-import { Card } from "react-bootstrap"
 import { Row } from "react-bootstrap"
 import { Col } from "react-bootstrap"
 import { Button } from "react-bootstrap"
-import pizzaHome from "../assets/pizzahome.png"
-import drinkHome from "../assets/drinkhome.png"
-import dessertHome from "../assets/desserts.png"
+import pizzabanner from "../assets/pizzabanner.png"
 
 export const HomeMenuCard = () => {
     return (
@@ -16,58 +13,25 @@ export const HomeMenuCard = () => {
                 {/*  Title */}
                 <Row className='text-center mt-5 mb-5'>
                     <Col>
-                        <h2>
-                            <strong> What We Offer </strong>
-                        </h2>
-                        <h6>Curious? Here are our most popular menu items.</h6>
+                        <h4>
+                            <strong> WE DO CATERING </strong>
+                        </h4>
+                        <h6>GET 30% OFF IN YOUR FIRST ORDER</h6>
                     </Col>
-                </Row>
-                {/*  Menu items */}
-                <Row className='text-center'>
-                    {/*  Pizzas box */}
-                    <Col md='4'>
-                        <Card
-                            className='ms-auto me-auto'
-                            style={{ width: "12rem" }}>
-                            <Card.Img variant='top' src={pizzaHome} />
-                            <Card.Body>
-                                <Card.Title> Pizzas </Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    {/*  Drinks box */}
-                    <Col md='4'>
-                        <Card
-                            className='ms-auto me-auto'
-                            style={{ width: "12rem" }}>
-                            <Card.Img variant='top' src={drinkHome} />
-                            <Card.Body>
-                                <Card.Title> Drinks </Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    {/* Desserts box */}
-                    <Col md='4'>
-                        <Card
-                            className='ms-auto me-auto'
-                            style={{ width: "12rem" }}>
-                            <Card.Img variant='top' src={dessertHome} />
-                            <Card.Body>
-                                <Card.Title> Desserts </Card.Title>
-                            </Card.Body>
-                        </Card>
+                    <Col>
+                        <Button>Contact Us</Button>
                     </Col>
                 </Row>
             </Row>
-            {/*  View Full Menu button */}
-            <Row className='text-center mt-5'>
-                <Col className='mt-2'>
-                    <Button className='me-4'>
-                        <Link className='btn-menu' to='/menu'>
-                            {" "}
-                            View Full Menu{" "}
-                        </Link>
-                    </Button>
+            <Row>
+                <Col>
+                    <div>
+                        <img
+                            src={pizzabanner}
+                            className='img-fluid rounded p-1'
+                            alt='pizzaflyer'
+                        />
+                    </div>
                 </Col>
             </Row>
         </Container>

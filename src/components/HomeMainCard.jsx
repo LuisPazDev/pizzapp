@@ -1,28 +1,15 @@
-import flyer from "../assets/pizzaflyer.png"
 import { Container } from "react-bootstrap"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
-import Card from "react-bootstrap/Card"
+import flyer from "../assets/pizzabgmain.png"
+import small1 from "../assets/small1.png"
+import small2 from "../assets/small2.png"
 
 export const HomeMainCard = () => {
     return (
         <Container fluid>
-            <Row className='mt-4'>
-                <Col xs={12} md={6} className='mt-auto mb-auto'>
-                    <div className='ms-auto me-auto'>
-                        <h1>
-                            <strong> The Best Pizzas </strong>
-                        </h1>
-                        <p>
-                            We are a family owned and operated pizza shop in the
-                            heart of Dallas, TX. We are known for our delicious
-                            pizza and our friendly staff. We look forward to
-                            serving you!
-                        </p>
-                    </div>
-                </Col>
-
-                <Col xs={12} md={6} className='mt-auto mb-auto'>
+            <Row>
+                <Col>
                     <div>
                         <img
                             src={flyer}
@@ -30,6 +17,30 @@ export const HomeMainCard = () => {
                             alt='pizzaflyer'
                         />
                     </div>
+                </Col>
+                <Col>
+                    <Row>
+                        <Col className='mt-auto mb-auto'>
+                            <div>
+                                <img
+                                    src={small1}
+                                    className='img-fluid rounded p-1'
+                                    alt='pizzaflyer'
+                                />
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className='mt-auto mb-auto'>
+                            <div>
+                                <img
+                                    src={small2}
+                                    className='img-fluid rounded p-1'
+                                    alt='pizzaflyer'
+                                />
+                            </div>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Container>
