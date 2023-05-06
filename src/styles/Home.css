@@ -1,0 +1,27 @@
+.container-homeheader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-homeheader-text {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 650px;
+}
+
+.container-homebanner-text {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 650px;
+}
+
+.container-homebanner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -8,35 +8,35 @@ import small2 from "../assets/small2.png"
 export const HomeMainCard = () => {
     return (
         <Container fluid>
-            <Row>
+            <Row xs={1} sm={1} md={2} lg={2}>
                 <Col>
                     <div>
                         <img
                             src={flyer}
-                            className='img-fluid rounded p-1'
-                            alt='pizzaflyer'
+                            className='img-fluid rounded p-2'
+                            alt='pizzamain'
                         />
                     </div>
                 </Col>
                 <Col>
                     <Row>
-                        <Col className='mt-auto mb-auto'>
+                        <Col>
                             <div>
                                 <img
                                     src={small1}
-                                    className='img-fluid rounded p-1'
-                                    alt='pizzaflyer'
+                                    className='img-fluid rounded p-3'
+                                    alt='drinks'
                                 />
                             </div>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col className='mt-auto mb-auto'>
+                    <Row className='mt-2 mb-1'>
+                        <Col>
                             <div>
                                 <img
                                     src={small2}
-                                    className='img-fluid rounded p-1'
-                                    alt='pizzaflyer'
+                                    className='img-fluid rounded p-3'
+                                    alt='desserts'
                                 />
                             </div>
                         </Col>

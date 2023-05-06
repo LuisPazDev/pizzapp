@@ -22,18 +22,14 @@ export const NavBar = () => {
                             <p className='menu-text'>Menu</p>{" "}
                         </Link>
                     </Nav.Link>
-                    <div className='mt-2 ms-2 me-2'>
-                        <span>|</span>
-                    </div>
+
                     <Nav.Link>
                         <Link to='/about'>
                             {" "}
                             <p className='menu-text'>About</p>{" "}
                         </Link>
                     </Nav.Link>
-                    <div className='mt-2 ms-2 me-2'>
-                        <span>|</span>
-                    </div>
+
                     <Nav.Link>
                         <Link to='/reserve'>
                             {" "}

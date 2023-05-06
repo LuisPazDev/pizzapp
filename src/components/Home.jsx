@@ -1,16 +1,17 @@
 import { Container } from "react-bootstrap"
 import { HomeHeader } from "./HomeHeader"
 import { HomeMainCard } from "./HomeMainCard"
-import { HomeMenuCard } from "./HomeMenuCard"
+import { HomeCatering } from "./HomeCatering"
 import { HomeFooterCard } from "./HomeFooterCard"
+import { HomeBanner } from "./HomeBanner"
 
 export const Home = () => {
     return (
         <Container fluid>
             <HomeHeader />
             <HomeMainCard />
-            <HomeMenuCard />
-            <HomeFooterCard />
+            <HomeCatering />
+            <HomeBanner />
         </Container>
     )
 }
