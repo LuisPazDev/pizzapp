@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/pizzapp/static/css/main.d618b42b.css",
-    "main.js": "/pizzapp/static/js/main.1bf4edad.js",
-    "static/media/pizzaflyer.png": "/pizzapp/static/media/pizzaflyer.6c6959613e7009195c6d.png",
-    "static/media/pizzahome.png": "/pizzapp/static/media/pizzahome.78fad69bf90a0d41a83f.png",
+    "main.css": "/pizzapp/static/css/main.0ad9cb19.css",
+    "main.js": "/pizzapp/static/js/main.8ed00754.js",
+    "static/media/pizzabanner.png": "/pizzapp/static/media/pizzabanner.f3b206e77ed93b300aac.png",
+    "static/media/pizzabgmain.png": "/pizzapp/static/media/pizzabgmain.139eca16f4edec99e319.png",
     "static/media/pizzmap.png": "/pizzapp/static/media/pizzmap.d85ac59259fbe0e89ebe.png",
-    "static/media/desserts.png": "/pizzapp/static/media/desserts.4c80123ed88acdeaedc0.png",
-    "static/media/drinkhome.png": "/pizzapp/static/media/drinkhome.d111b9e7cd20f6547937.png",
-    "static/media/logo.png": "/pizzapp/static/media/logo.f96bc0334532fa952c26.png",
+    "static/media/small1.png": "/pizzapp/static/media/small1.d8317f6e52ded8dee051.png",
+    "static/media/small2.png": "/pizzapp/static/media/small2.c48ea923b8be1efbdc80.png",
     "index.html": "/pizzapp/index.html",
-    "main.d618b42b.css.map": "/pizzapp/static/css/main.d618b42b.css.map",
-    "main.1bf4edad.js.map": "/pizzapp/static/js/main.1bf4edad.js.map"
+    "main.0ad9cb19.css.map": "/pizzapp/static/css/main.0ad9cb19.css.map",
+    "main.8ed00754.js.map": "/pizzapp/static/js/main.8ed00754.js.map"
   },
   "entrypoints": [
-    "static/css/main.d618b42b.css",
-    "static/js/main.1bf4edad.js"
+    "static/css/main.0ad9cb19.css",
+    "static/js/main.8ed00754.js"
   ]
 }
