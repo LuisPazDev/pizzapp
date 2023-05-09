@@ -1,44 +1,29 @@
+import { PizzaMainImg } from "./PizzaMainImg"
+
 import { Container } from "react-bootstrap"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
-import flyer from "../assets/pizzabgmain.png"
-import small1 from "../assets/small1.png"
-import small2 from "../assets/small2.png"
+
+import "../styles/Home.css"
+import { DrinkBox } from "./DrinkBox"
+import { DessertBox } from "./DessertBox"
 
 export const HomeMainCard = () => {
     return (
         <Container fluid>
             <Row xs={1} sm={1} md={2} lg={2}>
                 <Col>
-                    <div>
-                        <img
-                            src={flyer}
-                            className='img-fluid rounded p-2'
-                            alt='pizzamain'
-                        />
-                    </div>
+                    <PizzaMainImg />
                 </Col>
                 <Col>
                     <Row>
                         <Col>
-                            <div>
-                                <img
-                                    src={small1}
-                                    className='img-fluid rounded p-3'
-                                    alt='drinks'
-                                />
-                            </div>
+                            <DrinkBox />
                         </Col>
                     </Row>
-                    <Row className='mt-2 mb-1'>
+                    <Row>
                         <Col>
-                            <div>
-                                <img
-                                    src={small2}
-                                    className='img-fluid rounded p-3'
-                                    alt='desserts'
-                                />
-                            </div>
+                            <DessertBox />
                         </Col>
                     </Row>
                 </Col>

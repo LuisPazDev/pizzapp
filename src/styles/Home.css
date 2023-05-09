@@ -25,3 +25,24 @@
     align-items: center;
     justify-content: center;
 }
+
+.img-pizzamain {
+    background-image: url("../assets/pizzabgmain.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-drinks {
+    background-image: url("../assets/small1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-desserts {
+    background-image: url("../assets/small2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
