@@ -1,26 +1,25 @@
 * {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 button {
-    background-color: rgba(238, 115, 15, 0.89) !important;
-    color: white !important;
-    border: none !important;
+  background-color: #f17923 !important;
+  color: white !important;
+  border: black solid 1px !important;
+  border-radius: 10px !important;
 }
 button:hover {
-    background-color: rgba(216, 120, 41, 0.89) !important;
-}
-
-.btn-menu {
-    background-color: rgba(238, 115, 15, 0.89) !important;
+  background-color: #f39755 !important;
+  color: white !important;
+  border: none !important;
 }
 
 .input-comment {
-    padding-top: 35px;
-    padding-bottom: 35px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }

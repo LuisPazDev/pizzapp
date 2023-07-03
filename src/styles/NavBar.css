@@ -1,20 +1,16 @@
 .Navbar {
-    height: 60px;
-    background-color: #da5e04;
-    color: #ffffff;
+  height: 70px;
+  background-color: #f17923;
+  color: #ffffff;
 }
 
 .logo {
-    width: 150px;
-    height: 40px;
+  width: 180px;
+  height: 30px;
 }
 
 .menu-text {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-span {
-    color: greenyellow;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
 }
