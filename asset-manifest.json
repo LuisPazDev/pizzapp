@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/pizzapp/static/css/main.0ad9cb19.css",
-    "main.js": "/pizzapp/static/js/main.8ed00754.js",
+    "main.css": "/pizzapp/static/css/main.1b97e8ef.css",
+    "main.js": "/pizzapp/static/js/main.996aa6b2.js",
     "static/media/pizzabanner.png": "/pizzapp/static/media/pizzabanner.f3b206e77ed93b300aac.png",
-    "static/media/pizzabgmain.png": "/pizzapp/static/media/pizzabgmain.139eca16f4edec99e319.png",
-    "static/media/pizzmap.png": "/pizzapp/static/media/pizzmap.d85ac59259fbe0e89ebe.png",
-    "static/media/small1.png": "/pizzapp/static/media/small1.d8317f6e52ded8dee051.png",
-    "static/media/small2.png": "/pizzapp/static/media/small2.c48ea923b8be1efbdc80.png",
+    "static/media/pepperonipizza.png": "/pizzapp/static/media/pepperonipizza.5238d517ca5e938e3f68.png",
+    "static/media/primaverapizza.png": "/pizzapp/static/media/primaverapizza.07c1078bda2aef2d754a.png",
+    "static/media/pomodoropizza.png": "/pizzapp/static/media/pomodoropizza.76e1a42c44cee98d74a1.png",
+    "static/media/desserts.png": "/pizzapp/static/media/desserts.249af1bfbb4e469d8b13.png",
+    "static/media/drinks.png": "/pizzapp/static/media/drinks.1d76755f379cecb38726.png",
     "index.html": "/pizzapp/index.html",
-    "main.0ad9cb19.css.map": "/pizzapp/static/css/main.0ad9cb19.css.map",
-    "main.8ed00754.js.map": "/pizzapp/static/js/main.8ed00754.js.map"
+    "main.1b97e8ef.css.map": "/pizzapp/static/css/main.1b97e8ef.css.map",
+    "main.996aa6b2.js.map": "/pizzapp/static/js/main.996aa6b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ad9cb19.css",
-    "static/js/main.8ed00754.js"
+    "static/css/main.1b97e8ef.css",
+    "static/js/main.996aa6b2.js"
   ]
 }
