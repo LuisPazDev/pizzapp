@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/pizzapp/static/css/main.427ce40c.css",
-    "main.js": "/pizzapp/static/js/main.d124b020.js",
+    "main.css": "/pizzapp/static/css/main.8c9e9e3e.css",
+    "main.js": "/pizzapp/static/js/main.4c3e2623.js",
     "static/media/pizzabanner.png": "/pizzapp/static/media/pizzabanner.f3b206e77ed93b300aac.png",
-    "static/media/pepperonipizza.png": "/pizzapp/static/media/pepperonipizza.b36568c1a0ee1cd499d6.png",
-    "static/media/menupizza.png": "/pizzapp/static/media/menupizza.cffa32a217e72be5eabe.png",
+    "static/media/pepperonipizza.png": "/pizzapp/static/media/pepperonipizza.baaa88a41be16337f790.png",
+    "static/media/menupizza.png": "/pizzapp/static/media/menupizza.6b9fad5193cab4b7cf19.png",
     "static/media/primaverapizza.png": "/pizzapp/static/media/primaverapizza.9107158fcd8ffb09c136.png",
-    "static/media/desserts.png": "/pizzapp/static/media/desserts.249af1bfbb4e469d8b13.png",
-    "static/media/drinks.png": "/pizzapp/static/media/drinks.a8cdbfff0da47457c31d.png",
+    "static/media/desserts.png": "/pizzapp/static/media/desserts.22ce7065d0b25eb8be63.png",
+    "static/media/drinks.png": "/pizzapp/static/media/drinks.eb19f6a6844cb5758e3e.png",
+    "static/media/delivery.png": "/pizzapp/static/media/delivery.fa2361d1055bb2a38f7f.png",
+    "static/media/catering.png": "/pizzapp/static/media/catering.e1f9df4c715e6d548697.png",
     "index.html": "/pizzapp/index.html",
-    "main.427ce40c.css.map": "/pizzapp/static/css/main.427ce40c.css.map",
-    "main.d124b020.js.map": "/pizzapp/static/js/main.d124b020.js.map"
+    "main.8c9e9e3e.css.map": "/pizzapp/static/css/main.8c9e9e3e.css.map",
+    "main.4c3e2623.js.map": "/pizzapp/static/js/main.4c3e2623.js.map"
   },
   "entrypoints": [
-    "static/css/main.427ce40c.css",
-    "static/js/main.d124b020.js"
+    "static/css/main.8c9e9e3e.css",
+    "static/js/main.4c3e2623.js"
   ]
 }
