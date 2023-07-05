@@ -6,9 +6,9 @@ import { Container, Row, Col } from "react-bootstrap";
 export const HomeMainCard = () => {
   return (
     <Container className="text-center" fluid>
-      <Row xs={1} sm={1} md={2} lg={2} className="p-2">
+      <Row xs={1} sm={1} md={2} lg={2}>
         {/* Pizza Carousel */}
-        <Col className="mb-2">
+        <Col className="mb-3">
           <PizzaCarousel />
         </Col>
 

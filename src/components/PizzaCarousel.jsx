@@ -8,11 +8,11 @@ export const PizzaCarousel = () => {
   return (
     <Carousel>
       <Carousel.Item interval={1000}>
-        <img className="d-block w-100" src={pepperoniPizza} alt="First slide" />
+        <img className="d-block w-100" src={menuPizza} alt="First slide" />
         <Carousel.Caption className="text-center">
-          <Button variant="dark" size="lg" className="mt-3">
+          <Button variant="dark" size="lg" className="mt-1">
             <strong>
-              <i>ORDER NOW</i>
+              <i>ABOUT US</i>
             </strong>
           </Button>
         </Carousel.Caption>
@@ -20,11 +20,11 @@ export const PizzaCarousel = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={primaveraPizza}
+          src={pepperoniPizza}
           alt="Second slide"
         />
         <Carousel.Caption className="text-center">
-          <Button variant="dark" size="lg" className="mt-3">
+          <Button variant="dark" size="lg" className="mt-1">
             <strong>
               <i>ORDER NOW</i>
             </strong>
@@ -32,11 +32,11 @@ export const PizzaCarousel = () => {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={menuPizza} alt="Third slide" />
+        <img className="d-block w-100" src={primaveraPizza} alt="Third slide" />
         <Carousel.Caption className="text-center">
-          <Button variant="dark" size="lg" className="mt-3">
+          <Button variant="dark" size="lg" className="mt-1">
             <strong>
-              <i>FULL MENU</i>
+              <i>ORDER NOW</i>
             </strong>
           </Button>
         </Carousel.Caption>

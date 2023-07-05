@@ -2,11 +2,9 @@ import { Link } from "react-router-dom";
 import {
   Nav,
   Navbar,
-  Button,
   Container,
   Offcanvas,
   NavDropdown,
-  Form,
 } from "react-bootstrap";
 
 import logo from "../assets/pizzapplogo.png";
@@ -15,7 +13,11 @@ export const NavBar = () => {
   return (
     <>
       {["md"].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+        <Navbar
+          key={expand}
+          expand={expand}
+          className="sticky-top mb-1 p-2 bg-light"
+        >
           <Container fluid>
             <Navbar.Brand href="#">
               <img src={logo} alt="logo" />
@@ -33,9 +35,29 @@ export const NavBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">MENU</Nav.Link>
-                  <Nav.Link href="#action2">ABOUT US</Nav.Link>
-                  <Nav.Link href="#action2">CONTACT</Nav.Link>
+                  <NavDropdown
+                    title="MENU"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item>
+                      <Link to="/menu">PIZZAS</Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item>
+                      <Link to="/menu">DRINKS</Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item>
+                      <Link to="/menu">DESSERTS</Link>
+                    </NavDropdown.Item>
+                  </NavDropdown>
+
+                  <Nav.Link>
+                    <Link to="/about">ABOUT</Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="/contact">CONTACT</Link>
+                  </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
