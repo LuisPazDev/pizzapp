@@ -6,24 +6,15 @@ export const DrinksCard = () => {
   return (
     <Card>
       <Card.Img src={drinks} alt="Card image" />
-      <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
-        <Card.Title>
-          <Badge bg="light" className="text-dark">
-            <h5>
-              <strong>
-                <i>PERFECT DRINKS</i>
-              </strong>
-            </h5>
-          </Badge>
-        </Card.Title>
-        <Card.Text>
-          <Button size="md">
+      <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
+        <div>
+          <Button variant="dark" size="md">
             {" "}
             <strong>
               <i>ORDER NOW</i>
             </strong>
           </Button>
-        </Card.Text>
+        </div>
       </Card.ImgOverlay>
     </Card>
   );

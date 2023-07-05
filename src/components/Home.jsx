@@ -1,17 +1,14 @@
-import { Container } from "react-bootstrap"
-import { HomeHeader } from "./HomeHeader"
-import { HomeMainCard } from "./HomeMainCard"
-import { HomeCatering } from "./HomeCatering"
-import { HomeFooterCard } from "./HomeFooterCard"
-import { HomeBanner } from "./HomeBanner"
+import { Container } from "react-bootstrap";
+import { HomeMainCard } from "./HomeMainCard";
+import { HomeCatering } from "./HomeCatering";
+import { HomeBanner } from "./HomeBanner";
 
 export const Home = () => {
-    return (
-        <Container fluid>
-            <HomeHeader />
-            <HomeMainCard />
-            <HomeCatering />
-            <HomeBanner />
-        </Container>
-    )
-}
+  return (
+    <Container fluid>
+      <HomeMainCard />
+      <HomeCatering />
+      <HomeBanner />
+    </Container>
+  );
+};

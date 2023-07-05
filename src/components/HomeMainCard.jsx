@@ -1,7 +1,7 @@
 import { PizzaCarousel } from "./PizzaCarousel";
 import { DrinksCard } from "./DrinksCard";
-import { Container, Row, Col } from "react-bootstrap";
 import { DessertsCard } from "./DessertsCard";
+import { Container, Row, Col } from "react-bootstrap";
 
 export const HomeMainCard = () => {
   return (

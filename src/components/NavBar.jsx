@@ -1,57 +1,47 @@
 import { Link } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import {
+  Nav,
+  Navbar,
+  Button,
+  Container,
+  Offcanvas,
+  NavDropdown,
+  Form,
+} from "react-bootstrap";
+
 import logo from "../assets/pizzapplogo.png";
-import "../styles/NavBar.css";
 
 export const NavBar = () => {
   return (
-    <Navbar className="Navbar" collapseOnSelect expand="md">
-      <Navbar.Brand>
-        <Nav.Link>
-          <Link to="/">
-            <img src={logo} alt="logo" className="logo ms-3" />
-          </Link>
-        </Nav.Link>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ms-auto mt-1 me-4">
-          <Nav.Link>
-            <Link to="/menu">
-              <p className="menu-text">
-                <strong>
-                  <i>MENU</i>
-                </strong>
-              </p>{" "}
-            </Link>
-          </Nav.Link>
-
-          <Nav.Link>
-            <Link to="/about">
-              {" "}
-              <p className="menu-text">
-                {" "}
-                <strong>
-                  <i>ABOUT</i>
-                </strong>
-              </p>{" "}
-            </Link>
-          </Nav.Link>
-
-          <Nav.Link>
-            <Link to="/reserve">
-              {" "}
-              <p className="menu-text">
-                {" "}
-                <strong>
-                  <i>CONTACT</i>
-                </strong>
-              </p>{" "}
-            </Link>
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <>
+      {["md"].map((expand) => (
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+          <Container fluid>
+            <Navbar.Brand href="#">
+              <img src={logo} alt="logo" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="start"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  <img src={logo} alt="logo" width={100} height={25} />
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link href="#action1">MENU</Nav.Link>
+                  <Nav.Link href="#action2">ABOUT US</Nav.Link>
+                  <Nav.Link href="#action2">CONTACT</Nav.Link>
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
+    </>
   );
 };

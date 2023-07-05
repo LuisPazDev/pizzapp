@@ -3,20 +3,8 @@
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
-}
-
-button {
-  background-color: #f17923 !important;
-  color: white !important;
-  border: black solid 1px !important;
-  border-radius: 10px !important;
-}
-button:hover {
-  background-color: #f39755 !important;
-  color: white !important;
-  border: none !important;
 }
 
 .input-comment {
