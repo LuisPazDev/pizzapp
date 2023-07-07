@@ -9,13 +9,7 @@ export const PizzaCarousel = () => {
     <Carousel>
       <Carousel.Item interval={1000}>
         <img className="d-block w-100" src={menuPizza} alt="First slide" />
-        <Carousel.Caption className="text-center">
-          <Button variant="dark" size="lg" className="mt-1">
-            <strong>
-              <i>ABOUT US</i>
-            </strong>
-          </Button>
-        </Carousel.Caption>
+        <Carousel.Caption className="text-center"></Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
