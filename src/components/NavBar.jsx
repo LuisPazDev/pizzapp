@@ -13,11 +13,7 @@ export const NavBar = () => {
   return (
     <>
       {["md"].map((expand) => (
-        <Navbar
-          key={expand}
-          expand={expand}
-          className="sticky-top mb-1 p-2 bg-light"
-        >
+        <Navbar key={expand} expand={expand} className="sticky-top bg-light">
           <Container fluid>
             <Navbar.Brand href="#">
               <img src={logo} alt="logo" />
