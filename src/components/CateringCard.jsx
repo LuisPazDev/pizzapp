@@ -1,11 +1,11 @@
 import { Card, Button } from "react-bootstrap";
-import reservation from "../assets/reservation.png";
+import catering from "../assets/catering.png";
 
-export const ReservarionCard = () => {
+export const CateringCard = () => {
   return (
     <Card>
-      <Card.Img src={reservation} alt="Card image" />
-      <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
+      <Card.Img src={catering} alt="Card image" />
+      <Card.ImgOverlay className="d-flex flex-column justify-content-end text-start">
         <div className="me-3">
           <Button variant="dark" size="sm">
             {" "}
