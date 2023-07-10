@@ -6,8 +6,8 @@ export const ReservarionCard = () => {
     <Card>
       <Card.Img src={reservation} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
-        <div className="me-3">
-          <Button variant="dark" size="sm">
+        <div className="me-5 mb-2">
+          <Button variant="dark" size="md">
             {" "}
             <strong>
               <i>CONTACT US</i>

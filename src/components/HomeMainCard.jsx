@@ -1,7 +1,7 @@
 import { PizzaCarousel } from "./PizzaCarousel";
-import { ComboCard } from "./ComboCard";
 import { DrinksCard } from "./DrinksCard";
 import { DessertsCard } from "./DessertsCard";
+import { ComboCard } from "./ComboCard";
 import { Row, Col } from "react-bootstrap";
 
 export const HomeMainCard = () => {
@@ -21,13 +21,13 @@ export const HomeMainCard = () => {
 
         {/* Drinks Box */}
         <Row>
-          <Col xs={12} md={6} className="mb-3">
+          <Col className="mb-3">
             <DrinksCard />
           </Col>
 
           {/* Desserts Box */}
 
-          <Col xs={12} md={6} className="mb-3">
+          <Col className="mb-3">
             <DessertsCard />
           </Col>
         </Row>
