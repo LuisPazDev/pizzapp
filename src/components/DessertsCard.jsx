@@ -8,10 +8,10 @@ export const DessertsCard = () => {
       <Card.Img src={desserts} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
         <Card.Text>
-          <Button variant="dark" size="md" className="mb-1">
+          <Button variant="dark" size="sm">
             {" "}
             <strong>
-              <i>ORDER NOW</i>
+              <i>MENU</i>
             </strong>
           </Button>
         </Card.Text>
