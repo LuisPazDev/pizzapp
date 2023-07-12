@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pizzapp/static/css/main.dea2fa98.css",
-    "main.js": "/pizzapp/static/js/main.f3e04152.js",
+    "main.js": "/pizzapp/static/js/main.3a6628fc.js",
     "static/media/pepperonipizza.png": "/pizzapp/static/media/pepperonipizza.b4b3b7b1d6bda77e520d.png",
     "static/media/menupizza.png": "/pizzapp/static/media/menupizza.6488ac98c76336c49916.png",
     "static/media/primaverapizza.png": "/pizzapp/static/media/primaverapizza.b50300ee0437e4343c06.png",
@@ -9,15 +9,15 @@
     "static/media/pizzabanner.png": "/pizzapp/static/media/pizzabanner.b7812a8f2146e09e316e.png",
     "static/media/desserts.png": "/pizzapp/static/media/desserts.f310f574b66e0a750cfa.png",
     "static/media/drinks.png": "/pizzapp/static/media/drinks.7f8edd3deb43a97f7e33.png",
-    "static/media/reservation.png": "/pizzapp/static/media/reservation.97b0c2c3698f1046a51f.png",
-    "static/media/hiring.png": "/pizzapp/static/media/hiring.d0659adc1604784b39f1.png",
-    "static/media/delivery.png": "/pizzapp/static/media/delivery.9af1e73f9c98685d3974.png",
+    "static/media/reservation.png": "/pizzapp/static/media/reservation.2e378b65e5ef4ce2a8a4.png",
+    "static/media/hiring.png": "/pizzapp/static/media/hiring.902e73dfefe6d277f6d2.png",
+    "static/media/delivery.png": "/pizzapp/static/media/delivery.254b2f49b1e1ff362e98.png",
     "index.html": "/pizzapp/index.html",
     "main.dea2fa98.css.map": "/pizzapp/static/css/main.dea2fa98.css.map",
-    "main.f3e04152.js.map": "/pizzapp/static/js/main.f3e04152.js.map"
+    "main.3a6628fc.js.map": "/pizzapp/static/js/main.3a6628fc.js.map"
   },
   "entrypoints": [
     "static/css/main.dea2fa98.css",
-    "static/js/main.f3e04152.js"
+    "static/js/main.3a6628fc.js"
   ]
 }
