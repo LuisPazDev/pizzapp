@@ -8,7 +8,7 @@ export const DessertsCard = () => {
       <Card.Img src={desserts} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
         <Card.Text>
-          <Button variant="dark" size="sm">
+          <Button variant="dark" size="md">
             {" "}
             <strong>
               <i>MENU</i>

@@ -4,13 +4,15 @@ import delivery from "../assets/delivery.png";
 
 export const DeliveryCard = () => {
   return (
-    <Card>
+    <Card border="dark">
       <Card.Img src={delivery} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row>
-          <Col>{/* Space Column */}</Col>
+          <Col xs={5} sm={5} md={5}>
+            {/* Space Column */}
+          </Col>
           <Col>
-            <Row className="mb-2">
+            <Row>
               <Col>
                 <Badge bg="dark">
                   <i>NOW </i>

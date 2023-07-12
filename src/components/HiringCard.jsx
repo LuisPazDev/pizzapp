@@ -4,13 +4,15 @@ import hiring from "../assets/hiring.png";
 
 export const HiringCard = () => {
   return (
-    <Card>
+    <Card border="dark">
       <Card.Img src={hiring} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row>
-          <Col>{/* Space Column */}</Col>
+          <Col xs={5} sm={5} md={5}>
+            {/* Space Column */}
+          </Col>
           <Col>
-            <Row className="mb-2">
+            <Row>
               <Col>
                 <Badge bg="dark">
                   <i>JOBS</i>
@@ -27,7 +29,7 @@ export const HiringCard = () => {
                 <Button variant="dark" size="sm">
                   {" "}
                   <strong>
-                    <i>CONTACT US</i>
+                    <i>APPLY HERE</i>
                   </strong>
                 </Button>
               </Col>

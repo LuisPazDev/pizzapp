@@ -1,27 +1,25 @@
 import { Link } from "react-router-dom";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
 
 export const HomeHeader = () => {
   return (
-    <Row className="p-2">
-      <Row>
-        <Col md={4} className="text-center">
+    <Container className="text-center p-2">
+      <Row xs={1} sm={1} md={2} className="d-flex align-items-center">
+        <Col className="mb-1">
           <h5>
             <strong>
-              <i>START YOUR ORDER</i>
+              <i>START YOUR ORDER NOW</i>
             </strong>
           </h5>
         </Col>
-        <Col>
-          <Button variant="dark" size="sm">
+        <Col className="mt-1 mb-2">
+          <Button variant="dark" size="md">
             {" "}
             <strong>
               <i>PICK UP</i>
             </strong>
           </Button>
-        </Col>
-        <Col>
-          <Button variant="dark" size="sm">
+          <Button className="ms-5" variant="dark" size="md">
             {" "}
             <strong>
               <i>DELIVERY</i>
@@ -29,6 +27,6 @@ export const HomeHeader = () => {
           </Button>
         </Col>
       </Row>
-    </Row>
+    </Container>
   );
 };
