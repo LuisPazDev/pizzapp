@@ -1,13 +1,13 @@
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import pizzabanner from "../assets/pizzabanner.png";
 
 export const HomeBanner = () => {
   return (
     <Card>
-      <Card.Img src={pizzabanner} style={{ maxHeight: 200 }} />
+      <Card.Img src={pizzabanner} style={{ minHeight: 200 }} />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
-        <div>
-          <h3 className="text-white">
+        <div className="text-white">
+          <h4 className="mb-3">
             <strong>
               <i>IT'S TIME TO SHARE</i>
             </strong>
@@ -15,12 +15,19 @@ export const HomeBanner = () => {
             <strong>
               <i>IT'S PIZZA TIME</i>
             </strong>
-          </h3>
-          <button className="btn btn-dark btn-md">
+          </h4>
+
+          <h6>
             <strong>
-              <i>ABOUT US</i>
+              <i>OFFERING FREE DELIVERY </i>
             </strong>
-          </button>
+          </h6>
+          <Button variant="dark" size="md">
+            {" "}
+            <strong>
+              <i>FULL MENU</i>
+            </strong>
+          </Button>
         </div>
       </Card.ImgOverlay>
     </Card>
