@@ -11,7 +11,7 @@ export const DessertsCard = () => {
           <Button variant="dark" size="md">
             {" "}
             <strong>
-              <i>MENU</i>
+              <i>ORDER</i>
             </strong>
           </Button>
         </Card.Text>

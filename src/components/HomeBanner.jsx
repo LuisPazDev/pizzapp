@@ -1,4 +1,4 @@
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Badge } from "react-bootstrap";
 import pizzabanner from "../assets/pizzabanner.png";
 
 export const HomeBanner = () => {
@@ -16,13 +16,15 @@ export const HomeBanner = () => {
               <i>IT'S PIZZA TIME</i>
             </strong>
           </h4>
-
-          <h6>
-            <strong>
-              <i>OFFERING FREE DELIVERY </i>
-            </strong>
-          </h6>
-          <Button variant="dark" size="md">
+          <Badge bg="light">
+            <h6 className="text-black">
+              <strong>
+                <i>OFFERING FREE DELIVERY </i>
+              </strong>
+            </h6>
+          </Badge>
+          <br />
+          <Button className="mt-2" variant="dark" size="lg">
             {" "}
             <strong>
               <i>FULL MENU</i>

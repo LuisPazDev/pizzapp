@@ -16,7 +16,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i>CONTACT </i>
+          <i>CONTACT ME </i>
         </a>
       </div>
 
