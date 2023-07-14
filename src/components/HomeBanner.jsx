@@ -1,37 +1,16 @@
-import { Card, Button, Badge } from "react-bootstrap";
-import pizzabanner from "../assets/pizzabanner.png";
+import { Container, Row, Col } from "react-bootstrap";
+import { FullMenuCard } from "./FullMenuCard";
+import { AboutusCard } from "./AboutusCard";
 
 export const HomeBanner = () => {
   return (
-    <Card>
-      <Card.Img src={pizzabanner} style={{ minHeight: 200 }} />
-      <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
-        <div className="text-white">
-          <h4 className="mb-3">
-            <strong>
-              <i>IT'S TIME TO SHARE</i>
-            </strong>
-            <br />
-            <strong>
-              <i>IT'S PIZZA TIME</i>
-            </strong>
-          </h4>
-          <Badge bg="light">
-            <h6 className="text-black">
-              <strong>
-                <i>OFFERING FREE DELIVERY </i>
-              </strong>
-            </h6>
-          </Badge>
-          <br />
-          <Button className="mt-2" variant="dark" size="lg">
-            {" "}
-            <strong>
-              <i>FULL MENU</i>
-            </strong>
-          </Button>
-        </div>
-      </Card.ImgOverlay>
-    </Card>
+    <Row xs={1} md={2}>
+      <Col className="mt-1 mb-1">
+        <FullMenuCard />
+      </Col>
+      <Col className="mt-1 mb-1">
+        <AboutusCard />
+      </Col>
+    </Row>
   );
 };
