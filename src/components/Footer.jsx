@@ -2,7 +2,7 @@ import { Container, Badge } from "react-bootstrap";
 
 export const Footer = () => {
   return (
-    <Container fluid className="text-center mt-3 mb-3">
+    <Container fluid className="text-center mt-4 mb-3">
       <div>
         <h6>
           <strong>

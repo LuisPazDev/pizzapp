@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Nav,
@@ -10,6 +11,11 @@ import {
 import logo from "../assets/pizzapplogo.png";
 
 export const NavBar = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       {["md"].map((expand) => (
@@ -18,8 +24,14 @@ export const NavBar = () => {
             <Navbar.Brand href="#">
               <img src={logo} alt="logo" />
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Toggle
+              onClick={handleShow}
+              aria-controls={`offcanvasNavbar-expand-${expand}`}
+              className="border-3 border-dark"
+            />
             <Navbar.Offcanvas
+              show={show}
+              onHide={handleClose}
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="start"
@@ -36,23 +48,33 @@ export const NavBar = () => {
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                     <NavDropdown.Item>
-                      <Link to="/menu">PIZZAS</Link>
+                      <Link onClick={handleClose} to="/menu">
+                        PIZZAS
+                      </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item>
-                      <Link to="/menu">DRINKS</Link>
+                      <Link onClick={handleClose} to="/menu">
+                        DRINKS
+                      </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item>
-                      <Link to="/menu">DESSERTS</Link>
+                      <Link onClick={handleClose} to="/menu">
+                        DESSERTS
+                      </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
 
                   <Nav.Link>
-                    <Link to="/about">ABOUT</Link>
+                    <Link onClick={handleClose} to="/about">
+                      ABOUT
+                    </Link>
                   </Nav.Link>
                   <Nav.Link>
-                    <Link to="/contact">CONTACT</Link>
+                    <Link onClick={handleClose} to="/contact">
+                      CONTACT
+                    </Link>
                   </Nav.Link>
                 </Nav>
               </Offcanvas.Body>

@@ -5,10 +5,10 @@ import { AboutusCard } from "./AboutusCard";
 export const HomeBanner = () => {
   return (
     <Row xs={1} md={2}>
-      <Col className="mt-1 mb-1">
+      <Col className="mt-2 mb-2">
         <FullMenuCard />
       </Col>
-      <Col className="mt-1 mb-1">
+      <Col className="mt-2 mb-2">
         <AboutusCard />
       </Col>
     </Row>

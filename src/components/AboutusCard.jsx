@@ -9,22 +9,22 @@ export const AboutusCard = () => {
         <Row>
           <Col>
             <Badge bg="light" className="text-black">
-              <h5>
+              <h4>
                 <strong>
-                  <i>
-                    WE ARE A FAMILY <br /> OWNED RESTAURANT
-                    <br /> SINCE 2017
-                  </i>
+                  <i>FAMILY OWNED</i>
                 </strong>
-              </h5>
+              </h4>
+              <h6>
+                <i> SINCE 2019</i>
+              </h6>
             </Badge>
 
             <br />
 
-            <Button className="mt-2 ms-4" variant="dark" size="md">
+            <Button className="mt-3 ms-4" variant="dark" size="md">
               {" "}
               <strong>
-                <i>KNOW MORE</i>
+                <i>ABOUT US</i>
               </strong>
             </Button>
           </Col>

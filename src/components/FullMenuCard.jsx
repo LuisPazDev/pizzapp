@@ -1,4 +1,4 @@
-import { Card, Button, Badge } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import pizzabanner from "../assets/pizzabanner.png";
 
 export const FullMenuCard = () => {
@@ -9,14 +9,18 @@ export const FullMenuCard = () => {
         <div className="text-white">
           <h4 className="mb-3">
             <strong>
-              <i>IT'S TIME TO SHARE</i>
+              <b>
+                <i>IT'S TIME TO SHARE</i>
+              </b>
             </strong>
             <br />
             <strong>
-              <i>IT'S PIZZA TIME</i>
+              <b>
+                <i>IT'S PIZZA TIME</i>
+              </b>
             </strong>
           </h4>
-          <Button variant="dark" size="md">
+          <Button className="mt-2" variant="dark" size="md">
             {" "}
             <strong>
               <i>FULL MENU</i>
