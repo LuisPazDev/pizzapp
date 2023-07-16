@@ -27,7 +27,7 @@ export const NavBar = () => {
             <Navbar.Toggle
               onClick={handleShow}
               aria-controls={`offcanvasNavbar-expand-${expand}`}
-              className="border-3 border-dark"
+              className="border-1 border-dark"
             />
             <Navbar.Offcanvas
               show={show}

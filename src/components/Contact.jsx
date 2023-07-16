@@ -1,9 +1,7 @@
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { db } from "../components/Firebase";
 import { addDoc, collection } from "firebase/firestore";
-import { Card, Container } from "react-bootstrap";
+import { Container, Button, Form } from "react-bootstrap";
 
 export function Contact() {
   const [input, setInput] = useState({});
@@ -33,11 +31,19 @@ export function Contact() {
   };
 
   return (
-    <Card
-      className="mt-5 ms-auto me-auto p-4 b-2 b-dark"
-      style={{ width: "24rem" }}
-    >
-      <h2 className="mt-4 mb-5">Contact Us</h2>
+    <Container className="p-4">
+      <div className="mt-5 text-center">
+        <h2 className="mt-4 mb-5">
+          <strong>
+            <i>
+              <u>
+                <b>CONTACT US</b>
+              </u>
+            </i>
+          </strong>
+        </h2>
+      </div>
+
       <Form className="mt-auto mb-auto" id="form" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>
@@ -94,6 +100,6 @@ export function Contact() {
           </Button>
         </div>
       </Form>
-    </Card>
+    </Container>
   );
 }
