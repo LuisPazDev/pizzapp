@@ -3,7 +3,7 @@ import reservation from "../assets/reservation.png";
 
 export const ReservarionCard = () => {
   return (
-    <Card border="dark">
+    <Card className="border-dark border-3">
       <Card.Img src={reservation} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row>

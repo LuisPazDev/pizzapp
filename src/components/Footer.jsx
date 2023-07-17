@@ -12,20 +12,16 @@ export const Footer = () => {
             <i> Developed By </i>
           </strong>
         </h6>
-        <img src={logoluispazdev} alt="logo" style={{ height: 60 }} />
-      </div>
-      <div className="mt-2 mb-3">
         <a
           href="https://luispazdev.github.io/portfolio/#home"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <strong>
-            <i>CONTACT ME </i>
-          </strong>
+          <img src={logoluispazdev} alt="logo" style={{ height: 60 }} />
         </a>
       </div>
-      <div className="mb-3">
+
+      <div>
         <Badge bg="dark">
           <h6>
             <i>© 2022 All rights reserved </i>

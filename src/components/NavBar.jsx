@@ -19,7 +19,7 @@ export const NavBar = () => {
   return (
     <>
       {["md"].map((expand) => (
-        <Navbar key={expand} expand={expand} className="sticky-top bg-light ">
+        <Navbar key={expand} expand={expand} className="sticky-top bg-light">
           <Container fluid>
             <Navbar.Brand href="#">
               <img src={logo} alt="logo" />
@@ -27,7 +27,7 @@ export const NavBar = () => {
             <Navbar.Toggle
               onClick={handleShow}
               aria-controls={`offcanvasNavbar-expand-${expand}`}
-              className="border-1 border-dark"
+              className="border-0"
             />
             <Navbar.Offcanvas
               show={show}
