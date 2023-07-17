@@ -4,7 +4,7 @@ import oven from "../assets/combos.png";
 
 export const ComboCard = () => {
   return (
-    <Card>
+    <Card className="border-dark">
       <Card.Img src={oven} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
         <div>

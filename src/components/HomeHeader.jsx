@@ -16,17 +16,25 @@ export const HomeHeader = () => {
         </Col>
         <Col className="mt-1 mb-2">
           <Button className="me-1" variant="dark" size="md">
-            {" "}
-            <strong>
-              <i>PICK UP</i>
-            </strong>
+            <Link to="/menu">
+              {" "}
+              <strong>
+                <i>PICK UP</i>
+              </strong>
+            </Link>
           </Button>
           <img src={divider} style={{ width: 40 }} />
           <Button className="ms-1" variant="dark" size="md">
-            {" "}
-            <strong>
-              <i>DELIVERY</i>
-            </strong>
+            <a
+              href="https://www.ubereats.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <strong>
+                <i>DELIVERY</i>
+              </strong>
+            </a>
           </Button>
         </Col>
       </Row>

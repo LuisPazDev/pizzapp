@@ -4,7 +4,7 @@ import drinks from "../assets/drinks.png";
 
 export const DrinksCard = () => {
   return (
-    <Card>
+    <Card className="border-dark">
       <Card.Img src={drinks} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
         <div>

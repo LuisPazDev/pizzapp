@@ -3,7 +3,7 @@ import pizzabanner from "../assets/pizzabanner.png";
 
 export const FullMenuCard = () => {
   return (
-    <Card>
+    <Card className="border-dark">
       <Card.Img src={pizzabanner} style={{ minHeight: 200 }} />
       <Card.ImgOverlay className="d-flex flex-column justify-column justify-content-center">
         <Row className="text-white">

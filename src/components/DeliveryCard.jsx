@@ -4,7 +4,7 @@ import delivery from "../assets/delivery.png";
 
 export const DeliveryCard = () => {
   return (
-    <Card className="border-dark border-3">
+    <Card className="border-dark border-2">
       <Card.Img src={delivery} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row>

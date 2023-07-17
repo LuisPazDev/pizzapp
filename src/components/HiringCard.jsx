@@ -4,7 +4,7 @@ import hiring from "../assets/hiring.png";
 
 export const HiringCard = () => {
   return (
-    <Card className="border-dark border-3">
+    <Card className="border-dark border-2">
       <Card.Img src={hiring} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row>

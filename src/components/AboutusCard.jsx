@@ -3,7 +3,7 @@ import about from "../assets/aboutcard.png";
 
 export const AboutusCard = () => {
   return (
-    <Card>
+    <Card className="border-dark">
       <Card.Img src={about} style={{ minHeight: 200 }} />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row className="text-white">
