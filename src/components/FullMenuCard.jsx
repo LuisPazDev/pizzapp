@@ -27,7 +27,7 @@ export const FullMenuCard = () => {
               <Button variant="dark" size="lg">
                 {" "}
                 <strong>
-                  <i>FULL MENU</i>
+                  <i>SEE MENU</i>
                 </strong>
               </Button>
             </div>

@@ -12,9 +12,14 @@ export const AboutusCard = () => {
               <Badge className="bg-white text-black">
                 <h5>
                   <strong>
-                    <i> SINCE 2019</i>
+                    <i>SERVING</i>
                   </strong>
                 </h5>
+                <h6>
+                  <i>
+                    <h6>SINCE 2019</h6>
+                  </i>
+                </h6>
               </Badge>
             </div>
             <div className="mt-3">

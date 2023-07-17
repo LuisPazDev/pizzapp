@@ -48,31 +48,51 @@ export const NavBar = () => {
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                     <NavDropdown.Item>
-                      <Link onClick={handleClose} to="/menu">
+                      <Link
+                        className="text-dark"
+                        onClick={handleClose}
+                        to="/menu"
+                      >
                         PIZZAS
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item>
-                      <Link onClick={handleClose} to="/menu">
+                      <Link
+                        className="text-dark"
+                        onClick={handleClose}
+                        to="/menu"
+                      >
                         DRINKS
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item>
-                      <Link onClick={handleClose} to="/menu">
+                      <Link
+                        className="text-dark"
+                        onClick={handleClose}
+                        to="/menu"
+                      >
                         DESSERTS
                       </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
 
                   <Nav.Link>
-                    <Link onClick={handleClose} to="/about">
+                    <Link
+                      className="text-dark"
+                      onClick={handleClose}
+                      to="/about"
+                    >
                       ABOUT
                     </Link>
                   </Nav.Link>
                   <Nav.Link>
-                    <Link onClick={handleClose} to="/contact">
+                    <Link
+                      className="text-dark"
+                      onClick={handleClose}
+                      to="/contact"
+                    >
                       CONTACT
                     </Link>
                   </Nav.Link>
