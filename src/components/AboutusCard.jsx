@@ -1,5 +1,6 @@
 import { Card, Button, Badge, Row, Col } from "react-bootstrap";
 import about from "../assets/aboutcard.png";
+import { Link } from "react-router-dom";
 
 export const AboutusCard = () => {
   return (
@@ -24,10 +25,12 @@ export const AboutusCard = () => {
             </div>
             <div className="mt-3">
               <Button variant="dark" size="lg">
-                {" "}
-                <strong>
-                  <i>ABOUT US</i>
-                </strong>
+                <Link to="/about" className="text-white">
+                  {" "}
+                  <strong>
+                    <i>ABOUT US</i>
+                  </strong>
+                </Link>
               </Button>
             </div>
           </Col>

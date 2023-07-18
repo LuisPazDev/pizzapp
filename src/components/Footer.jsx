@@ -4,7 +4,7 @@ import logoluispazdev from "../assets/logoluispazdev.png";
 
 export const Footer = () => {
   return (
-    <Container fluid className="footer-bg text-center mt-3 mb-3">
+    <Container fluid className="footer-bg text-center mt-3">
       <hr />
       <div className="mt-2">
         <h6>
@@ -17,16 +17,16 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={logoluispazdev} alt="logo" style={{ height: 60 }} />
+          <img src={logoluispazdev} alt="logo" style={{ height: 70 }} />
         </a>
       </div>
 
       <div>
-        <Badge bg="dark">
-          <h6>
+        <p>
+          <b>
             <i>© 2022 All rights reserved </i>
-          </h6>
-        </Badge>
+          </b>
+        </p>
       </div>
     </Container>
   );
