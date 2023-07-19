@@ -1,10 +1,11 @@
-import { Card, Badge, Button, Row, Col } from "react-bootstrap";
-import pizzabanner from "../assets/pizzabanner.png";
+import { Card, Button, Row, Col } from "react-bootstrap";
 
-export const FullMenuCard = () => {
+import pizzaparty from "../../assets/pizzaparty.png";
+
+export const SeeMenuCard = () => {
   return (
     <Card className="border-dark">
-      <Card.Img src={pizzabanner} style={{ minHeight: 200 }} />
+      <Card.Img src={pizzaparty} style={{ minHeight: 200 }} />
       <Card.ImgOverlay className="d-flex flex-column justify-column justify-content-center">
         <Row className="text-white">
           <Col className="text-center">

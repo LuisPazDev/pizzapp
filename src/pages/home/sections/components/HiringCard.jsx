@@ -1,22 +1,25 @@
 import { Card, Button, Row, Col, Badge } from "react-bootstrap";
-import reservation from "../assets/reservation.png";
 
-export const ReservarionCard = () => {
+import hiring from "../../assets/hiring.png";
+
+export const HiringCard = () => {
   return (
     <Card className="border-dark border-2">
-      <Card.Img src={reservation} alt="Card image" />
+      <Card.Img src={hiring} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row>
-          <Col>{/* Space Column */}</Col>
+          <Col xs={5} sm={5} md={5}>
+            {/* Space Column */}
+          </Col>
           <Col>
             <Row>
               <Col>
                 <Badge bg="dark">
-                  <i>DINE IN </i>
+                  <i>JOBS</i>
                 </Badge>
                 <h6 className="mt-1">
                   <strong>
-                    <i>MAKE A RESERVATION</i>
+                    <i>WE ARE HIRING NOW</i>
                   </strong>
                 </h6>
               </Col>
@@ -26,7 +29,7 @@ export const ReservarionCard = () => {
                 <Button variant="dark" size="sm">
                   {" "}
                   <strong>
-                    <i>RESERVATIONS</i>
+                    <i>APPLY HERE</i>
                   </strong>
                 </Button>
               </Col>

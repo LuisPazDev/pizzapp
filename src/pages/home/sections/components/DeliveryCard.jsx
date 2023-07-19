@@ -1,6 +1,6 @@
 import { Button, Badge, Card, Row, Col } from "react-bootstrap";
 
-import delivery from "../assets/delivery.png";
+import delivery from "../../assets/delivery.png";
 
 export const DeliveryCard = () => {
   return (

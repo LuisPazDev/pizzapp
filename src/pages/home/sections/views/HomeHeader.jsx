@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Row, Col, Button, Container } from "react-bootstrap";
 
-import divider from "../assets/divider.svg";
+import divider from "../../assets/divider.svg";
 
 export const HomeHeader = () => {
   return (

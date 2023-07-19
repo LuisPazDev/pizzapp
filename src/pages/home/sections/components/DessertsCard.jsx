@@ -1,6 +1,6 @@
-import { Button, Card, Badge } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
-import desserts from "../assets/desserts.png";
+import desserts from "../../assets/desserts.png";
 
 export const DessertsCard = () => {
   return (

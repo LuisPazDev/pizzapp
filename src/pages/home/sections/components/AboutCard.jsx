@@ -1,11 +1,12 @@
-import { Card, Button, Badge, Row, Col } from "react-bootstrap";
-import about from "../assets/aboutcard.png";
 import { Link } from "react-router-dom";
+import { Card, Button, Badge, Row, Col } from "react-bootstrap";
 
-export const AboutusCard = () => {
+import aboutcard from "../../assets/aboutcard.png";
+
+export const AboutCard = () => {
   return (
     <Card className="border-dark">
-      <Card.Img src={about} style={{ minHeight: 200 }} />
+      <Card.Img src={aboutcard} style={{ minHeight: 200 }} />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row className="text-white">
           <Col>
@@ -16,11 +17,9 @@ export const AboutusCard = () => {
                     <i>SERVING</i>
                   </strong>
                 </h5>
-                <h6>
-                  <i>
-                    <h6>SINCE 2019</h6>
-                  </i>
-                </h6>
+                <p>
+                  <i>SINCE 2019</i>
+                </p>
               </Badge>
             </div>
             <div className="mt-3">

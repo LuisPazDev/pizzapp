@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { db } from "../components/Firebase";
+import { db } from "../../components/Firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { Container, Button, Form, Row, Card } from "react-bootstrap";
 

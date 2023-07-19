@@ -1,10 +1,12 @@
-import { PizzaCarousel } from "./PizzaCarousel";
-import { DrinksCard } from "./DrinksCard";
-import { DessertsCard } from "./DessertsCard";
-import { ComboCard } from "./ComboCard";
+import {
+  PizzaCarousel,
+  PizzaCard,
+  DrinksCard,
+  DessertsCard,
+} from "../components";
 import { Row, Col } from "react-bootstrap";
 
-export const HomeMainCard = () => {
+export const HomeMain = () => {
   return (
     <Row xs={1} sm={1} md={2}>
       {/* Pizza Carousel */}
@@ -15,7 +17,7 @@ export const HomeMainCard = () => {
       <Col>
         <Row>
           <Col xs={12} className="mb-3">
-            <ComboCard />
+            <PizzaCard />
           </Col>
         </Row>
 

@@ -1,8 +1,8 @@
-import { Container, Badge } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
-import logoluispazdev from "../assets/logoluispazdev.png";
+import logoluispazdev from "../../assets/logoluispazdev.png";
 
-export const Footer = () => {
+export const HomeFooter = () => {
   return (
     <Container fluid className="footer-bg text-center mt-3">
       <hr />
@@ -17,15 +17,13 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={logoluispazdev} alt="logo" style={{ height: 70 }} />
+          <img src={logoluispazdev} alt="logo" style={{ height: 50 }} />
         </a>
       </div>
 
       <div>
         <p>
-          <b>
-            <i>© 2022 All rights reserved </i>
-          </b>
+          <i>© 2022 All rights reserved </i>
         </p>
       </div>
     </Container>

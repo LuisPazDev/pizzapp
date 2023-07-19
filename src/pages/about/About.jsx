@@ -1,20 +1,19 @@
 import { Link } from "react-router-dom";
 import { Col, Container, Image, Row } from "react-bootstrap";
 
-import image from "../assets/aboutuspage.png";
+import image from "../about/assets/aboutuspage.png";
 
-export const AboutPage = () => {
+export const About = () => {
   return (
     <Container fluid>
       <Row xs={1} sm={1} md={1} className="ms-auto text-center mt-4">
         <Row className="mt-2 mb-4">
           <Col xs={12} sm={12} md={12}>
-            <h2>FAMILY OWNED</h2>
-            <h5>
+            <h2>
               <strong>
-                <i>SINCE 2019</i>
+                <i>ABOUT US</i>
               </strong>
-            </h5>
+            </h2>
           </Col>
         </Row>
 
@@ -25,6 +24,16 @@ export const AboutPage = () => {
             md={6}
             className="d-flex flex-column justify-content-center"
           >
+            <h5>
+              <strong>
+                <i>FAMILY OWNED</i>
+              </strong>
+            </h5>
+            <h6>
+              <strong>
+                <i> SINCE 2017</i>
+              </strong>
+            </h6>
             <p className="p-about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               voluptatum, voluptate, quibusdam, quia voluptas quos dolorum
