@@ -1,6 +1,7 @@
 import { Card, Button, Row, Col, Badge } from "react-bootstrap";
 
 import hiring from "../../assets/hiring.png";
+import { Link } from "react-router-dom";
 
 export const HiringCard = () => {
   return (
@@ -28,9 +29,11 @@ export const HiringCard = () => {
               <Col>
                 <Button variant="dark" size="sm">
                   {" "}
-                  <strong>
-                    <i>APPLY HERE</i>
-                  </strong>
+                  <Link to="/contact">
+                    <strong>
+                      <i>APPLY HERE</i>
+                    </strong>
+                  </Link>
                 </Button>
               </Col>
             </Row>

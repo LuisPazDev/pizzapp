@@ -1,52 +1,85 @@
-import { useState, useEffect } from "react";
-import { db } from "../../components/Firebase";
-import { collection, onSnapshot, query } from "firebase/firestore";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { Link } from "react-router-dom";
+import { Card, Button, Row, Col, Badge } from "react-bootstrap";
+
+import menupizza from "./assets/menupizzas.png";
+import menudrinhs from "./assets/menudrinks.png";
+import menudesserts from "./assets/menudesserts.png";
 
 export const Menu = () => {
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-    const q = query(collection(db, "menu"));
-    onSnapshot(q, (querySnapshot) => {
-      setList(
-        querySnapshot.docs.map((item) => ({
-          id: item.id,
-          data: item.data(),
-        }))
-      );
-    });
-  }, []);
-
   return (
-    <>
-      <div>
-        <h1 className="text-center mt-5"> Pizzas </h1>
-      </div>
-      <Row xs={1} md={2} lg={3} className="g-4 ">
-        {list.map((item) => (
-          <Col>
-            <Card
-              style={{ width: "14rem" }}
-              className="text-center ms-auto me-auto"
-            >
-              <Card.Img variant="top" src={item.data.img} />
-              <Card.Body>
-                <Card.Title>{item.data.name}</Card.Title>
-                <Card.Text>
-                  <p>{item.data.size}</p>
-
-                  <p> {item.data.price}</p>
-                </Card.Text>
-                <Button> See Ingredients </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </>
+    <Row className="justify-content-center">
+      <Col xs={12} md={4} lg={4} className="mb-4">
+        <Card className="border-dark">
+          <Card.Img src={menupizza} alt="Card image" />
+          <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
+            <div>
+              <Badge pill className="bg-white text-dark">
+                <strong>
+                  <i>PIZZAS</i>
+                </strong>
+              </Badge>
+            </div>
+            <div>
+              <Button variant="dark" size="md" className="mt-2 mb-1">
+                {" "}
+                <Link to="/menu/pizzas">
+                  <strong>
+                    <i>ORDER NOW</i>
+                  </strong>
+                </Link>
+              </Button>
+            </div>
+          </Card.ImgOverlay>
+        </Card>
+      </Col>
+      <Col xs={12} md={4} lg={4} className="mb-4">
+        <Card className="border-dark">
+          <Card.Img src={menudrinhs} alt="Card image" />
+          <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
+            <div>
+              <Badge pill className="bg-white text-dark">
+                <strong>
+                  <i>DRINKS</i>
+                </strong>
+              </Badge>
+            </div>
+            <div>
+              <Button variant="dark" size="md" className="mt-2 mb-1">
+                {" "}
+                <Link to="/menu/drinks">
+                  <strong>
+                    <i>ORDER NOW</i>
+                  </strong>
+                </Link>
+              </Button>
+            </div>
+          </Card.ImgOverlay>
+        </Card>
+      </Col>
+      <Col xs={12} md={4} lg={4} className="mb-4">
+        <Card className="border-dark">
+          <Card.Img src={menudesserts} alt="Card image" />
+          <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
+            <div>
+              <Badge pill className="bg-white text-dark">
+                <strong>
+                  <i>DESSERTS</i>
+                </strong>
+              </Badge>
+            </div>
+            <div>
+              <Button variant="dark" size="md" className="mt-2 mb-1">
+                {" "}
+                <Link to="/menu/desserts">
+                  <strong>
+                    <i>ORDER NOW</i>
+                  </strong>
+                </Link>
+              </Button>
+            </div>
+          </Card.ImgOverlay>
+        </Card>
+      </Col>
+    </Row>
   );
 };

@@ -1,6 +1,7 @@
 import { Button, Card } from "react-bootstrap";
 
 import desserts from "../../assets/desserts.png";
+import { Link } from "react-router-dom";
 
 export const DessertsCard = () => {
   return (
@@ -10,9 +11,11 @@ export const DessertsCard = () => {
         <Card.Text>
           <Button variant="dark" size="md">
             {" "}
-            <strong>
-              <i>ORDER</i>
-            </strong>
+            <Link to="/menu/desserts">
+              <strong>
+                <i>ORDER</i>
+              </strong>
+            </Link>
           </Button>
         </Card.Text>
       </Card.ImgOverlay>

@@ -27,10 +27,15 @@ export const DeliveryCard = () => {
             <Row>
               <Col>
                 <Button variant="dark" size="sm">
-                  {" "}
-                  <strong>
-                    <i>ORDER NOW</i>
-                  </strong>
+                  <a
+                    href="https://www.ubereats.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>
+                      <i>ORDER NOW</i>
+                    </strong>
+                  </a>{" "}
                 </Button>
               </Col>
             </Row>

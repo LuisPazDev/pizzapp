@@ -1,6 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 
 import mainpizza from "../../assets/mainpizza.png";
+import { Link } from "react-router-dom";
 
 export const PizzaCard = () => {
   return (
@@ -10,9 +11,11 @@ export const PizzaCard = () => {
         <div>
           <Button variant="dark" size="md" className="mb-1">
             {" "}
-            <strong>
-              <i>ORDER NOW</i>
-            </strong>
+            <Link to="/menu/pizzas">
+              <strong>
+                <i>ORDER NOW</i>
+              </strong>
+            </Link>
           </Button>
         </div>
       </Card.ImgOverlay>

@@ -3,6 +3,7 @@ import { Carousel, Button } from "react-bootstrap";
 import mainlogo from "../../assets/mainlogo.png";
 import pepperoniPizza from "../../assets/pepperonipizza.png";
 import primaveraPizza from "../../assets/primaverapizza.png";
+import { Link } from "react-router-dom";
 
 export const PizzaCarousel = () => {
   return (
@@ -19,9 +20,11 @@ export const PizzaCarousel = () => {
         />
         <Carousel.Caption className="text-center">
           <Button variant="dark" size="lg" className="mt-1">
-            <strong>
-              <i>ORDER NOW</i>
-            </strong>
+            <Link to="/menu/pizzas">
+              <strong>
+                <i>ORDER NOW</i>
+              </strong>
+            </Link>
           </Button>
         </Carousel.Caption>
       </Carousel.Item>
@@ -29,9 +32,11 @@ export const PizzaCarousel = () => {
         <img className="d-block w-100" src={primaveraPizza} alt="Third slide" />
         <Carousel.Caption className="text-center">
           <Button variant="dark" size="lg" className="mt-1">
-            <strong>
-              <i>ORDER NOW</i>
-            </strong>
+            <Link to="/menu/pizzas">
+              <strong>
+                <i>ORDER NOW</i>
+              </strong>
+            </Link>
           </Button>
         </Carousel.Caption>
       </Carousel.Item>

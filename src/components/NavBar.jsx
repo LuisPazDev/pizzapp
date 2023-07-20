@@ -51,7 +51,7 @@ export const NavBar = () => {
                       <Link
                         className="text-dark"
                         onClick={handleClose}
-                        to="/menu"
+                        to="/menu/pizzas"
                       >
                         PIZZAS
                       </Link>
@@ -61,7 +61,7 @@ export const NavBar = () => {
                       <Link
                         className="text-dark"
                         onClick={handleClose}
-                        to="/menu"
+                        to="/menu/drinks"
                       >
                         DRINKS
                       </Link>
@@ -71,7 +71,7 @@ export const NavBar = () => {
                       <Link
                         className="text-dark"
                         onClick={handleClose}
-                        to="/menu"
+                        to="/menu/desserts"
                       >
                         DESSERTS
                       </Link>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, Button, Row, Col, Badge } from "react-bootstrap";
 import reservation from "../../assets/reservation.png";
 
@@ -25,9 +26,11 @@ export const ReservationCard = () => {
               <Col>
                 <Button variant="dark" size="sm">
                   {" "}
-                  <strong>
-                    <i>RESERVATIONS</i>
-                  </strong>
+                  <Link to="/contact">
+                    <strong>
+                      <i>BOOK NOW</i>
+                    </strong>
+                  </Link>
                 </Button>
               </Col>
             </Row>

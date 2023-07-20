@@ -1,6 +1,7 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
 
 import pizzaparty from "../../assets/pizzaparty.png";
+import { Link } from "react-router-dom";
 
 export const SeeMenuCard = () => {
   return (
@@ -27,9 +28,11 @@ export const SeeMenuCard = () => {
             <div>
               <Button variant="dark" size="lg">
                 {" "}
-                <strong>
-                  <i>SEE MENU</i>
-                </strong>
+                <Link to="/menu">
+                  <strong>
+                    <i>SEE MENU</i>
+                  </strong>
+                </Link>
               </Button>
             </div>
           </Col>
