@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/pizzapp/static/css/main.164255aa.css",
-    "main.js": "/pizzapp/static/js/main.5c584c4d.js",
+    "main.js": "/pizzapp/static/js/main.5bd7236a.js",
     "static/media/pepperonipizza.png": "/pizzapp/static/media/pepperonipizza.b4b3b7b1d6bda77e520d.png",
     "static/media/mainlogo.png": "/pizzapp/static/media/mainlogo.6488ac98c76336c49916.png",
     "static/media/primaverapizza.png": "/pizzapp/static/media/primaverapizza.b50300ee0437e4343c06.png",
     "static/media/aboutuspage.png": "/pizzapp/static/media/aboutuspage.04f2b86fd7d36bab5bf6.png",
     "static/media/mainpizza.png": "/pizzapp/static/media/mainpizza.b8550d98090af00e9401.png",
-    "static/media/menupizzas.png": "/pizzapp/static/media/menupizzas.d98905da0c693c6da73b.png",
+    "static/media/menupizzas.png": "/pizzapp/static/media/menupizzas.9d972275b56da139d378.png",
     "static/media/menudesserts.png": "/pizzapp/static/media/menudesserts.955bbe344e70b9b34f55.png",
     "static/media/menudrinks.png": "/pizzapp/static/media/menudrinks.d2ef6c240085b0084b3c.png",
     "static/media/pizzaparty.png": "/pizzapp/static/media/pizzaparty.fdebe5f384a26fdae68a.png",
     "static/media/aboutcard.png": "/pizzapp/static/media/aboutcard.cb6adf95f689ee9f43b3.png",
     "static/media/desserts.png": "/pizzapp/static/media/desserts.f310f574b66e0a750cfa.png",
     "static/media/drinks.png": "/pizzapp/static/media/drinks.7f8edd3deb43a97f7e33.png",
-    "static/media/reservation.png": "/pizzapp/static/media/reservation.2e378b65e5ef4ce2a8a4.png",
-    "static/media/hiring.png": "/pizzapp/static/media/hiring.902e73dfefe6d277f6d2.png",
-    "static/media/delivery.png": "/pizzapp/static/media/delivery.254b2f49b1e1ff362e98.png",
+    "static/media/reservation.png": "/pizzapp/static/media/reservation.cd4c22ca79a0dbd8e66b.png",
+    "static/media/delivery.png": "/pizzapp/static/media/delivery.cb1b5b50d1b8b2088b52.png",
+    "static/media/hiring.png": "/pizzapp/static/media/hiring.def6e22fb83b6d42eac1.png",
     "index.html": "/pizzapp/index.html",
     "static/media/divider.svg": "/pizzapp/static/media/divider.bbc24698b825b7cad47df742441bcf88.svg",
     "main.164255aa.css.map": "/pizzapp/static/css/main.164255aa.css.map",
-    "main.5c584c4d.js.map": "/pizzapp/static/js/main.5c584c4d.js.map"
+    "main.5bd7236a.js.map": "/pizzapp/static/js/main.5bd7236a.js.map"
   },
   "entrypoints": [
     "static/css/main.164255aa.css",
-    "static/js/main.5c584c4d.js"
+    "static/js/main.5bd7236a.js"
   ]
 }
