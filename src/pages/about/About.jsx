@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Badge, Col, Container, Image, Row } from "react-bootstrap";
 
 import image from "../about/assets/aboutuspage.png";
 
@@ -8,12 +8,14 @@ export const About = () => {
     <Container fluid>
       <Row xs={1} sm={1} md={1} className="ms-auto text-center mt-4">
         <Row className="mt-2 mb-4">
-          <Col xs={12} sm={12} md={12}>
-            <h2>
-              <strong>
-                <i>ABOUT US</i>
-              </strong>
-            </h2>
+          <Col xs={12} md={12} lg={12} className="mb-4">
+            <h1 className="text-center">
+              <Badge pill className="bg-dark text-white">
+                <strong>
+                  <i>ABOUT US</i>
+                </strong>
+              </Badge>
+            </h1>
           </Col>
         </Row>
 

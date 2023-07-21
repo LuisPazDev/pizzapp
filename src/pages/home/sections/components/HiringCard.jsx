@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const HiringCard = () => {
   return (
-    <Card className="border-dark border-2">
+    <Card className="border-dark">
       <Card.Img src={hiring} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row>
