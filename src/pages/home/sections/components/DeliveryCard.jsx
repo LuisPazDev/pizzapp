@@ -1,10 +1,24 @@
 import { Button, Badge, Card, Row, Col } from "react-bootstrap";
 
 import delivery from "../../assets/delivery.png";
+import { useState } from "react";
 
 export const DeliveryCard = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  const handleButtonMouseEnter = () => {
+    setShowButton(true);
+  };
+  const handleButtonMouseLeave = () => {
+    setShowButton(false);
+  };
+
   return (
-    <Card className="border-dark">
+    <Card
+      onMouseEnter={handleButtonMouseEnter}
+      onMouseLeave={handleButtonMouseLeave}
+      className={showButton ? "menu-card-hover" : "border-dark"}
+    >
       <Card.Img src={delivery} alt="Card image" />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
         <Row>
@@ -14,29 +28,43 @@ export const DeliveryCard = () => {
           <Col>
             <Row>
               <Col>
-                <Badge bg="dark">
-                  <i>NOW </i>
-                </Badge>
-                <h6 className="mt-1">
-                  <strong>
-                    <i>OFFERING FREE DELIVERY</i>
-                  </strong>
-                </h6>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Button variant="dark" size="sm">
-                  <a
-                    href="https://www.ubereats.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <strong>
-                      <i>ORDER NOW</i>
-                    </strong>
-                  </a>{" "}
-                </Button>
+                {
+                  // If showButton is true, then show the button
+                  showButton ? (
+                    <div>
+                      <h6 className="mt-1">
+                        IN PARNERTSHIP WITH <br />
+                        <Badge bg="dark">
+                          <i>UBER EATS</i>
+                        </Badge>
+                      </h6>
+                      <br />
+
+                      <Button variant="dark" size="md">
+                        <a
+                          href="https://www.ubereats.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <strong>
+                            <i>ORDER NOW</i>
+                          </strong>
+                        </a>{" "}
+                      </Button>
+                    </div>
+                  ) : (
+                    <div>
+                      <h6 className="mt-1">
+                        <Badge bg="dark">
+                          <i>NOW </i>
+                        </Badge>
+                        <strong>
+                          <i>OFFERING FREE DELIVERY</i>
+                        </strong>
+                      </h6>
+                    </div>
+                  )
+                }
               </Col>
             </Row>
           </Col>
