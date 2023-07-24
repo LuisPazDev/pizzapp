@@ -42,14 +42,28 @@ export function Contact() {
   return (
     <Container fluid className="p-4">
       <Row>
-        <Col xs={12} md={12} lg={12} className="mb-4">
-          <h1 className="text-center">
-            <Badge pill className="bg-dark text-white">
+        <Col xs={12} md={12} lg={12} className="text-center mb-4">
+          <div>
+            <h3>
+              <Badge pill className="bg-dark text-white">
+                <strong>
+                  <i>CONTACT US</i>
+                </strong>
+              </Badge>
+            </h3>
+          </div>
+          <div className="mt-1">
+            <p>
               <strong>
-                <i>CONTACT US</i>
+                <i>
+                  {" "}
+                  Send us a message with your special request.
+                  <br />
+                  We are here to help you!
+                </i>
               </strong>
-            </Badge>
-          </h1>
+            </p>
+          </div>
         </Col>
       </Row>
       <Row className="justify-content-center">
@@ -57,11 +71,11 @@ export function Contact() {
           <Form className="mt-auto mb-auto" id="form" onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicName">
               <Form.Label>
-                <h6>
+                <p>
                   <strong>
                     <i>NAME</i>
                   </strong>
-                </h6>
+                </p>
               </Form.Label>
               <Form.Control
                 onChange={handleChange}

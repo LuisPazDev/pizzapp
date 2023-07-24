@@ -9,13 +9,22 @@ export const About = () => {
       <Row xs={1} sm={1} md={1} className="ms-auto text-center mt-4">
         <Row className="mt-2 mb-4">
           <Col xs={12} md={12} lg={12} className="mb-4">
-            <h1 className="text-center">
-              <Badge pill className="bg-dark text-white">
+            <div>
+              <h3 className="text-center">
+                <Badge pill className="bg-dark text-white">
+                  <strong>
+                    <i>ABOUT US</i>
+                  </strong>
+                </Badge>
+              </h3>
+            </div>
+            <div className="mt-1">
+              <p>
                 <strong>
-                  <i>ABOUT US</i>
+                  <i> Learn more about us! </i>
                 </strong>
-              </Badge>
-            </h1>
+              </p>
+            </div>
           </Col>
         </Row>
 

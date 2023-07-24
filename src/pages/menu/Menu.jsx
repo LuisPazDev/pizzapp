@@ -23,15 +23,15 @@ export const Menu = () => {
       <Row className="justify-content-center mt-3 text-center">
         <Col xs={12} md={12} lg={12} className="mt-4 mb-2">
           <div>
-            <h1>
+            <h3>
               <Badge pill className="bg-dark text-white">
                 <strong>
                   <i>MENU</i>
                 </strong>
               </Badge>
-            </h1>
+            </h3>
           </div>
-          <div className="mt-3">
+          <div className="mt-1">
             <p>
               <strong>
                 <i> Choose your favorite pizza, drink and dessert! </i>
@@ -153,7 +153,7 @@ export const Menu = () => {
                     <h2>
                       <Badge pill className="bg-white text-dark">
                         <strong>
-                          <i>PIZZAS</i>
+                          <i>DESSERTS</i>
                         </strong>
                       </Badge>
                     </h2>
