@@ -32,14 +32,6 @@ export const DeliveryCard = () => {
                   // If showButton is true, then show the button
                   showButton ? (
                     <div>
-                      <h6 className="mt-1">
-                        IN PARNERTSHIP WITH <br />
-                        <Badge bg="dark">
-                          <i>UBER EATS</i>
-                        </Badge>
-                      </h6>
-                      <br />
-
                       <Button variant="dark" size="md">
                         <a
                           href="https://www.ubereats.com/"
@@ -54,10 +46,12 @@ export const DeliveryCard = () => {
                     </div>
                   ) : (
                     <div>
-                      <h6 className="mt-1">
+                      <h5>
                         <Badge bg="dark">
                           <i>NOW </i>
                         </Badge>
+                      </h5>
+                      <h6 className="mt-1">
                         <strong>
                           <i>OFFERING FREE DELIVERY</i>
                         </strong>
