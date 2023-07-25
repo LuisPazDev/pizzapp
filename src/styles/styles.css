@@ -37,7 +37,7 @@ a:hover {
 
 .p-about {
   margin-top: 25px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   text-align: justify;
@@ -53,7 +53,7 @@ a:hover {
 }
 
 .menu-card-hover {
-  opacity: 0.9;
-  transform: scale(0.9);
+  opacity: 0.9.6;
+  transform: scale(1.05);
   transition: all 0.1s ease-in-out;
 }

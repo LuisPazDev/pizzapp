@@ -54,14 +54,12 @@ export function Contact() {
           </div>
           <div className="mt-1">
             <p>
-              <strong>
-                <i>
-                  {" "}
-                  Send us a message with your special request.
-                  <br />
-                  We are here to help you!
-                </i>
-              </strong>
+              <i>
+                {" "}
+                Send us a message with your special request.
+                <br />
+                We are here to help you!
+              </i>
             </p>
           </div>
         </Col>

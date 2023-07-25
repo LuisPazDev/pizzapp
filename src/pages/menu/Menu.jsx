@@ -33,9 +33,7 @@ export const Menu = () => {
           </div>
           <div className="mt-1">
             <p>
-              <strong>
-                <i> Choose your favorite pizza, drink and dessert! </i>
-              </strong>
+              <i> Choose your favorite pizza, drink and dessert! </i>
             </p>
           </div>
         </Col>
@@ -68,13 +66,13 @@ export const Menu = () => {
                   </div>
                 ) : (
                   <div>
-                    <h2>
+                    <h3>
                       <Badge pill className="bg-white text-dark">
                         <strong>
                           <i>PIZZAS</i>
                         </strong>
                       </Badge>
-                    </h2>
+                    </h3>
                   </div>
                 )
               }
@@ -109,13 +107,13 @@ export const Menu = () => {
                   </div>
                 ) : (
                   <div>
-                    <h2>
+                    <h3>
                       <Badge pill className="bg-white text-dark">
                         <strong>
                           <i>DRINKS</i>
                         </strong>
                       </Badge>
-                    </h2>
+                    </h3>
                   </div>
                 )
               }
@@ -150,13 +148,13 @@ export const Menu = () => {
                   </div>
                 ) : (
                   <div>
-                    <h2>
+                    <h3>
                       <Badge pill className="bg-white text-dark">
                         <strong>
                           <i>DESSERTS</i>
                         </strong>
                       </Badge>
-                    </h2>
+                    </h3>
                   </div>
                 )
               }

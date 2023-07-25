@@ -20,9 +20,7 @@ export const About = () => {
             </div>
             <div className="mt-1">
               <p>
-                <strong>
-                  <i> Learn more about us! </i>
-                </strong>
+                <i> Learn more about us! </i>
               </p>
             </div>
           </Col>
