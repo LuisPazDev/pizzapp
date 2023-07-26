@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { db } from "../../../components/Firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
-import { Card, Button, Badge, Row, Col } from "react-bootstrap";
+import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
 
 export const MenuPizzas = () => {
   const [list, setList] = useState([]);
@@ -18,58 +18,83 @@ export const MenuPizzas = () => {
     });
   }, []);
 
+  const [showButton, setShowButton] = useState(false);
+
+  const handleShowButton = (key) => setShowButton(key);
+  const handleNoShowButton = () => setShowButton(false);
+
   return (
-    <Row>
-      <Row>
-        <div className="text-center mt-4">
-          <h3>
-            <Badge pill bg="dark">
-              <strong>
-                <i>PIZZAS</i>
-              </strong>
-            </Badge>
-          </h3>
-          <p>
-            <i>
-              Choose your favorite pizza
-              <br />
-              and we will prepare it for you with the best ingredients.
-            </i>
-          </p>
-        </div>
-      </Row>
+    <Container fluid>
+      <Row className="text-center">
+        <Row>
+          <div className="mt-4">
+            <h3>
+              <Badge pill bg="dark">
+                <strong>
+                  <i>PIZZAS</i>
+                </strong>
+              </Badge>
+            </h3>
+            <p>
+              <i>Choose your favorite pizza</i>
+            </p>
+          </div>
+        </Row>
 
-      <Row xs={1} md={3} lg={3} className="g-4 ">
-        {list.map((item) => (
-          <Col>
-            <Card
-              border="dark"
-              style={{ width: "14rem" }}
-              className="text-center ms-auto me-auto rounded-start"
-            >
-              <Card.Img
-                className="img-fluid"
-                variant="top"
-                src={item.data.img}
-              />
-              <hr />
-              <Card.Body>
-                <Card.Title>{item.data.name}</Card.Title>
-                <Card.Text>
-                  <p>{item.data.size}</p>
+        <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
+          {list.map((item, key) => (
+            <Col className="mt-3 mb-3">
+              <Card
+                key={item.id}
+                onMouseEnter={() => handleShowButton(item.id)}
+                onMouseLeave={handleNoShowButton}
+                border="dark"
+                className="text-center ms-auto me-auto rounded-start"
+              >
+                <Card.Img
+                  className="img-fluid"
+                  variant="top"
+                  src={item.data.img}
+                />
 
-                  <p> {item.data.price}</p>
-                </Card.Text>
-                <Button variant="dark">
-                  <strong>
-                    <i>ORDER</i>
-                  </strong>
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
+                <Card.Body>
+                  <Card.Title>
+                    <h3>
+                      <Badge
+                        pill
+                        bg="light"
+                        className="text-dark border border-dark"
+                      >
+                        <b>
+                          <i>{item.data.name}</i>
+                        </b>
+                      </Badge>
+                    </h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      <strong>
+                        <i>{item.data.size}</i>
+                      </strong>
+                    </p>
+
+                    <p>
+                      <strong>{item.data.price}</strong>
+                    </p>
+                  </Card.Text>
+                  {showButton && (
+                    <Button size="lg" variant="dark">
+                      <strong>
+                        <i>ORDER</i>
+                      </strong>
+                    </Button>
+                  )}
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </Row>
-    </Row>
+    </Container>
   );
 };

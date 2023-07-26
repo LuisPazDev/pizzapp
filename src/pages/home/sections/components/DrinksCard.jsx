@@ -24,7 +24,7 @@ export const DrinksCard = () => {
             <Card.Img src={drinks} alt="Card image" />
             <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
               <div>
-                <Button variant="dark" size="sm">
+                <Button variant="dark" size="md">
                   {" "}
                   <Link to="/menu/drinks">
                     <strong>

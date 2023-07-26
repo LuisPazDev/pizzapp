@@ -8,14 +8,14 @@ export const HomeHeader = () => {
     <Container className="text-center p-2">
       <Row xs={1} sm={1} md={2} className="d-flex align-items-center mt-3 mb-3">
         <Col className="mb-1">
-          <h5>
+          <h4>
             <strong>
               <i>START YOUR ORDER NOW</i>
             </strong>
-          </h5>
+          </h4>
         </Col>
-        <Col className="mt-1 mb-2">
-          <Button className="me-1" variant="dark" size="md">
+        <Col className="d-flex justify-content-center mt-2 mb-2">
+          <Button className="mb-2" variant="dark" size="md">
             <Link to="/menu">
               {" "}
               <strong>
@@ -24,7 +24,7 @@ export const HomeHeader = () => {
             </Link>
           </Button>
           <img src={divider} style={{ width: 40 }} />
-          <Button className="ms-1" variant="dark" size="md">
+          <Button className="mb-2" variant="dark" size="md">
             <a
               href="https://www.ubereats.com"
               target="_blank"
