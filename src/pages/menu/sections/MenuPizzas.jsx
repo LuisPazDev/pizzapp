@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { db } from "../../../components/Firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
+import { ShoppingCart } from "../../../components/ShoppingCart";
 import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
 
 export const MenuPizzas = () => {
+  // get data from firebase and show it in cards (useEffect and useState)
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -18,14 +20,26 @@ export const MenuPizzas = () => {
     });
   }, []);
 
-  const [showButton, setShowButton] = useState(false);
+  // show button on hover card image and hide button on leave card image (onMouseEnter and onMouseLeave)
 
-  const handleShowButton = (key) => setShowButton(key);
-  const handleNoShowButton = () => setShowButton(false);
+  const [showButton, setShowButton] = useState(null);
+
+  const handleShowButton = (item) => setShowButton(item);
+  const handleNoShowButton = () => setShowButton(null);
+
+  // handle button click for add to cart (onClick)
+
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (item) => {
+    setCart([...cart, item]);
+    alert(item.data.name + " Successfully added to cart");
+    console.log(cart);
+  };
 
   return (
     <Container fluid>
-      <Row className="text-center">
+      <Row className="text-center mb-4">
         <Row>
           <div className="mt-4">
             <h3>
@@ -42,7 +56,7 @@ export const MenuPizzas = () => {
         </Row>
 
         <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
-          {list.map((item, key) => (
+          {list.map((item) => (
             <Col className="mt-3 mb-3">
               <Card
                 key={item.id}
@@ -82,19 +96,24 @@ export const MenuPizzas = () => {
                       <strong>{item.data.price}</strong>
                     </p>
                   </Card.Text>
-                  {showButton && (
-                    <Button size="lg" variant="dark">
+                  {showButton === item.id ? (
+                    <Button
+                      size="lg"
+                      variant="dark"
+                      onClick={() => handleAddToCart(item)}
+                    >
                       <strong>
-                        <i>ORDER</i>
+                        <i>ADD ORDER</i>
                       </strong>
                     </Button>
-                  )}
+                  ) : null}
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
       </Row>
+      <ShoppingCart items={cart} />
     </Container>
   );
 };
