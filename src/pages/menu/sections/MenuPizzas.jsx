@@ -5,7 +5,6 @@ import { ShoppingCart } from "../../../components/ShoppingCart";
 import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
 
 export const MenuPizzas = () => {
-  // get data from firebase and show it in cards (useEffect and useState)
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -20,21 +19,16 @@ export const MenuPizzas = () => {
     });
   }, []);
 
-  // show button on hover card image and hide button on leave card image (onMouseEnter and onMouseLeave)
-
   const [showButton, setShowButton] = useState(null);
 
   const handleShowButton = (item) => setShowButton(item);
   const handleNoShowButton = () => setShowButton(null);
 
-  // handle button click for add to cart (onClick)
-
-  const [cart, setCart] = useState([]);
-
+  // send cart to LocalStorage
   const handleAddToCart = (item) => {
-    setCart([...cart, item]);
-    alert(item.data.name + " Successfully added to cart");
-    console.log(cart);
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(item);
+    localStorage.setItem("cart", JSON.stringify(cart));
   };
 
   return (
@@ -57,9 +51,8 @@ export const MenuPizzas = () => {
 
         <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
           {list.map((item) => (
-            <Col className="mt-3 mb-3">
+            <Col className="mt-3 mb-3" key={item.id}>
               <Card
-                key={item.id}
                 onMouseEnter={() => handleShowButton(item.id)}
                 onMouseLeave={handleNoShowButton}
                 border="dark"
@@ -113,7 +106,7 @@ export const MenuPizzas = () => {
           ))}
         </Row>
       </Row>
-      <ShoppingCart items={cart} />
+      <ShoppingCart />
     </Container>
   );
 };

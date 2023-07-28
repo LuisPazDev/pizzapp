@@ -1,27 +1,39 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 
-export const ShoppingCart = ({ items }) => {
+export const ShoppingCart = React.memo(() => {
+  // get cart from LocalStorage
   const [cart, setCart] = useState([]);
 
-  // handle button click for remove from cart (onClick)
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart"));
+    if (storedCart) {
+      setCart(storedCart);
+    }
+  }, []);
+
+  console.log(cart.length);
+
+  // remove item from cart LocalStorage
+
   const handleRemoveItemFromCart = (item) => {
-    const updatedCart = cart.filter((cartItem) => cartItem.id !== item.id);
-    setCart(updatedCart);
+    const newCart = cart.filter((cartItem) => cartItem.id !== item.id);
+    setCart(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
   return (
     <div>
       <ul>
-        {items.map((item) => (
+        {cart.map((cartItem) => (
           <div className="mt-2 mb-2">
-            <li key={item.id}>
-              {item.data.name}
+            <li key={cartItem.id}>
+              {cartItem.data.name}
               <Button
                 size="sm"
                 variant="danger"
                 className="ms-5"
-                onClick={() => handleRemoveItemFromCart(item)}
+                onClick={() => handleRemoveItemFromCart(cartItem)}
               >
                 <i>Remove</i>
               </Button>
@@ -30,7 +42,7 @@ export const ShoppingCart = ({ items }) => {
         ))}
         {
           // show button when cart is not empty
-          items.length > 0 && (
+          cart.length > 0 && (
             <Button variant="dark" className="mt-3">
               <strong>
                 <i>Checkout</i>
@@ -41,4 +53,4 @@ export const ShoppingCart = ({ items }) => {
       </ul>
     </div>
   );
-};
+});
