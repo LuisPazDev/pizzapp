@@ -19,17 +19,11 @@ export const MenuPizzas = () => {
     });
   }, []);
 
+  // show button when hover on card
   const [showButton, setShowButton] = useState(null);
 
   const handleShowButton = (item) => setShowButton(item);
   const handleNoShowButton = () => setShowButton(null);
-
-  // send cart to LocalStorage
-  const handleAddToCart = (item) => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(item);
-    localStorage.setItem("cart", JSON.stringify(cart));
-  };
 
   return (
     <Container fluid>
@@ -93,7 +87,7 @@ export const MenuPizzas = () => {
                     <Button
                       size="lg"
                       variant="dark"
-                      onClick={() => handleAddToCart(item)}
+                      //onClick={() => handleAddToCart(item)}
                     >
                       <strong>
                         <i>ADD ORDER</i>
@@ -106,7 +100,6 @@ export const MenuPizzas = () => {
           ))}
         </Row>
       </Row>
-      <ShoppingCart />
     </Container>
   );
 };

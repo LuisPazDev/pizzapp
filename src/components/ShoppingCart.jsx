@@ -3,19 +3,20 @@ import { Button } from "react-bootstrap";
 
 export const ShoppingCart = React.memo(() => {
   // get cart from LocalStorage
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    [] ? JSON.parse(localStorage.getItem("cart")) : []
+  );
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart"));
     if (storedCart) {
-      setCart(storedCart);
+      setCart(...cart, storedCart);
     }
   }, []);
 
   console.log(cart.length);
 
   // remove item from cart LocalStorage
-
   const handleRemoveItemFromCart = (item) => {
     const newCart = cart.filter((cartItem) => cartItem.id !== item.id);
     setCart(newCart);
