@@ -47,6 +47,7 @@ export const MenuPizzas = () => {
           {list.map((item) => (
             <Col className="mt-3 mb-3" key={item.id}>
               <Card
+                style={{ width: "16rem" }}
                 onMouseEnter={() => handleShowButton(item.id)}
                 onMouseLeave={handleNoShowButton}
                 border="dark"
@@ -64,7 +65,7 @@ export const MenuPizzas = () => {
                       <Badge
                         pill
                         bg="light"
-                        className="text-dark border border-dark"
+                        className="text-dark border border-3 border-dark"
                       >
                         <b>
                           <i>{item.data.name}</i>
@@ -74,13 +75,10 @@ export const MenuPizzas = () => {
                   </Card.Title>
                   <Card.Text>
                     <p>
-                      <strong>
-                        <i>{item.data.size}</i>
-                      </strong>
-                    </p>
-
-                    <p>
                       <strong>{item.data.price}</strong>
+                    </p>
+                    <p>
+                      <i>{item.data.ingredients}</i>
                     </p>
                   </Card.Text>
                   {showButton === item.id ? (

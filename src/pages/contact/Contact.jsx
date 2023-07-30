@@ -56,9 +56,9 @@ export function Contact() {
             <p>
               <i>
                 {" "}
-                Send us a message with your special request.
-                <br />
                 We are here to help you!
+                <br />
+                Send us a message with your special request.
               </i>
             </p>
           </div>
