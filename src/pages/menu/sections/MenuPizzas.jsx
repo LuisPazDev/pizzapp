@@ -29,7 +29,7 @@ export const MenuPizzas = () => {
     <Container fluid>
       <Row className="text-center mb-4">
         <Row>
-          <div className="mt-4">
+          <div className="mt-5">
             <h3>
               <Badge pill bg="dark">
                 <strong>
@@ -43,7 +43,7 @@ export const MenuPizzas = () => {
           </div>
         </Row>
 
-        <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
+        <Row xs={1} md={3} lg={3} className="mt-3 mb-4">
           {list.map((item) => (
             <Col className="mt-3 mb-3" key={item.id}>
               <Card
@@ -65,7 +65,7 @@ export const MenuPizzas = () => {
                       <Badge
                         pill
                         bg="light"
-                        className="text-dark border border-3 border-dark"
+                        className="text-dark border border-2 border-dark"
                       >
                         <b>
                           <i>{item.data.name}</i>

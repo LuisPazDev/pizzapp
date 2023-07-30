@@ -8,7 +8,7 @@ export const MenuDrinks = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    const q = query(collection(db, "menu"));
+    const q = query(collection(db, "drinks"));
     onSnapshot(q, (querySnapshot) => {
       setList(
         querySnapshot.docs.map((item) => ({
@@ -66,7 +66,7 @@ export const MenuDrinks = () => {
                       <Badge
                         pill
                         bg="light"
-                        className="text-dark border border-dark"
+                        className="text-dark border border-2 border-dark"
                       >
                         <b>
                           <i>{item.data.name}</i>
@@ -75,12 +75,6 @@ export const MenuDrinks = () => {
                     </h3>
                   </Card.Title>
                   <Card.Text>
-                    <p>
-                      <strong>
-                        <i>{item.data.size}</i>
-                      </strong>
-                    </p>
-
                     <p>
                       <strong>{item.data.price}</strong>
                     </p>
