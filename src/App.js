@@ -5,6 +5,7 @@ import { MenuPizzas, MenuDrinks, MenuDesserts } from "./pages/menu/sections";
 import { About } from "./pages/about/About";
 import { Contact } from "./pages/contact/Contact";
 import { Menu } from "./pages/menu/Menu";
+import { ShoppingCart } from "./components/ShoppingCart";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/menu/desserts" element={<MenuDesserts />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<ShoppingCart />} />
       </Route>
     </Routes>
   );

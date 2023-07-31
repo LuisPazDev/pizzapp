@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import { db } from "../../../components/Firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
 import { CartContext } from "../../../context/CartContext";
-import { ShoppingCart } from "../../../components/ShoppingCart";
 import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
 
 export const MenuPizzas = () => {
@@ -56,7 +55,6 @@ export const MenuPizzas = () => {
 
   return (
     <Container fluid>
-      <ShoppingCart />
       <Row className="text-center mb-4">
         <Row>
           <div className="mt-5">

@@ -1,9 +1,10 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
-import { Button } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 
 export const ShoppingCart = React.memo(() => {
   const [cart, setCart] = useContext(CartContext);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   // get cart items from localStorage
   useEffect(() => {
@@ -18,35 +19,58 @@ export const ShoppingCart = React.memo(() => {
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
+  // calculate total price
+  useEffect(() => {
+    const totalPrice = cart.reduce(
+      (total, item) => total + item.data.price * item.quantity,
+      0
+    );
+    setTotalPrice(totalPrice);
+  }, [cart]);
+
   return (
-    <div>
-      <ul>
-        {cart.map((cartItem) => (
-          <div className="mt-2 mb-2">
-            <li key={cartItem.id}>
-              {cartItem.data.name}
-              <Button
-                size="sm"
-                variant="danger"
-                className="ms-5"
-                onClick={() => handleRemoveItemFromCart(cartItem)}
-              >
-                <i>Remove</i>
-              </Button>
-            </li>
-          </div>
-        ))}
-        {
-          // show button when cart is not empty
-          cart.length > 0 && (
-            <Button variant="dark" className="mt-3">
-              <strong>
-                <i>Checkout</i>
-              </strong>
-            </Button>
-          )
-        }
-      </ul>
+    <div className="mt-5">
+      <h3>Shopping Cart</h3>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cart.map((item) => (
+            <tr key={item.id}>
+              <td>{item.data.name}</td>
+              <td>{item.data.price}</td>
+              <td>{item.quantity}</td>
+              <td>
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => handleRemoveItemFromCart(item)}
+                >
+                  Remove
+                </Button>
+              </td>
+            </tr>
+          ))}
+          <tr>
+            <td colSpan="2">Total:</td>
+            <td></td>
+            <td>${totalPrice.toFixed(2)}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colSpan="4">
+              <Button variant="dark">Check Out</Button>
+            </td>
+          </tr>
+        </tfoot>
+      </Table>
     </div>
   );
 });

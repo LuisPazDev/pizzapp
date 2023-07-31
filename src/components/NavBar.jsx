@@ -96,6 +96,15 @@ export const NavBar = () => {
                       CONTACT
                     </Link>
                   </Nav.Link>
+                  <Nav.Link>
+                    <Link
+                      className="text-dark"
+                      onClick={handleClose}
+                      to="/cart"
+                    >
+                      CART
+                    </Link>
+                  </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
