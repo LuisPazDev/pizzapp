@@ -66,12 +66,11 @@ a:hover {
 
 .cart-quantity {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: orange;
+  right: 15px;
+  background-color: rgb(250, 124, 6);
   color: white;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
-  padding: 2px 5px;
+  padding: 3px 6px;
   border-radius: 50%;
 }

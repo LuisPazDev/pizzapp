@@ -116,7 +116,9 @@ export const NavBar = () => {
                     >
                       <img src={cart} alt="cartlogo" className="cart-icon" />
                       {totalQuantity > 0 && (
-                        <span className="cart-quantity">{totalQuantity}</span>
+                        <span className="cart-quantity rounded-pill">
+                          {totalQuantity}
+                        </span>
                       )}
                     </Link>
                   </Nav.Link>
