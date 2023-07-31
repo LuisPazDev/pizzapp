@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { db } from "../../../components/Firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
+import { CartContext } from "../../../context/CartContext";
 import { ShoppingCart } from "../../../components/ShoppingCart";
 import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
 
 export const MenuPizzas = () => {
+  // get data from firebase and show it in cards (useEffect and useState)
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -25,8 +27,36 @@ export const MenuPizzas = () => {
   const handleShowButton = (item) => setShowButton(item);
   const handleNoShowButton = () => setShowButton(null);
 
+  // add to cart button functionality to set local storage
+  const [cart, setCart] = useContext(CartContext);
+
+  const handleAddToCart = (item) => {
+    try {
+      const cartLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const existingItem = cartLocalStorage.find(
+        (cartItem) => cartItem.id === item.id
+      );
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cartLocalStorage.push({ ...item, quantity: 1 });
+
+        setCart([...cart, { ...item, quantity: 1 }]);
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cartLocalStorage));
+
+      alert(item.data.name + " added to cart");
+      console.log(cartLocalStorage.length);
+    } catch (e) {
+      console.error("Error parsing cart data:", e);
+    }
+  };
+
   return (
     <Container fluid>
+      <ShoppingCart />
       <Row className="text-center mb-4">
         <Row>
           <div className="mt-5">
@@ -47,7 +77,7 @@ export const MenuPizzas = () => {
           {list.map((item) => (
             <Col className="mt-3 mb-3" key={item.id}>
               <Card
-                style={{ width: "16rem" }}
+                style={{ width: "15rem" }}
                 onMouseEnter={() => handleShowButton(item.id)}
                 onMouseLeave={handleNoShowButton}
                 border="dark"
@@ -85,7 +115,7 @@ export const MenuPizzas = () => {
                     <Button
                       size="lg"
                       variant="dark"
-                      //onClick={() => handleAddToCart(item)}
+                      onClick={() => handleAddToCart(item)}
                     >
                       <strong>
                         <i>ADD ORDER</i>

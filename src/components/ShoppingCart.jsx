@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { Button } from "react-bootstrap";
 
 export const ShoppingCart = React.memo(() => {
-  // get cart from LocalStorage
-  const [cart, setCart] = useState(
-    [] ? JSON.parse(localStorage.getItem("cart")) : []
-  );
+  const [cart, setCart] = useContext(CartContext);
 
+  // get cart items from localStorage
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart"));
-    if (storedCart) {
-      setCart(...cart, storedCart);
-    }
+    const cartLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(cartLocalStorage);
   }, []);
-
-  console.log(cart.length);
 
   // remove item from cart LocalStorage
   const handleRemoveItemFromCart = (item) => {
