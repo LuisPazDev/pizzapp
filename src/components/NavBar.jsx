@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 import {
   Nav,
   Navbar,
@@ -8,13 +9,23 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 
+// Assets & Styles
 import logo from "../assets/pizzapplogo.png";
+import cart from "../assets/cart.svg";
 
 export const NavBar = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // calculate total quantity of items in cart
+  const [cartItems, setCartItems] = useContext(CartContext);
+
+  const totalQuantity = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   return (
     <>
@@ -38,7 +49,9 @@ export const NavBar = () => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  <img src={logo} alt="logo" width={100} height={25} />
+                  <Link to="/" onClick={handleClose}>
+                    <img src={logo} alt="logo" width={100} height={25} />
+                  </Link>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -77,7 +90,6 @@ export const NavBar = () => {
                       </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
-
                   <Nav.Link>
                     <Link
                       className="text-dark"
@@ -102,7 +114,10 @@ export const NavBar = () => {
                       onClick={handleClose}
                       to="/cart"
                     >
-                      CART
+                      <img src={cart} alt="cartlogo" className="cart-icon" />
+                      {totalQuantity > 0 && (
+                        <span className="cart-quantity">{totalQuantity}</span>
+                      )}
                     </Link>
                   </Nav.Link>
                 </Nav>
