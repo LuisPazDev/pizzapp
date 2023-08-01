@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { db } from "../../../components/Firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
 import { CartContext } from "../../../context/CartContext";
+import Swal from "sweetalert2";
 import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
 
 export const MenuPizzas = () => {
@@ -45,9 +46,15 @@ export const MenuPizzas = () => {
       }
 
       localStorage.setItem("cart", JSON.stringify(cartLocalStorage));
-
-      alert(item.data.name + " added to cart");
-      console.log(cartLocalStorage.length);
+      Swal.fire({
+        title: item.data.name,
+        text: "Successfully added to cart",
+        icon: "success",
+        showCloseButton: true,
+        showCancelButton: true,
+        confirmButtonText: "<a href='#/cart'>Go to cart</a>",
+        cancelButtonText: "Keep ordering",
+      });
     } catch (e) {
       console.error("Error parsing cart data:", e);
     }

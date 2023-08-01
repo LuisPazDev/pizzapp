@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { CartContext } from "../context/CartContext";
 import { Table, Button, Container, Badge } from "react-bootstrap";
 
@@ -35,9 +36,12 @@ export const ShoppingCart = React.memo(() => {
 
   // fuction to pay order button and clear cart
   const handlePayOrder = () => {
-    alert(
-      "Payment successful! Thank you for your purchase. We are preparing your order."
-    );
+    Swal.fire({
+      title: "Order placed successfully",
+      text: "Thank you for your purchase",
+      icon: "success",
+      confirmButtonText: "<a href='/'>Close</a>",
+    });
     localStorage.removeItem("cart");
     setCart([]);
   };

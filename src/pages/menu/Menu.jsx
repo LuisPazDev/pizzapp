@@ -40,7 +40,8 @@ export const Menu = () => {
       </Row>
 
       <Row className="justify-content-center text-center">
-        {/* Pizzas Card */}
+        {/* //* Pizzas Card */}
+
         <Col xs={12} md={6} lg={6} className="mt-4 mb-3">
           <Card
             onMouseEnter={() => handleButtonMouseEnter(0)}
@@ -80,7 +81,7 @@ export const Menu = () => {
           </Card>
         </Col>
 
-        {/* Drinks Card */}
+        {/* //* Drinks Card */}
 
         <Col xs={12} md={6} lg={6} className="mt-4 mb-3">
           <Card
@@ -96,7 +97,7 @@ export const Menu = () => {
                   <div>
                     <Button variant="dark" size="lg">
                       {" "}
-                      <Link to="/menu/pizzas">
+                      <Link to="/menu/drinks">
                         <strong>
                           <b>
                             <i>ORDER NOW</i>
@@ -121,7 +122,7 @@ export const Menu = () => {
           </Card>
         </Col>
 
-        {/* Desserts Card */}
+        {/* //*Desserts Card */}
 
         <Col xs={12} md={6} lg={6} className="mt-4 mb-4">
           <Card
@@ -137,7 +138,7 @@ export const Menu = () => {
                   <div>
                     <Button variant="dark" size="lg">
                       {" "}
-                      <Link to="/menu/pizzas">
+                      <Link to="/menu/desserts">
                         <strong>
                           <b>
                             <i>ORDER NOW</i>
