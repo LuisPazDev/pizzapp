@@ -50,10 +50,8 @@ export const MenuPizzas = () => {
         title: item.data.name,
         text: "Successfully added to cart",
         icon: "success",
-        showCloseButton: true,
-        showCancelButton: true,
-        confirmButtonText: "<a href='#/cart'>Go to cart</a>",
-        cancelButtonText: "Keep ordering",
+        timer: 1500,
+        showConfirmButton: false,
       });
     } catch (e) {
       console.error("Error parsing cart data:", e);
@@ -110,7 +108,7 @@ export const MenuPizzas = () => {
                   </Card.Title>
                   <Card.Text>
                     <p>
-                      <strong>{item.data.price}</strong>
+                      <strong>${item.data.price}</strong>
                     </p>
                     <p>
                       <i>{item.data.ingredients}</i>
@@ -123,7 +121,7 @@ export const MenuPizzas = () => {
                       onClick={() => handleAddToCart(item)}
                     >
                       <strong>
-                        <i>ADD ORDER</i>
+                        <i>ORDER</i>
                       </strong>
                     </Button>
                   ) : null}
