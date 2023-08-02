@@ -110,7 +110,12 @@ export const MenuDrinks = () => {
                   </Card.Title>
                   <Card.Text>
                     <p>
-                      <strong>${item.data.price}</strong>
+                      <strong>
+                        <i>${item.data.price}</i>
+                      </strong>
+                    </p>
+                    <p>
+                      <i>{item.data.ingredients}</i>
                     </p>
                   </Card.Text>
                   {showButton === item.id ? (
