@@ -7,6 +7,7 @@ import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
 
 export const MenuDesserts = () => {
   // get data from firebase and show it in cards (useEffect and useState)
+  const [cart, setCart, handleAddToCartToast] = useContext(CartContext);
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -29,7 +30,6 @@ export const MenuDesserts = () => {
   const handleNoShowButton = () => setShowButton(null);
 
   // add to cart button functionality to set local storage
-  const [cart, setCart] = useContext(CartContext);
 
   const handleAddToCart = (item) => {
     try {
@@ -54,6 +54,7 @@ export const MenuDesserts = () => {
         timer: 1500,
         showConfirmButton: false,
       });
+      handleAddToCartToast(item);
     } catch (e) {
       console.error("Error parsing cart data:", e);
     }
@@ -76,6 +77,20 @@ export const MenuDesserts = () => {
             </p>
           </div>
         </Row>
+
+        <div className="text-center mt-4">
+          <Button variant="dark" size="sm" className="me-2">
+            <strong>
+              <i>PIZZAS</i>
+            </strong>
+          </Button>
+
+          <Button variant="dark" size="sm" className="ms-2">
+            <strong>
+              <i>DESSERTS</i>
+            </strong>
+          </Button>
+        </div>
 
         <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
           {list.map((item) => (

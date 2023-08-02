@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { CartContext } from "../context/CartContext";
 import { Table, Button, Container, Badge } from "react-bootstrap";
@@ -34,16 +34,22 @@ export const ShoppingCart = React.memo(() => {
     setTotalPrice(totalPrice + saleTaxes);
   }, [cart]);
 
-  // fuction to pay order button and clear cart
+  // fuction to payOrder button and clear cart
+  const navigate = useNavigate();
+
   const handlePayOrder = () => {
     Swal.fire({
-      title: "Order placed successfully",
+      title: "Order Placed",
       text: "Thank you for your purchase",
       icon: "success",
-      confirmButtonText: "<a href='/'>Close</a>",
+      timer: 1500,
+      showConfirmButton: false,
     });
     localStorage.removeItem("cart");
     setCart([]);
+    setTimeout(() => {
+      navigate("/");
+    }, 1600);
   };
 
   return (
@@ -106,7 +112,11 @@ export const ShoppingCart = React.memo(() => {
                 <td>${(totalPrice * 0.04).toFixed(2)}</td>
               </tr>
               <tr>
-                <td colSpan="2">Total:</td>
+                <td colSpan="2">
+                  <strong>
+                    <i>Total:</i>
+                  </strong>
+                </td>
                 <td></td>
                 <td>${totalPrice.toFixed(2)}</td>
               </tr>
