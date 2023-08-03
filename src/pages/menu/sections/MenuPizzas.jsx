@@ -1,9 +1,19 @@
 import { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import { db } from "../../../components/Firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
-import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  Badge,
+  Row,
+  Col,
+  Container,
+  DropdownButton,
+  Dropdown,
+} from "react-bootstrap";
 
 export const MenuPizzas = () => {
   // get data from firebase and show it in cards (useEffect and useState)
@@ -75,6 +85,29 @@ export const MenuPizzas = () => {
             </p>
           </div>
         </Row>
+
+        <div className="text-center mt-4">
+          <DropdownButton
+            id="dropdown-basic-button"
+            title="MENU"
+            variant="dark"
+          >
+            <Dropdown.Item>
+              <Link className="text-black" to="/menu/drinks">
+                <strong>
+                  <i>DRINKS</i>
+                </strong>
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <Link className="text-black" to="/menu/desserts">
+                <strong>
+                  <i>DESSERTS</i>
+                </strong>
+              </Link>
+            </Dropdown.Item>
+          </DropdownButton>
+        </div>
 
         <Row xs={1} md={3} lg={3} className="mt-3 mb-4">
           {list.map((item) => (

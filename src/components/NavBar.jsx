@@ -11,7 +11,7 @@ import {
 
 // Assets & Styles
 import logo from "../assets/pizzapplogo.png";
-import cart from "../assets/cart.svg";
+import cartImg from "../assets/cart.svg";
 
 export const NavBar = () => {
   // offcanvas navbar
@@ -129,7 +129,7 @@ export const NavBar = () => {
                         // if cart is empty, show 0
                         cartItems.length === 0 ? (
                           <img
-                            src={cart}
+                            src={cartImg}
                             alt="cartlogo"
                             className="cart-icon"
                           />
@@ -137,7 +137,7 @@ export const NavBar = () => {
                           // else show total quantity of items in cart
                           <div>
                             <img
-                              src={cart}
+                              src={cartImg}
                               alt="cartlogo"
                               className="cart-icon"
                             />

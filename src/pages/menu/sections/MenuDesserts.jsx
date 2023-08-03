@@ -3,7 +3,17 @@ import { db } from "../../../components/Firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
 import Swal from "sweetalert2";
 import { CartContext } from "../../../context/CartContext";
-import { Card, Button, Badge, Row, Col, Container } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  Badge,
+  Row,
+  Col,
+  Container,
+  DropdownButton,
+  Dropdown,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const MenuDesserts = () => {
   // get data from firebase and show it in cards (useEffect and useState)
@@ -68,7 +78,7 @@ export const MenuDesserts = () => {
             <h3>
               <Badge pill bg="dark">
                 <strong>
-                  <i>DRINKS</i>
+                  <i>DESSERTS</i>
                 </strong>
               </Badge>
             </h3>
@@ -79,17 +89,26 @@ export const MenuDesserts = () => {
         </Row>
 
         <div className="text-center mt-4">
-          <Button variant="dark" size="sm" className="me-2">
-            <strong>
-              <i>PIZZAS</i>
-            </strong>
-          </Button>
-
-          <Button variant="dark" size="sm" className="ms-2">
-            <strong>
-              <i>DESSERTS</i>
-            </strong>
-          </Button>
+          <DropdownButton
+            id="dropdown-basic-button"
+            title="MENU"
+            variant="dark"
+          >
+            <Dropdown.Item>
+              <Link className="text-black" to="/menu/pizzas">
+                <strong>
+                  <i>PIZZAS</i>
+                </strong>
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <Link className="text-black" to="/menu/drinks">
+                <strong>
+                  <i>DRINKS</i>
+                </strong>
+              </Link>
+            </Dropdown.Item>
+          </DropdownButton>
         </div>
 
         <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
