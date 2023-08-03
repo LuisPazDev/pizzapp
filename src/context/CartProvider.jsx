@@ -38,6 +38,12 @@ export const CartProvider = ({ children }) => {
   // calculate total quantity of items in cart
   const cartItems = cart.reduce((total, item) => total + item.quantity, 0);
 
+  // calculate total price of items in cart
+  const cartTotal = cart.reduce(
+    (total, item) => total + item.data.price * item.quantity,
+    0
+  );
+
   return (
     <CartContext.Provider value={[cart, setCart, handleAddToCartToast]}>
       <Container fluid>
@@ -52,7 +58,7 @@ export const CartProvider = ({ children }) => {
                 position: "fixed",
                 bottom: 20,
                 right: 20,
-                width: 130,
+                width: 120,
               }}
             >
               <Toast.Header>
@@ -62,6 +68,9 @@ export const CartProvider = ({ children }) => {
                 </small>
               </Toast.Header>
               <Toast.Body>
+                <p>
+                  <strong className="me-auto">Total : {"$" + cartTotal}</strong>
+                </p>
                 <Button variant="dark" size="sm">
                   <Link to="/cart">
                     <strong>

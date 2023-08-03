@@ -38,7 +38,7 @@ export const MenuPizzas = () => {
   const handleNoShowButton = () => setShowButton(null);
 
   // add to cart button functionality to set local storage
-  const [cart, setCart] = useContext(CartContext);
+  const [cart, setCart, handleAddToCartToast] = useContext(CartContext);
 
   const handleAddToCart = (item) => {
     try {
@@ -63,6 +63,7 @@ export const MenuPizzas = () => {
         timer: 1500,
         showConfirmButton: false,
       });
+      handleAddToCartToast(item);
     } catch (e) {
       console.error("Error parsing cart data:", e);
     }
