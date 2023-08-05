@@ -119,11 +119,17 @@ export const ShoppingCart = React.memo(() => {
               <tr>
                 <td colSpan="2">
                   <strong>
-                    <i>Total:</i>
+                    <i>TOTAL:</i>
                   </strong>
                 </td>
                 <td></td>
-                <td>${totalPrice.toFixed(2)}</td>
+                <td>
+                  <h6>
+                    <strong>
+                      <i>${totalPrice.toFixed(2)}</i>
+                    </strong>
+                  </h6>
+                </td>
               </tr>
             </tbody>
             <tfoot>

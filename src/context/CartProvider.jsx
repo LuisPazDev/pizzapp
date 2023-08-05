@@ -59,12 +59,16 @@ export const CartProvider = ({ children }) => {
                 position: "fixed",
                 bottom: 20,
                 right: 20,
-                width: 120,
+                width: 140,
               }}
             >
-              <Toast.Header>
-                <img src={cartImg} alt="cart" width="30" height="30" />
-                <small className="cart-quantity rounded-pill">
+              <Toast.Header closeButton={false}>
+                <h6 className="mt-2">
+                  <strong>
+                    <i>My Order</i>
+                  </strong>
+                </h6>
+                <small className="cart-quantity rounded-pill ms-3">
                   {cartItems}{" "}
                 </small>
               </Toast.Header>
@@ -75,7 +79,7 @@ export const CartProvider = ({ children }) => {
                     <i>Total :{" $" + cartTotal}</i>
                   </strong>
                 </p>
-                <Button variant="dark" size="sm">
+                <Button variant="dark" size="md">
                   <Link to="/cart">
                     <strong>
                       <i>CHECK OUT</i>
