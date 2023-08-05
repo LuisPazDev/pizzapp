@@ -11,10 +11,15 @@ export const ShoppingCart = React.memo(() => {
   // calculate total price and sale taxes (4%) of cart items
   const [totalPrice, setTotalPrice] = useState(0);
 
-  // get cart items from localStorage
-  useEffect(() => {
+  // retrieve cart items from localStorage
+  const retrieveCartItems = () => {
     const cartLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(cartLocalStorage);
+  };
+
+  // call retrieveCartItems whenever the component mounts or updates
+  useEffect(() => {
+    retrieveCartItems();
   }, []);
 
   // remove item from cart LocalStorage

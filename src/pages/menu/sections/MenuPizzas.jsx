@@ -44,15 +44,20 @@ export const MenuPizzas = () => {
     try {
       const cartLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
 
-      const existingItem = cartLocalStorage.find(
+      const existingItemIndex = cartLocalStorage.findIndex(
         (cartItem) => cartItem.id === item.id
       );
-      if (existingItem) {
-        existingItem.quantity += 1;
+      if (existingItemIndex !== -1) {
+        const existingItem = cartLocalStorage[existingItemIndex];
+        const updatedItem = {
+          ...existingItem,
+          quantity: existingItem.quantity + 1,
+        };
+        cartLocalStorage[existingItemIndex] = updatedItem;
+        setCart(cartLocalStorage);
       } else {
         cartLocalStorage.push({ ...item, quantity: 1 });
-
-        setCart([...cart, { ...item, quantity: 1 }]);
+        setCart([...cartLocalStorage]);
       }
 
       localStorage.setItem("cart", JSON.stringify(cartLocalStorage));
@@ -63,7 +68,7 @@ export const MenuPizzas = () => {
         timer: 1500,
         showConfirmButton: false,
       });
-      handleAddToCartToast(item);
+      handleAddToCartToast();
     } catch (e) {
       console.error("Error parsing cart data:", e);
     }
@@ -87,28 +92,22 @@ export const MenuPizzas = () => {
           </div>
         </Row>
 
-        <div className="text-center mt-4">
-          <DropdownButton
-            id="dropdown-basic-button"
-            title="MENU"
-            variant="dark"
-          >
-            <Dropdown.Item>
-              <Link className="text-black" to="/menu/drinks">
-                <strong>
-                  <i>DRINKS</i>
-                </strong>
-              </Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Link className="text-black" to="/menu/desserts">
-                <strong>
-                  <i>DESSERTS</i>
-                </strong>
-              </Link>
-            </Dropdown.Item>
-          </DropdownButton>
-        </div>
+        <DropdownButton id="dropdown-basic-button" title="MENU" variant="dark">
+          <Dropdown.Item>
+            <Link className="text-black" to="/menu/drinks">
+              <strong>
+                <i>DRINKS</i>
+              </strong>
+            </Link>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Link className="text-black" to="/menu/desserts">
+              <strong>
+                <i>DESSERTS</i>
+              </strong>
+            </Link>
+          </Dropdown.Item>
+        </DropdownButton>
 
         <Row xs={1} md={3} lg={3} className="mt-3 mb-4">
           {list.map((item) => (

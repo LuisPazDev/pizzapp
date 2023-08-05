@@ -64,7 +64,7 @@ export const MenuDrinks = () => {
         timer: 1500,
         showConfirmButton: false,
       });
-      handleAddToCartToast(item);
+      handleAddToCartToast();
     } catch (e) {
       console.error("Error parsing cart data:", e);
     }
