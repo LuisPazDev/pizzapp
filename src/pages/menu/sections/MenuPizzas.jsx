@@ -92,28 +92,30 @@ export const MenuPizzas = () => {
           </div>
         </Row>
 
-        <DropdownButton
-          id="dropdown-basic-button"
-          title=" MENU  "
-          variant="dark"
-        >
-          <Dropdown.Item>
-            <Link className="text-black" to="/menu/drinks">
-              <strong>
-                <i>DRINKS</i>
-              </strong>
-            </Link>
-          </Dropdown.Item>
-          <Dropdown.Item>
-            <Link className="text-black" to="/menu/desserts">
-              <strong>
-                <i>DESSERTS</i>
-              </strong>
-            </Link>
-          </Dropdown.Item>
-        </DropdownButton>
+        <div className="text-center mt-3">
+          <DropdownButton
+            id="dropdown-basic-button"
+            title=" MENU  "
+            variant="dark"
+          >
+            <Dropdown.Item>
+              <Link className="text-black" to="/menu/drinks">
+                <strong>
+                  <i>DRINKS</i>
+                </strong>
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <Link className="text-black" to="/menu/desserts">
+                <strong>
+                  <i>DESSERTS</i>
+                </strong>
+              </Link>
+            </Dropdown.Item>
+          </DropdownButton>
+        </div>
 
-        <Row xs={1} md={3} lg={3} className="mt-3 mb-4">
+        <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
           {list.map((item) => (
             <Col className="mt-3 mb-3" key={item.id}>
               <Card

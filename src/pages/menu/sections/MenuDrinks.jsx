@@ -88,7 +88,7 @@ export const MenuDrinks = () => {
           </div>
         </Row>
 
-        <div className="text-center mt-4">
+        <div className="text-center mt-3">
           <DropdownButton
             id="dropdown-basic-button"
             title=" MENU  "
@@ -111,7 +111,7 @@ export const MenuDrinks = () => {
           </DropdownButton>
         </div>
 
-        <Row xs={1} md={3} lg={3} className="mt-3 mb-4">
+        <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
           {list.map((item) => (
             <Col className="mt-3 mb-3" key={item.id}>
               <Card

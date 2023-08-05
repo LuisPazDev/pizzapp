@@ -42,7 +42,17 @@ export const Menu = () => {
       <Row className="justify-content-center text-center">
         {/* //* Pizzas Card */}
 
-        <Col xs={12} md={6} lg={6} className="mt-4 mb-3">
+        <Col
+          style={{
+            cursor: "pointer",
+            maxWidth: "750px",
+            maxHeight: "500px",
+          }}
+          xs={12}
+          md={12}
+          lg={12}
+          className="mt-4 mb-3"
+        >
           <Card
             onMouseEnter={() => handleButtonMouseEnter(0)}
             onMouseLeave={handleButtonMouseLeave}
@@ -83,7 +93,17 @@ export const Menu = () => {
 
         {/* //* Drinks Card */}
 
-        <Col xs={12} md={6} lg={6} className="mt-4 mb-3">
+        <Col
+          style={{
+            cursor: "pointer",
+            maxWidth: "750px",
+            maxHeight: "500px",
+          }}
+          xs={12}
+          md={12}
+          lg={12}
+          className="mt-4 mb-4"
+        >
           <Card
             className={hoverIndex === 1 ? "menu-card-hover" : "border-dark"}
             onMouseEnter={() => handleButtonMouseEnter(1)}
@@ -124,7 +144,17 @@ export const Menu = () => {
 
         {/* //*Desserts Card */}
 
-        <Col xs={12} md={6} lg={6} className="mt-4 mb-4">
+        <Col
+          style={{
+            cursor: "pointer",
+            maxWidth: "750px",
+            maxHeight: "500px",
+          }}
+          xs={12}
+          md={12}
+          lg={12}
+          className="mt-4 mb-3"
+        >
           <Card
             className={hoverIndex === 2 ? "menu-card-hover" : "border-dark"}
             onMouseEnter={() => handleButtonMouseEnter(2)}
