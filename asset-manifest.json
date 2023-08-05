@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pizzapp/static/css/main.b27dfc19.css",
-    "main.js": "/pizzapp/static/js/main.ecfc06eb.js",
+    "main.css": "/pizzapp/static/css/main.ed7191eb.css",
+    "main.js": "/pizzapp/static/js/main.ff219d87.js",
     "static/media/pepperonipizza.png": "/pizzapp/static/media/pepperonipizza.b4b3b7b1d6bda77e520d.png",
     "static/media/mainlogo.png": "/pizzapp/static/media/mainlogo.6488ac98c76336c49916.png",
     "static/media/primaverapizza.png": "/pizzapp/static/media/primaverapizza.b50300ee0437e4343c06.png",
@@ -20,11 +20,11 @@
     "index.html": "/pizzapp/index.html",
     "static/media/divider.svg": "/pizzapp/static/media/divider.bbc24698b825b7cad47df742441bcf88.svg",
     "static/media/cart.svg": "/pizzapp/static/media/cart.0312147298b7f757bf0e67b674447789.svg",
-    "main.b27dfc19.css.map": "/pizzapp/static/css/main.b27dfc19.css.map",
-    "main.ecfc06eb.js.map": "/pizzapp/static/js/main.ecfc06eb.js.map"
+    "main.ed7191eb.css.map": "/pizzapp/static/css/main.ed7191eb.css.map",
+    "main.ff219d87.js.map": "/pizzapp/static/js/main.ff219d87.js.map"
   },
   "entrypoints": [
-    "static/css/main.b27dfc19.css",
-    "static/js/main.ecfc06eb.js"
+    "static/css/main.ed7191eb.css",
+    "static/js/main.ff219d87.js"
   ]
 }
