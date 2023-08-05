@@ -71,11 +71,13 @@ export const About = () => {
       </Row>
 
       <Row className="ms-auto me-auto mt-5 mb-3">
-        <Link to="/">
+        <Link to="/menu">
           <h5 className="text-center text-black">
-            Back to{" "}
+            Go to{" "}
             <strong>
-              <u> Home Page </u>
+              <i>
+                <u> MENU </u>
+              </i>
             </strong>
           </h5>
         </Link>

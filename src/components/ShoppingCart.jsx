@@ -85,13 +85,19 @@ export const ShoppingCart = React.memo(() => {
             </Button>
           </div>
         ) : (
-          <Table striped bordered hover>
+          <Table
+            style={{ maxWidth: "80%", margin: "auto" }}
+            striped
+            bordered
+            hover
+            className="mt-4"
+          >
             <thead>
               <tr>
-                <th>Name</th>
+                <th></th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>Actions</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -112,7 +118,7 @@ export const ShoppingCart = React.memo(() => {
                 </tr>
               ))}
               <tr>
-                <td colSpan="2">Sale Taxes (4%):</td>
+                <td colSpan="2">Tax (4%):</td>
                 <td></td>
                 <td>${(totalPrice * 0.04).toFixed(2)}</td>
               </tr>
@@ -139,6 +145,7 @@ export const ShoppingCart = React.memo(() => {
                     size="lg"
                     variant="dark"
                     onClick={() => handlePayOrder()}
+                    className="mt-4"
                   >
                     <strong>
                       <i>PAY ORDER</i>

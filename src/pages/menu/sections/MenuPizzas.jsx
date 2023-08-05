@@ -78,7 +78,7 @@ export const MenuPizzas = () => {
     <Container fluid>
       <Row className="text-center mb-4">
         <Row>
-          <div className="mt-5">
+          <div className="mt-4">
             <h3>
               <Badge pill bg="dark">
                 <strong>
@@ -92,7 +92,11 @@ export const MenuPizzas = () => {
           </div>
         </Row>
 
-        <DropdownButton id="dropdown-basic-button" title="MENU" variant="dark">
+        <DropdownButton
+          id="dropdown-basic-button"
+          title=" MENU  "
+          variant="dark"
+        >
           <Dropdown.Item>
             <Link className="text-black" to="/menu/drinks">
               <strong>
@@ -113,7 +117,7 @@ export const MenuPizzas = () => {
           {list.map((item) => (
             <Col className="mt-3 mb-3" key={item.id}>
               <Card
-                style={{ width: "15rem" }}
+                style={{ maxWidth: "16rem" }}
                 onMouseEnter={() => handleShowButton(item.id)}
                 onMouseLeave={handleNoShowButton}
                 border="dark"
@@ -124,7 +128,7 @@ export const MenuPizzas = () => {
                   variant="top"
                   src={item.data.img}
                 />
-
+                <hr />
                 <Card.Body>
                   <Card.Title>
                     <h3>

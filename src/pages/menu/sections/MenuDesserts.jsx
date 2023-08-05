@@ -91,7 +91,7 @@ export const MenuDesserts = () => {
         <div className="text-center mt-4">
           <DropdownButton
             id="dropdown-basic-button"
-            title="MENU"
+            title=" MENU  "
             variant="dark"
           >
             <Dropdown.Item>
@@ -111,12 +111,11 @@ export const MenuDesserts = () => {
           </DropdownButton>
         </div>
 
-        <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
+        <Row xs={1} md={3} lg={3} className="mt-3 mb-4">
           {list.map((item) => (
-            <Col className="mt-3 mb-3">
+            <Col className="mt-3 mb-3" key={item.id}>
               <Card
-                key={item.id}
-                style={{ width: "15rem" }}
+                style={{ maxWidth: "16rem" }}
                 onMouseEnter={() => handleShowButton(item.id)}
                 onMouseLeave={handleNoShowButton}
                 border="dark"
@@ -127,7 +126,7 @@ export const MenuDesserts = () => {
                   variant="top"
                   src={item.data.img}
                 />
-
+                <hr />
                 <Card.Body>
                   <Card.Title>
                     <h3>
@@ -144,9 +143,7 @@ export const MenuDesserts = () => {
                   </Card.Title>
                   <Card.Text>
                     <p>
-                      <strong>
-                        <i>${item.data.price}</i>
-                      </strong>
+                      <strong>${item.data.price}</strong>
                     </p>
                     <p>
                       <i>{item.data.ingredients}</i>
@@ -156,9 +153,7 @@ export const MenuDesserts = () => {
                     <Button
                       size="lg"
                       variant="dark"
-                      onClick={() => {
-                        handleAddToCart(item);
-                      }}
+                      onClick={() => handleAddToCart(item)}
                     >
                       <strong>
                         <i>ORDER</i>
