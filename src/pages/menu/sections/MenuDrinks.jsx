@@ -111,15 +111,15 @@ export const MenuDrinks = () => {
           </DropdownButton>
         </div>
 
-        <Container style={{ maxWidth: "1000px" }}>
+        <Container style={{ maxWidth: "800px" }}>
           <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
             {list.map((item) => (
               <Col className="mt-3 mb-3" key={item.id}>
                 <Card
-                  style={{ maxWidth: "16rem" }}
+                  style={{ maxWidth: "18rem" }}
                   onMouseEnter={() => handleShowButton(item.id)}
                   onMouseLeave={handleNoShowButton}
-                  border="dark"
+                  border="dark border-2"
                   className="text-center ms-auto me-auto rounded-start"
                 >
                   <Card.Img
@@ -127,8 +127,12 @@ export const MenuDrinks = () => {
                     variant="top"
                     src={item.data.img}
                   />
-                  <hr />
-                  <Card.Body>
+                  <Card.Body
+                    style={{
+                      backgroundColor: "#FF914D",
+                      borderTop: "solid 2px black",
+                    }}
+                  >
                     <Card.Title>
                       <h3>
                         <Badge
@@ -143,63 +147,13 @@ export const MenuDrinks = () => {
                       </h3>
                     </Card.Title>
                     <Card.Text>
-                      <p>
-                        <strong>${item.data.price}</strong>
-                      </p>
-                      <p>
-                        <i>{item.data.ingredients}</i>
-                      </p>
-                    </Card.Text>
-                    {showButton === item.id ? (
-                      <Button
-                        size="lg"
-                        variant="dark"
-                        onClick={() => handleAddToCart(item)}
-                      >
+                      <h5>
                         <strong>
-                          <i>ORDER</i>
-                        </strong>
-                      </Button>
-                    ) : null}
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-          <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
-            {list.map((item) => (
-              <Col className="mt-3 mb-3" key={item.id}>
-                <Card
-                  style={{ maxWidth: "16rem" }}
-                  onMouseEnter={() => handleShowButton(item.id)}
-                  onMouseLeave={handleNoShowButton}
-                  border="dark"
-                  className="text-center ms-auto me-auto rounded-start"
-                >
-                  <Card.Img
-                    className="img-fluid"
-                    variant="top"
-                    src={item.data.img}
-                  />
-                  <hr />
-                  <Card.Body>
-                    <Card.Title>
-                      <h3>
-                        <Badge
-                          pill
-                          bg="light"
-                          className="text-dark border border-2 border-dark"
-                        >
                           <b>
-                            <i>{item.data.name}</i>
+                            <i> $ {item.data.price}</i>
                           </b>
-                        </Badge>
-                      </h3>
-                    </Card.Title>
-                    <Card.Text>
-                      <p>
-                        <strong>${item.data.price}</strong>
-                      </p>
+                        </strong>
+                      </h5>
                       <p>
                         <i>{item.data.ingredients}</i>
                       </p>

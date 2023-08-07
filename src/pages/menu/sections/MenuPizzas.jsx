@@ -115,15 +115,15 @@ export const MenuPizzas = () => {
           </DropdownButton>
         </div>
 
-        <Container style={{ maxWidth: "1000px" }}>
+        <Container style={{ maxWidth: "800px" }}>
           <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
             {list.map((item) => (
               <Col className="mt-3 mb-3" key={item.id}>
                 <Card
-                  style={{ maxWidth: "16rem" }}
+                  style={{ maxWidth: "18rem" }}
                   onMouseEnter={() => handleShowButton(item.id)}
                   onMouseLeave={handleNoShowButton}
-                  border="dark"
+                  border="dark border-2"
                   className="text-center ms-auto me-auto rounded-start"
                 >
                   <Card.Img
@@ -131,8 +131,12 @@ export const MenuPizzas = () => {
                     variant="top"
                     src={item.data.img}
                   />
-                  <hr />
-                  <Card.Body>
+                  <Card.Body
+                    style={{
+                      backgroundColor: "#FF914D",
+                      borderTop: "solid 2px black",
+                    }}
+                  >
                     <Card.Title>
                       <h3>
                         <Badge
@@ -147,9 +151,13 @@ export const MenuPizzas = () => {
                       </h3>
                     </Card.Title>
                     <Card.Text>
-                      <p>
-                        <strong>${item.data.price}</strong>
-                      </p>
+                      <h5>
+                        <strong>
+                          <b>
+                            <i> $ {item.data.price}</i>
+                          </b>
+                        </strong>
+                      </h5>
                       <p>
                         <i>{item.data.ingredients}</i>
                       </p>

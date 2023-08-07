@@ -42,21 +42,24 @@ export const Menu = () => {
       <Row className="justify-content-center text-center">
         {/* //* Pizzas Card */}
 
-        <Col
+        <Row
           style={{
             cursor: "pointer",
-            maxWidth: "750px",
-            maxHeight: "500px",
+            maxWidth: "550px",
+            maxHeight: "300px",
           }}
           xs={12}
           md={12}
           lg={12}
-          className="mt-4 mb-3"
+          className="mt-4 mb-4"
         >
           <Card
+            style={{ backgroundColor: "#FF914D" }}
             onMouseEnter={() => handleButtonMouseEnter(0)}
             onMouseLeave={handleButtonMouseLeave}
-            className={hoverIndex === 0 ? "menu-card-hover" : "border-dark"}
+            className={
+              hoverIndex === 0 ? "menu-card-hover" : "border-dark border-2"
+            }
           >
             <Card.Img src={menupizza} alt="Card image" />
             <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
@@ -89,15 +92,15 @@ export const Menu = () => {
               }
             </Card.ImgOverlay>
           </Card>
-        </Col>
+        </Row>
 
         {/* //* Drinks Card */}
 
-        <Col
+        <Row
           style={{
             cursor: "pointer",
-            maxWidth: "750px",
-            maxHeight: "500px",
+            maxWidth: "550px",
+            maxHeight: "300px",
           }}
           xs={12}
           md={12}
@@ -105,7 +108,10 @@ export const Menu = () => {
           className="mt-4 mb-4"
         >
           <Card
-            className={hoverIndex === 1 ? "menu-card-hover" : "border-dark"}
+            style={{ backgroundColor: "#FF914D" }}
+            className={
+              hoverIndex === 1 ? "menu-card-hover" : "border-dark border-2"
+            }
             onMouseEnter={() => handleButtonMouseEnter(1)}
             onMouseLeave={handleButtonMouseLeave}
           >
@@ -140,23 +146,26 @@ export const Menu = () => {
               }
             </Card.ImgOverlay>
           </Card>
-        </Col>
+        </Row>
 
         {/* //*Desserts Card */}
 
-        <Col
+        <Row
           style={{
             cursor: "pointer",
-            maxWidth: "750px",
-            maxHeight: "500px",
+            maxWidth: "550px",
+            maxHeight: "300px",
           }}
           xs={12}
           md={12}
           lg={12}
-          className="mt-4 mb-3"
+          className="mt-4 mb-4"
         >
           <Card
-            className={hoverIndex === 2 ? "menu-card-hover" : "border-dark"}
+            style={{ backgroundColor: "#FF914D" }}
+            className={
+              hoverIndex === 2 ? "menu-card-hover" : "border-dark border-2"
+            }
             onMouseEnter={() => handleButtonMouseEnter(2)}
             onMouseLeave={handleButtonMouseLeave}
           >
@@ -191,7 +200,7 @@ export const Menu = () => {
               }
             </Card.ImgOverlay>
           </Card>
-        </Col>
+        </Row>
       </Row>
     </Container>
   );
