@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 
-import mainpizza from "../../assets/mainpizza.png";
+import mainpizza from "../../assets/pizzamenu.png";
 
 export const PizzaCard = () => {
   const [hoverMouse, setHoverMouse] = useState(false);
@@ -21,16 +21,7 @@ export const PizzaCard = () => {
         <Card className="border-dark">
           <Card.Img src={mainpizza} alt="Card image" />
           <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
-            <div>
-              <Button variant="dark" size="md" className="mb-1">
-                {" "}
-                <Link to="/menu/pizzas">
-                  <strong>
-                    <i>ORDER NOW</i>
-                  </strong>
-                </Link>
-              </Button>
-            </div>
+            <div></div>
           </Card.ImgOverlay>
         </Card>
       ) : (

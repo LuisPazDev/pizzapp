@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, Button, Row, Col } from "react-bootstrap";
 
-import pizzaparty from "../../assets/pizzaparty.png";
+import pizzacard from "../../assets/pizzacard.png";
 import { Link } from "react-router-dom";
 
 export const SeeMenuCard = () => {
@@ -17,7 +17,7 @@ export const SeeMenuCard = () => {
 
         !show ? (
           <Card className="border-dark">
-            <Card.Img src={pizzaparty} style={{ minHeight: 200 }} />
+            <Card.Img src={pizzacard} style={{ minHeight: 300 }} />
             <Card.ImgOverlay className="d-flex flex-column justify-column justify-content-center">
               <Row className="text-white">
                 <Col className="text-center">
@@ -42,7 +42,13 @@ export const SeeMenuCard = () => {
           </Card>
         ) : (
           <Card className="menu-card-hover">
-            <Card.Img src={pizzaparty} style={{ minHeight: 200 }} />
+            <Card.Img
+              src={pizzacard}
+              style={{
+                maxHeight: "250px",
+                minHeight: "250px",
+              }}
+            />
             <Card.ImgOverlay className="d-flex flex-column justify-column justify-content-center">
               <Row className="text-white">
                 <Col className="text-center">

@@ -16,7 +16,13 @@ export const AboutCard = () => {
         // If show is true, then show the button
         !show ? (
           <Card className="border-dark">
-            <Card.Img src={aboutcard} style={{ minHeight: 200 }} />
+            <Card.Img
+              src={aboutcard}
+              style={{
+                maxHeight: "250px",
+                minHeight: "250px",
+              }}
+            />
             <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center">
               <Row className="text-white">
                 <Col>

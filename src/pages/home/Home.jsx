@@ -1,19 +1,15 @@
-import {
-  HomeHeader,
-  HomeMain,
-  HomeSecondary,
-  HomeBanner,
-  HomeFooter,
-} from "./sections/views";
+import { Container } from "react-bootstrap";
+import { HomeHeader, HomeMain, HomeBanner, HomeFooter } from "./sections/views";
+import { HomeIntro } from "./sections/views/HomeIntro";
 
 export const Home = () => {
   return (
-    <>
-      <HomeHeader />
+    <Container style={{ maxWidth: "1200px" }}>
+      <HomeIntro />
       <HomeMain />
-      <HomeSecondary />
+      <HomeHeader />
       <HomeBanner />
       <HomeFooter />
-    </>
+    </Container>
   );
 };
