@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Card, Button, Row, Col, Badge, Container } from "react-bootstrap";
+import { Card, Button, Row, Col, Badge } from "react-bootstrap";
 
 import menupizza from "./assets/menupizzas.png";
 import menudrinhs from "./assets/menudrinks.png";
@@ -18,7 +18,7 @@ export const Menu = () => {
   };
 
   return (
-    <Container fluid>
+    <>
       {/* Header */}
       <Row className="justify-content-center mt-3 text-center">
         <Col xs={12} md={12} lg={12} className="mt-4 mb-2">
@@ -202,6 +202,6 @@ export const Menu = () => {
           </Card>
         </Row>
       </Row>
-    </Container>
+    </>
   );
 };

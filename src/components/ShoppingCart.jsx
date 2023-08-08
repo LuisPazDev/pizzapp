@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { CartContext } from "../context/CartContext";
-import { Table, Button, Container, Badge } from "react-bootstrap";
+import { Table, Button, Badge } from "react-bootstrap";
 
 export const ShoppingCart = React.memo(() => {
   // get cart items from CartContext (context/CartContext.jsx)
@@ -58,7 +58,7 @@ export const ShoppingCart = React.memo(() => {
   };
 
   return (
-    <Container fluid className="text-center">
+    <>
       <div className="mt-5">
         <h3>
           <Badge pill bg="dark">
@@ -157,6 +157,6 @@ export const ShoppingCart = React.memo(() => {
           </Table>
         )
       }
-    </Container>
+    </>
   );
 });

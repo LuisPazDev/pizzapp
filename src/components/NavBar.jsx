@@ -1,13 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
-import {
-  Nav,
-  Navbar,
-  Container,
-  Offcanvas,
-  NavDropdown,
-} from "react-bootstrap";
+import { Nav, Navbar, Offcanvas, NavDropdown } from "react-bootstrap";
 
 // Assets & Styles
 import logo from "../assets/pizzapplogo.png";
@@ -41,12 +35,7 @@ export const NavBar = () => {
   return (
     <>
       {["md"].map((expand) => (
-        <Navbar
-          key={expand}
-          expand={expand}
-          style={{ width: "100%", zIndex: "1000" }}
-          className="sticky-top bg-light"
-        >
+        <Navbar key={expand} expand={expand} className="sticky-top bg-light">
           <Navbar.Brand href="#">
             <img src={logo} alt="logo" />
           </Navbar.Brand>
@@ -70,7 +59,7 @@ export const NavBar = () => {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav className="justify-content-end flex-grow-1">
                 <NavDropdown
                   title="MENU"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}

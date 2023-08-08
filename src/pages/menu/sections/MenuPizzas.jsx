@@ -10,7 +10,6 @@ import {
   Badge,
   Row,
   Col,
-  Container,
   DropdownButton,
   Dropdown,
 } from "react-bootstrap";
@@ -75,111 +74,107 @@ export const MenuPizzas = () => {
   };
 
   return (
-    <Container fluid>
-      <Row className="text-center mb-4">
-        <Row>
-          <div className="mt-4">
-            <h3>
-              <Badge pill bg="dark">
-                <strong>
-                  <i>PIZZAS</i>
-                </strong>
-              </Badge>
-            </h3>
-            <p>
-              <i>Choose your favorite pizza</i>
-            </p>
-          </div>
-        </Row>
-
-        <div className="text-center mt-3">
-          <DropdownButton
-            id="dropdown-basic-button"
-            title=" MENU  "
-            variant="dark"
-          >
-            <Dropdown.Item>
-              <Link className="text-black" to="/menu/drinks">
-                <strong>
-                  <i>DRINKS</i>
-                </strong>
-              </Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Link className="text-black" to="/menu/desserts">
-                <strong>
-                  <i>DESSERTS</i>
-                </strong>
-              </Link>
-            </Dropdown.Item>
-          </DropdownButton>
+    <Row className="text-center mb-4">
+      <Row>
+        <div className="mt-4">
+          <h3>
+            <Badge pill bg="dark">
+              <strong>
+                <i>PIZZAS</i>
+              </strong>
+            </Badge>
+          </h3>
+          <p>
+            <i>Choose your favorite pizza</i>
+          </p>
         </div>
-
-        <Container style={{ maxWidth: "800px" }}>
-          <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
-            {list.map((item) => (
-              <Col className="mt-3 mb-3" key={item.id}>
-                <Card
-                  style={{ maxWidth: "18rem" }}
-                  onMouseEnter={() => handleShowButton(item.id)}
-                  onMouseLeave={handleNoShowButton}
-                  border="dark border-2"
-                  className="text-center ms-auto me-auto rounded-start"
-                >
-                  <Card.Img
-                    className="img-fluid"
-                    variant="top"
-                    src={item.data.img}
-                  />
-                  <Card.Body
-                    style={{
-                      backgroundColor: "#FF914D",
-                      borderTop: "solid 2px black",
-                    }}
-                  >
-                    <Card.Title>
-                      <h3>
-                        <Badge
-                          pill
-                          bg="light"
-                          className="text-dark border border-2 border-dark"
-                        >
-                          <b>
-                            <i>{item.data.name}</i>
-                          </b>
-                        </Badge>
-                      </h3>
-                    </Card.Title>
-                    <Card.Text>
-                      <h5>
-                        <strong>
-                          <b>
-                            <i> $ {item.data.price}</i>
-                          </b>
-                        </strong>
-                      </h5>
-                      <p>
-                        <i>{item.data.ingredients}</i>
-                      </p>
-                    </Card.Text>
-                    {showButton === item.id ? (
-                      <Button
-                        size="lg"
-                        variant="dark"
-                        onClick={() => handleAddToCart(item)}
-                      >
-                        <strong>
-                          <i>ORDER</i>
-                        </strong>
-                      </Button>
-                    ) : null}
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
       </Row>
-    </Container>
+
+      <div className="text-center mt-3">
+        <DropdownButton
+          id="dropdown-basic-button"
+          title=" MENU  "
+          variant="dark"
+        >
+          <Dropdown.Item>
+            <Link className="text-black" to="/menu/drinks">
+              <strong>
+                <i>DRINKS</i>
+              </strong>
+            </Link>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Link className="text-black" to="/menu/desserts">
+              <strong>
+                <i>DESSERTS</i>
+              </strong>
+            </Link>
+          </Dropdown.Item>
+        </DropdownButton>
+      </div>
+
+      <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
+        {list.map((item) => (
+          <Col className="mt-3 mb-3" key={item.id}>
+            <Card
+              style={{ maxWidth: "18rem" }}
+              onMouseEnter={() => handleShowButton(item.id)}
+              onMouseLeave={handleNoShowButton}
+              border="dark border-2"
+              className="text-center ms-auto me-auto rounded-start"
+            >
+              <Card.Img
+                className="img-fluid"
+                variant="top"
+                src={item.data.img}
+              />
+              <Card.Body
+                style={{
+                  backgroundColor: "#FF914D",
+                  borderTop: "solid 2px black",
+                }}
+              >
+                <Card.Title>
+                  <h3>
+                    <Badge
+                      pill
+                      bg="light"
+                      className="text-dark border border-2 border-dark"
+                    >
+                      <b>
+                        <i>{item.data.name}</i>
+                      </b>
+                    </Badge>
+                  </h3>
+                </Card.Title>
+                <Card.Text>
+                  <h5>
+                    <strong>
+                      <b>
+                        <i> $ {item.data.price}</i>
+                      </b>
+                    </strong>
+                  </h5>
+                  <p>
+                    <i>{item.data.ingredients}</i>
+                  </p>
+                </Card.Text>
+                {showButton === item.id ? (
+                  <Button
+                    size="lg"
+                    variant="dark"
+                    onClick={() => handleAddToCart(item)}
+                  >
+                    <strong>
+                      <i>ORDER</i>
+                    </strong>
+                  </Button>
+                ) : null}
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Row>
   );
 };

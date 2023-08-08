@@ -24,73 +24,66 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  // calculate total quantity of items in cart
+  const cartItems = cart.reduce((total, item) => total + item.quantity, 0);
+
+  // calculate total price of items in cart
+  const totalPrice = cart.reduce(
+    (total, item) => total + item.data.price * item.quantity,
+    0
+  );
+  const saleTaxes = totalPrice * 0.04;
+  const cartTotal = totalPrice + saleTaxes;
+
   useEffect(() => {
     if (currentLocation === "/cart") {
       setShowToast(false);
-    } else {
-      setShowToast(true);
     }
   }, [currentLocation]);
 
-  // calculate total price plus saletaxes of items in cartToast
-  const [cartTotal, setCartTotal] = useState(0);
-  const [cartItems, setCartItems] = useState(0);
-
-  useEffect(() => {
-    const totalPrice = cart.reduce(
-      (total, item) => total + item.data.price * item.quantity,
-      0
-    );
-    const saleTaxes = totalPrice * 0.04;
-    setCartTotal(totalPrice + saleTaxes);
-    setCartItems(cart.length);
-  }, [cart]);
-
   return (
     <CartContext.Provider value={[cart, setCart, handleAddToCartToast]}>
-      <Container fluid>
-        {children}
-        {
-          // show Toast when cart is not empty
-          cartItems > 0 && (
-            <Toast
-              show={showToast}
-              style={{
-                position: "fixed",
-                bottom: 20,
-                right: 20,
-                width: 140,
-              }}
-            >
-              <Toast.Header closeButton={false}>
-                <h6 className="mt-2">
+      {
+        // show Toast when cart is not empty
+        cartItems > 0 && (
+          <Toast
+            show={showToast}
+            style={{
+              position: "fixed",
+              bottom: 20,
+              right: 20,
+              width: 140,
+            }}
+          >
+            <Toast.Header closeButton={false}>
+              <h6 className="mt-2">
+                <strong>
+                  <i>My Order</i>
+                </strong>
+              </h6>
+              <small className="cart-quantity rounded-pill ms-3">
+                {cartItems}{" "}
+              </small>
+            </Toast.Header>
+            <Toast.Body>
+              <p>
+                <strong className="me-auto">
+                  {" "}
+                  <i>Total :{" $" + cartTotal.toFixed(2)}</i>
+                </strong>
+              </p>
+              <Button variant="dark" size="sm">
+                <Link to="/cart">
                   <strong>
-                    <i>My Order</i>
+                    <i>CHECK OUT</i>
                   </strong>
-                </h6>
-                <small className="cart-quantity rounded-pill ms-3">
-                  {cartItems}{" "}
-                </small>
-              </Toast.Header>
-              <Toast.Body>
-                <p>
-                  <strong className="me-auto">
-                    {" "}
-                    <i>Total :{" $" + cartTotal}</i>
-                  </strong>
-                </p>
-                <Button variant="dark" size="md">
-                  <Link to="/cart">
-                    <strong>
-                      <i>CHECK OUT</i>
-                    </strong>
-                  </Link>
-                </Button>
-              </Toast.Body>
-            </Toast>
-          )
-        }
-      </Container>
+                </Link>
+              </Button>
+            </Toast.Body>
+          </Toast>
+        )
+      }
+      <Container>{children}</Container>
     </CartContext.Provider>
   );
 };

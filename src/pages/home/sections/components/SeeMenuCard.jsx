@@ -16,8 +16,14 @@ export const SeeMenuCard = () => {
         // If show is true, then show the button
 
         !show ? (
-          <Card className="border-dark">
-            <Card.Img src={pizzacard} style={{ minHeight: 300 }} />
+          <Card className="border-dark mt-4 mb-4">
+            <Card.Img
+              src={pizzacard}
+              style={{
+                maxHeight: 250,
+                minHeight: 250,
+              }}
+            />
             <Card.ImgOverlay className="d-flex flex-column justify-column justify-content-center">
               <Row className="text-white">
                 <Col className="text-center">

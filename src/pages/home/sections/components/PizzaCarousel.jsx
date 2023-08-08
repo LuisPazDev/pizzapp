@@ -11,8 +11,8 @@ export const PizzaCarousel = () => {
       <Carousel.Item interval={1000}>
         <img
           style={{
-            maxHeight: "600px",
-            minHeight: "400px",
+            maxHeight: "500px",
+            minHeight: "500px",
           }}
           className="d-block h-100 w-100"
           src={menupizza}
@@ -23,8 +23,8 @@ export const PizzaCarousel = () => {
       <Carousel.Item>
         <img
           style={{
-            maxHeight: "600px",
-            minHeight: "400px",
+            maxHeight: "500px",
+            minHeight: "500px",
           }}
           className="d-block w-100"
           src={menudrinks}
@@ -43,8 +43,8 @@ export const PizzaCarousel = () => {
       <Carousel.Item>
         <img
           style={{
-            maxHeight: "600px",
-            minHeight: "400px",
+            maxHeight: "500px",
+            minHeight: "500px",
           }}
           className="d-block w-100"
           src={menudesserts}

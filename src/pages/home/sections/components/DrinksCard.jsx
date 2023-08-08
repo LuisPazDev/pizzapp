@@ -21,9 +21,25 @@ export const DrinksCard = () => {
         // If showButton is true, then show the button
         !hoverMouse ? (
           <Card className="border-dark">
-            <Card.Img src={drinks} alt="Card image" />
+            <Card.Img
+              style={{
+                maxHeight: "240px",
+                minHeight: "240px",
+              }}
+              src={drinks}
+              alt="Card image"
+            />
             <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
-              <div></div>
+              <div>
+                <Button variant="dark" size="md">
+                  {" "}
+                  <Link to="/menu/drinks">
+                    <strong>
+                      <i>MENU</i>
+                    </strong>
+                  </Link>
+                </Button>
+              </div>
             </Card.ImgOverlay>
           </Card>
         ) : (

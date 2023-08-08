@@ -1,26 +1,26 @@
-import { AboutCard, PizzaCarousel, SeeMenuCard } from "../components";
+import { DessertsCard, DrinksCard, PizzaCarousel } from "../components";
 import { Row, Col, Container } from "react-bootstrap";
 
 export const HomeMain = () => {
   return (
-    <Container style={{ maxWidth: "1200px" }}>
+    <>
       <Row xs={1} sm={1} md={2}>
         {/* Pizza Carousel */}
-        <Col className="mb-4">
+        <Col className="mb-3">
           <PizzaCarousel />
         </Col>
 
         <Col>
           {/* Pizza Box */}
-          <Row className="mb-4">
-            <SeeMenuCard />
+          <Row className="mb-3">
+            <DrinksCard />
           </Row>
           {/* Drinks Box */}
           <Row>
-            <AboutCard />
+            <DessertsCard />
           </Row>
         </Col>
       </Row>
-    </Container>
+    </>
   );
 };

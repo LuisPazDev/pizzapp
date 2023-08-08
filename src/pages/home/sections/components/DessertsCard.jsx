@@ -21,14 +21,21 @@ export const DessertsCard = () => {
         // If showButton is true, then show the button
         !hoverMouse ? (
           <Card className="border-dark">
-            <Card.Img src={desserts} alt="Card image" />
+            <Card.Img
+              style={{
+                maxHeight: "240px",
+                minHeight: "240px",
+              }}
+              src={desserts}
+              alt="Card image"
+            />
             <Card.ImgOverlay className="d-flex flex-column justify-content-end text-end">
               <Card.Text>
                 <Button variant="dark" size="md">
                   {" "}
                   <Link to="/menu/desserts">
                     <strong>
-                      <i>ORDER</i>
+                      <i>MENU</i>
                     </strong>
                   </Link>
                 </Button>

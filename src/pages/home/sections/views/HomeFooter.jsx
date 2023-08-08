@@ -1,10 +1,8 @@
-import { Container } from "react-bootstrap";
-
 import logoluispazdev from "../../assets/logoluispazdev.png";
 
 export const HomeFooter = () => {
   return (
-    <Container fluid className="footer-bg text-center mt-3">
+    <>
       <hr />
       <div className="mt-2">
         <h6>
@@ -26,6 +24,6 @@ export const HomeFooter = () => {
           <i>© 2022 All rights reserved </i>
         </p>
       </div>
-    </Container>
+    </>
   );
 };

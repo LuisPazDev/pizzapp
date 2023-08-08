@@ -2,15 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { db } from "../../components/Firebase";
 import { addDoc, collection } from "firebase/firestore";
-import {
-  Container,
-  Badge,
-  Button,
-  Form,
-  Row,
-  Card,
-  Col,
-} from "react-bootstrap";
+import { Badge, Button, Form, Row, Card, Col } from "react-bootstrap";
 
 export function Contact() {
   const [input, setInput] = useState({});
@@ -40,7 +32,7 @@ export function Contact() {
   };
 
   return (
-    <Container fluid className="p-4">
+    <>
       <Row>
         <Col xs={12} md={12} lg={12} className="text-center mb-4">
           <div>
@@ -136,6 +128,6 @@ export function Contact() {
           </Link>
         </Row>
       </Row>
-    </Container>
+    </>
   );
 }
