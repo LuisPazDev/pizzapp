@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pizzapp/static/css/main.ed7191eb.css",
-    "main.js": "/pizzapp/static/js/main.fb0c1af6.js",
+    "main.css": "/pizzapp/static/css/main.73721c36.css",
+    "main.js": "/pizzapp/static/js/main.ed9ecd65.js",
     "static/media/pizzamenu.png": "/pizzapp/static/media/pizzamenu.7098074c589abc42bee8.png",
-    "static/media/drinks.png": "/pizzapp/static/media/drinks.5dbd567b0f214774609c.png",
+    "static/media/pizzacard.png": "/pizzapp/static/media/pizzacard.464bfb037ab6c2e3139d.png",
     "static/media/aboutuspage.png": "/pizzapp/static/media/aboutuspage.04f2b86fd7d36bab5bf6.png",
-    "static/media/desserts.png": "/pizzapp/static/media/desserts.690ad805cffec61c4898.png",
-    "static/media/pizzacard.png": "/pizzapp/static/media/pizzacard.ae6c81372488b432d5e9.png",
-    "static/media/aboutcard.png": "/pizzapp/static/media/aboutcard.90c7f7fc6787d1442c3c.png",
+    "static/media/aboutcard.png": "/pizzapp/static/media/aboutcard.408c8209df1ce6b46e1b.png",
+    "static/media/desserts.png": "/pizzapp/static/media/desserts.e8957e302692f680db8e.png",
+    "static/media/drinks.png": "/pizzapp/static/media/drinks.8438b520c251642c639f.png",
     "static/media/menupizzas.png": "/pizzapp/static/media/menupizzas.45a5da133d2c484bf03a.png",
     "static/media/reservation.png": "/pizzapp/static/media/reservation.cd4c22ca79a0dbd8e66b.png",
     "static/media/menudesserts.png": "/pizzapp/static/media/menudesserts.be88cb6bf734d6abd5ec.png",
@@ -17,11 +17,11 @@
     "index.html": "/pizzapp/index.html",
     "static/media/divider.svg": "/pizzapp/static/media/divider.bbc24698b825b7cad47df742441bcf88.svg",
     "static/media/cart.svg": "/pizzapp/static/media/cart.0312147298b7f757bf0e67b674447789.svg",
-    "main.ed7191eb.css.map": "/pizzapp/static/css/main.ed7191eb.css.map",
-    "main.fb0c1af6.js.map": "/pizzapp/static/js/main.fb0c1af6.js.map"
+    "main.73721c36.css.map": "/pizzapp/static/css/main.73721c36.css.map",
+    "main.ed9ecd65.js.map": "/pizzapp/static/js/main.ed9ecd65.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed7191eb.css",
-    "static/js/main.fb0c1af6.js"
+    "static/css/main.73721c36.css",
+    "static/js/main.ed9ecd65.js"
   ]
 }
