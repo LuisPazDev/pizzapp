@@ -4,9 +4,9 @@ import { Container } from "react-bootstrap";
 
 export const Layout = () => {
   return (
-    <Container>
+    <>
       <NavBar />
       <Outlet />
-    </Container>
+    </>
   );
 };

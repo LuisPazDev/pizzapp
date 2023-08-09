@@ -53,6 +53,7 @@ export const CartProvider = ({ children }) => {
               bottom: 20,
               right: 20,
               width: 140,
+              zIndex: 9999,
             }}
           >
             <Toast.Header closeButton={false}>
@@ -83,7 +84,7 @@ export const CartProvider = ({ children }) => {
           </Toast>
         )
       }
-      <Container>{children}</Container>
+      <>{children}</>
     </CartContext.Provider>
   );
 };
