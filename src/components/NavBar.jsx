@@ -35,7 +35,12 @@ export const NavBar = () => {
   return (
     <>
       {["md"].map((expand) => (
-        <Navbar key={expand} expand={expand} className="sticky-top bg-light">
+        <Navbar
+          // style={{ backgroundColor: "#D4501F" }}
+          key={expand}
+          expand={expand}
+          className="sticky-top bg-dark"
+        >
           <Navbar.Brand href="#">
             <img src={logo} alt="logo" />
           </Navbar.Brand>
@@ -61,12 +66,13 @@ export const NavBar = () => {
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1">
                 <NavDropdown
+                  className="text-light"
                   title="MENU"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
                 >
                   <NavDropdown.Item>
                     <Link
-                      className="text-dark"
+                      className="text-light"
                       onClick={handleClose}
                       to="/menu/pizzas"
                     >
@@ -76,7 +82,7 @@ export const NavBar = () => {
                   <NavDropdown.Divider />
                   <NavDropdown.Item>
                     <Link
-                      className="text-dark"
+                      className="text-light"
                       onClick={handleClose}
                       to="/menu/drinks"
                     >
@@ -86,7 +92,7 @@ export const NavBar = () => {
                   <NavDropdown.Divider />
                   <NavDropdown.Item>
                     <Link
-                      className="text-dark"
+                      className="text-light"
                       onClick={handleClose}
                       to="/menu/desserts"
                     >
@@ -95,13 +101,17 @@ export const NavBar = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link>
-                  <Link className="text-dark" onClick={handleClose} to="/about">
+                  <Link
+                    className="text-light"
+                    onClick={handleClose}
+                    to="/about"
+                  >
                     ABOUT
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
                   <Link
-                    className="text-dark"
+                    className="text-light"
                     onClick={handleClose}
                     to="/contact"
                   >
@@ -109,7 +119,7 @@ export const NavBar = () => {
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link className="text-dark" onClick={handleClose} to="/cart">
+                  <Link className="text-light" onClick={handleClose} to="/cart">
                     {
                       // if cart is empty, show 0
                       cartItems.length === 0 ? (

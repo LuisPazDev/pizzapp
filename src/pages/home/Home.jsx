@@ -5,9 +5,8 @@ import { AboutCard, SeeMenuCard } from "./sections/components";
 export const Home = () => {
   return (
     <>
-      <HomeMain />
-      <HomeHeader />
       <HomeBanner />
+      <HomeHeader />
       <SeeMenuCard />
       <AboutCard />
       <HomeFooter />

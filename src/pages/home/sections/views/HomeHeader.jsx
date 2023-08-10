@@ -5,15 +5,21 @@ import divider from "../../assets/divider.svg";
 
 export const HomeHeader = () => {
   return (
-    <Row xs={1} sm={1} md={2} className="d-flex align-items-center mt-3 mb-3">
-      <Col className="mb-1">
+    <Row
+      className="d-flex align-items-center text-center mt-4 mb-3"
+      xs={1}
+      sm={1}
+      md={4}
+    >
+      <Col md={2}></Col>
+      <Col className="mb-1" md={4}>
         <h4>
           <strong>
             <i>START YOUR ORDER NOW</i>
           </strong>
         </h4>
       </Col>
-      <Col className="d-flex justify-content-center mt-2 mb-2">
+      <Col className="d-flex justify-content-center mt-2 mb-2" md={4}>
         <Button className="mb-2" variant="dark" size="md">
           <Link to="/menu">
             {" "}
@@ -36,6 +42,7 @@ export const HomeHeader = () => {
           </a>
         </Button>
       </Col>
+      <Col md={2}></Col>
     </Row>
   );
 };

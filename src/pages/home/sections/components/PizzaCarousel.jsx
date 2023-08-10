@@ -17,15 +17,7 @@ export const PizzaCarousel = () => {
           }
           alt="First slide"
         />
-        <Carousel.Caption className="text-center">
-          <Button variant="dark" size="lg" className="mt-1">
-            <Link to="/menu">
-              <strong>
-                <i>OUR MENU</i>
-              </strong>
-            </Link>
-          </Button>
-        </Carousel.Caption>
+        <Carousel.Caption className="text-center"></Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -34,15 +26,7 @@ export const PizzaCarousel = () => {
           src={menudrinks}
           alt="Second slide"
         />
-        <Carousel.Caption className="text-center">
-          <Button variant="dark" size="lg" className="mt-1">
-            <Link to="/menu/">
-              <strong>
-                <i>OUR MENU</i>
-              </strong>
-            </Link>
-          </Button>
-        </Carousel.Caption>
+        <Carousel.Caption className="text-center"></Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -51,15 +35,7 @@ export const PizzaCarousel = () => {
           src={menudesserts}
           alt="Third slide"
         />
-        <Carousel.Caption className="text-center">
-          <Button variant="dark" size="lg" className="mt-1">
-            <Link to="/menu">
-              <strong>
-                <i>OUR MENU</i>
-              </strong>
-            </Link>
-          </Button>
-        </Carousel.Caption>
+        <Carousel.Caption className="text-center"></Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );

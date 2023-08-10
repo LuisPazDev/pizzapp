@@ -34,10 +34,6 @@ a {
 }
 
 /** containers home page */
-.container-home-header {
-  height: 766px;
-  background-image: url("https://res.cloudinary.com/dxctvkec9/image/upload/v1691590077/pizzacard_crwxhf.png");
-}
 
 .p-about {
   margin-top: 25px;
