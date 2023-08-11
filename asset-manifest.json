@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/pizzapp/static/css/main.4f650bd1.css",
-    "main.js": "/pizzapp/static/js/main.90238c70.js",
+    "main.js": "/pizzapp/static/js/main.e74d48e9.js",
     "static/media/pizzacard3.png": "/pizzapp/static/media/pizzacard3.45c3e948e704c59a9a5b.png",
     "static/media/pizzacard.png": "/pizzapp/static/media/pizzacard.a366a77f89424a0ba857.png",
     "static/media/pizzacard2.png": "/pizzapp/static/media/pizzacard2.140f216b5ac61083aec0.png",
     "static/media/pizzamenu.png": "/pizzapp/static/media/pizzamenu.7098074c589abc42bee8.png",
     "static/media/aboutuspage.png": "/pizzapp/static/media/aboutuspage.04f2b86fd7d36bab5bf6.png",
     "static/media/pizzahome.png": "/pizzapp/static/media/pizzahome.e802611013ca6bb77161.png",
-    "static/media/aboutcard.png": "/pizzapp/static/media/aboutcard.408c8209df1ce6b46e1b.png",
     "static/media/desserts.png": "/pizzapp/static/media/desserts.e8957e302692f680db8e.png",
     "static/media/drinks.png": "/pizzapp/static/media/drinks.8438b520c251642c639f.png",
     "static/media/menupizzas.png": "/pizzapp/static/media/menupizzas.45a5da133d2c484bf03a.png",
@@ -19,10 +18,10 @@
     "static/media/divider.svg": "/pizzapp/static/media/divider.bbc24698b825b7cad47df742441bcf88.svg",
     "static/media/cart.svg": "/pizzapp/static/media/cart.0312147298b7f757bf0e67b674447789.svg",
     "main.4f650bd1.css.map": "/pizzapp/static/css/main.4f650bd1.css.map",
-    "main.90238c70.js.map": "/pizzapp/static/js/main.90238c70.js.map"
+    "main.e74d48e9.js.map": "/pizzapp/static/js/main.e74d48e9.js.map"
   },
   "entrypoints": [
     "static/css/main.4f650bd1.css",
-    "static/js/main.90238c70.js"
+    "static/js/main.e74d48e9.js"
   ]
 }
