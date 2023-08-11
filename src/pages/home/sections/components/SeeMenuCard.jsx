@@ -1,90 +1,80 @@
-import { useState } from "react";
-import { Card, Button, Row, Col } from "react-bootstrap";
-
-import pizzacard from "../../assets/pizzacard.png";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { collection, onSnapshot, query } from "firebase/firestore";
+import { db } from "../../../../components/Firebase";
+
+import {
+  Container,
+  Badge,
+  Button,
+  Row,
+  Col,
+  Carousel,
+  Card,
+} from "react-bootstrap";
 
 export const SeeMenuCard = () => {
-  const [show, setShow] = useState(false);
+  const [list, setList] = useState([]);
 
-  const handleShow = () => setShow(true);
-  const handleClose = () => setShow(false);
+  useEffect(() => {
+    const q = query(collection(db, "menu"));
+    onSnapshot(q, (querySnapshot) => {
+      setList(
+        querySnapshot.docs.map((item) => ({
+          id: item.id,
+          data: item.data(),
+        }))
+      );
+    });
+  }, []);
 
   return (
-    <div onMouseEnter={handleShow} onMouseLeave={handleClose}>
-      {
-        // If show is true, then show the button
-
-        !show ? (
-          <Card className="border-dark mt-4 mb-4">
-            <Card.Img
-              src={pizzacard}
-              style={{
-                maxHeight: 250,
-                minHeight: 250,
-              }}
-            />
-            <Card.ImgOverlay className="d-flex flex-column justify-column justify-content-center">
-              <Row className="text-white">
-                <Col className="text-center">
-                  <div className="mb-3">
-                    <h3>
-                      <strong>
-                        <b>
-                          <i>IT'S TIME TO SHARE</i>
-                        </b>
-                      </strong>
-                      <br />
-                      <strong>
-                        <b>
-                          <i>IT'S PIZZA TIME</i>
-                        </b>
-                      </strong>
-                    </h3>
-                  </div>
-                </Col>
-              </Row>
-            </Card.ImgOverlay>
-          </Card>
-        ) : (
-          <Card className="menu-card-hover">
-            <Card.Img
-              src={pizzacard}
-              style={{
-                maxHeight: "250px",
-                minHeight: "250px",
-              }}
-            />
-            <Card.ImgOverlay className="d-flex flex-column justify-column justify-content-center">
-              <Row className="text-white">
-                <Col className="text-center">
-                  <div className="mb-1">
-                    <h5>
-                      <p>
-                        <strong>
-                          <b>
-                            <i>CHECK OUR FULL MENU</i>
-                          </b>
-                        </strong>
-                      </p>
-                    </h5>
-                  </div>
-                  <div>
-                    <Button variant="dark" size="lg">
-                      {" "}
-                      <Link to="/menu">
-                        <strong>
-                          <i>SEE MENU</i>
-                        </strong>
-                      </Link>
-                    </Button>
-                  </div>
-                </Col>
-              </Row>
-            </Card.ImgOverlay>
-          </Card>
-        )
-      }
-    </div>
+    <Container
+      fluid
+      style={{
+        width: "100%",
+      }}
+    >
+      <Row>
+        <Col xs={12} md={6} className="text-center">
+          <Carousel fade>
+            {list.map((item) => (
+              <Carousel.Item key={item.id}>
+                <img
+                  className="d-block w-100"
+                  src={item.data.img}
+                  alt="First slide"
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Col>
+        {/*  */}
+        <Col
+          xs={12}
+          md={6}
+          className="d-flex flex-column justify-content-center align-items-center"
+        >
+          <div>
+            <h1>
+              Check Out Our <br />
+              <strong>Menu </strong>
+              We Have <br />
+              <strong>Something</strong> For <br />
+              <strong>Everyone</strong>
+            </h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur <br />
+              adipisicing elit. Vel at ratione facere tenetur.
+            </p>
+            <Button variant="dark" size="lg">
+              <strong>
+                <i>GO TO MENU</i>
+              </strong>
+            </Button>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
