@@ -35,6 +35,10 @@ a {
 
 /** containers home page */
 
+.container {
+  width: 100%;
+}
+
 .p-about {
   margin-top: 25px;
   font-size: 14px;

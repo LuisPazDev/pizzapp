@@ -1,24 +1,53 @@
 import {
   Button,
   Badge,
-  Card,
+  Carousel,
   Row,
   Col,
   Container,
   Image,
 } from "react-bootstrap";
 
-import menu from "../../assets/pizzahome.png";
+import pizzaslide from "../../assets/pizzaslide.png";
+import drinkslide from "../../assets/drinkslide.png";
+import dessertslide from "../../assets/dessertslide.png";
 
 export const DeliveryCard = () => {
   return (
-    <Container
-      fluid
-      style={{
-        width: "100%",
-      }}
-    >
+    <Container>
       <Row>
+        {/* Carousel Col */}
+        <Col xs={12} md={6}>
+          <Carousel fade>
+            {/* First Slide */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={pizzaslide}
+                alt="First slide"
+              />
+            </Carousel.Item>
+
+            {/* Second Slide */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={drinkslide}
+                alt="Second slide"
+              />
+            </Carousel.Item>
+
+            {/* Third Slide */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={dessertslide}
+                alt="Third slide"
+              />
+            </Carousel.Item>
+          </Carousel>
+        </Col>
+        {/* Text Col */}
         <Col
           xs={12}
           md={6}
@@ -26,9 +55,11 @@ export const DeliveryCard = () => {
         >
           <div>
             <h1>
-              Handmade, <br />
-              With an Extra <br />
-              Pinch of Love
+              Check Out Our <br />
+              <strong>Menu </strong>
+              We Have <br />
+              <strong>Something</strong> For <br />
+              <strong>Everyone</strong>
             </h1>
             <p>
               Lorem ipsum, dolor sit amet consectetur <br />
@@ -36,13 +67,10 @@ export const DeliveryCard = () => {
             </p>
             <Button variant="dark" size="lg">
               <strong>
-                <i>Order Now</i>
+                <i>Go To Menu</i>
               </strong>
             </Button>
           </div>
-        </Col>
-        <Col xs={12} md={6}>
-          <Image src={menu} fluid />
         </Col>
       </Row>
     </Container>

@@ -29,13 +29,32 @@ export const SeeMenuCard = () => {
   }, []);
 
   return (
-    <Container
-      fluid
-      style={{
-        width: "100%",
-      }}
-    >
+    <Container>
       <Row>
+        {/* Text Col */}
+        <Col
+          xs={12}
+          md={6}
+          className="d-flex flex-column justify-content-center align-items-center"
+        >
+          <div>
+            <h1>
+              Handmade, <br />
+              With an Extra <br />
+              Pinch of Love
+            </h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur <br />
+              adipisicing elit. Vel at ratione facere tenetur.
+            </p>
+            <Button variant="dark" size="lg">
+              <strong>
+                <i>Order Now</i>
+              </strong>
+            </Button>
+          </div>
+        </Col>
+        {/* Carousel Col */}
         <Col xs={12} md={6} className="text-center">
           <Carousel fade>
             {list.map((item) => (
@@ -48,31 +67,6 @@ export const SeeMenuCard = () => {
               </Carousel.Item>
             ))}
           </Carousel>
-        </Col>
-        {/*  */}
-        <Col
-          xs={12}
-          md={6}
-          className="d-flex flex-column justify-content-center align-items-center"
-        >
-          <div>
-            <h1>
-              Check Out Our <br />
-              <strong>Menu </strong>
-              We Have <br />
-              <strong>Something</strong> For <br />
-              <strong>Everyone</strong>
-            </h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur <br />
-              adipisicing elit. Vel at ratione facere tenetur.
-            </p>
-            <Button variant="dark" size="lg">
-              <strong>
-                <i>GO TO MENU</i>
-              </strong>
-            </Button>
-          </div>
         </Col>
       </Row>
     </Container>

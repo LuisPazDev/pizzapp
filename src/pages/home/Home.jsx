@@ -5,9 +5,10 @@ import { AboutCard, SeeMenuCard } from "./sections/components";
 export const Home = () => {
   return (
     <>
+      <SeeMenuCard />
+      <HomeHeader />
       <HomeBanner />
       <HomeHeader />
-      <SeeMenuCard />
       <AboutCard />
       <HomeFooter />
     </>
