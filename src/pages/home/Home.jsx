@@ -6,9 +6,7 @@ export const Home = () => {
   return (
     <>
       <SeeMenuCard />
-      <HomeHeader />
       <HomeBanner />
-      <HomeHeader />
       <AboutCard />
       <HomeFooter />
     </>

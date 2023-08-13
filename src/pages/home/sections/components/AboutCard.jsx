@@ -10,21 +10,17 @@ import {
   Image,
 } from "react-bootstrap";
 
-import pizzacard from "../../assets/pizzacard.png";
+import aboutus from "../../assets/aboutus.png";
 
 export const AboutCard = () => {
   return (
-    <Container
-      fluid
-      style={{
-        width: "100%",
-      }}
-    >
+    <Container fluid style={{}} className="ps-5 mt-4 mb-4">
       <Row>
+        {/* Text Col */}
         <Col
           xs={12}
           md={6}
-          className="d-flex flex-column justify-content-center align-items-center"
+          className="mt-4 mb-4 d-flex flex-column justify-content-center"
         >
           <div>
             <h1>
@@ -34,19 +30,21 @@ export const AboutCard = () => {
               <strong>Serving</strong> Since <br />
               <strong>2017</strong>
             </h1>
+            <br />
             <p>
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <Button variant="dark" size="lg">
+            <Button className="mt-2" variant="dark" size="lg">
               <strong>
-                <i>READ MORE</i>
+                <i>Know More</i>
               </strong>
             </Button>
           </div>
         </Col>
-        <Col xs={12} md={6} className="p-3">
-          <Image fluid rounded src={pizzacard} />
+        {/* Image Col */}
+        <Col xs={12} md={6}>
+          <Image fluid rounded src={aboutus} />
         </Col>
       </Row>
     </Container>

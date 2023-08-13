@@ -3,15 +3,7 @@ import { Link } from "react-router-dom";
 import { collection, onSnapshot, query } from "firebase/firestore";
 import { db } from "../../../../components/Firebase";
 
-import {
-  Container,
-  Badge,
-  Button,
-  Row,
-  Col,
-  Carousel,
-  Card,
-} from "react-bootstrap";
+import { Container, Badge, Button, Row, Col, Carousel } from "react-bootstrap";
 
 export const SeeMenuCard = () => {
   const [list, setList] = useState([]);
@@ -29,33 +21,44 @@ export const SeeMenuCard = () => {
   }, []);
 
   return (
-    <Container>
+    <Container
+      fluid
+      style={{ backgroundColor: "rgba(250, 124, 6, 0.863)" }}
+      className="ps-5 pe-5"
+    >
       <Row>
         {/* Text Col */}
         <Col
           xs={12}
           md={6}
-          className="d-flex flex-column justify-content-center align-items-center"
+          className="mt-4 mb-4 d-flex flex-column justify-content-center"
         >
           <div>
+            <h4 className="mb-3">
+              <Badge bg="dark">Welcome</Badge>
+            </h4>
             <h1>
-              Handmade, <br />
-              With an Extra <br />
-              Pinch of Love
+              Handmade, With <br />
+              an Extra Pinch <br />
+              of <b className="text-white"> Love</b> and{" "}
+              <b className="text-white">Care </b>
             </h1>
+            <br />
             <p>
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <Button variant="dark" size="lg">
-              <strong>
-                <i>Order Now</i>
-              </strong>
-            </Button>
+            <div>
+              <Button className="mt-3" variant="dark" size="lg">
+                <strong>
+                  <i>Order Now</i>
+                </strong>
+              </Button>
+            </div>
           </div>
         </Col>
         {/* Carousel Col */}
-        <Col xs={12} md={6} className="text-center">
+        <Col xs={12} md={6} className="mt-4 mb-4 text-center">
           <Carousel fade>
             {list.map((item) => (
               <Carousel.Item key={item.id}>

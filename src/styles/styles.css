@@ -69,7 +69,7 @@ a {
 }
 
 .cart-quantity {
-  background-color: rgb(250, 124, 6);
+  background-color: rgba(250, 124, 6, 0.863);
   color: white;
   font-size: 17px;
   font-weight: 500;

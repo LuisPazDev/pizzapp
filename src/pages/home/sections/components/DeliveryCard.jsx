@@ -14,8 +14,13 @@ import dessertslide from "../../assets/dessertslide.png";
 
 export const DeliveryCard = () => {
   return (
-    <Container>
-      <Row>
+    <Container className="ps-5 pe-5 border-dark border-bottom border-2">
+      <Row className="mt-2 mb-4">
+        <div className="mt-1">
+          <h4>
+            <Badge bg="dark">Our Menu</Badge>
+          </h4>
+        </div>
         {/* Carousel Col */}
         <Col xs={12} md={6}>
           <Carousel fade>
@@ -55,17 +60,18 @@ export const DeliveryCard = () => {
         >
           <div>
             <h1>
-              Check Out Our <br />
+              Check out our <br />
               <strong>Menu </strong>
-              We Have <br />
-              <strong>Something</strong> For <br />
+              We have <br />
+              <strong>Something</strong> for <br />
               <strong>Everyone</strong>
             </h1>
+            <br />
             <p>
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <Button variant="dark" size="lg">
+            <Button className="mt-2" variant="dark" size="lg">
               <strong>
                 <i>Go To Menu</i>
               </strong>
