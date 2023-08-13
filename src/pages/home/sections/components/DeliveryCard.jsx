@@ -51,6 +51,13 @@ export const DeliveryCard = () => {
               />
             </Carousel.Item>
           </Carousel>
+          <div className="text-center">
+            <Button variant="dark" size="lg">
+              <strong>
+                <i>Menu</i>
+              </strong>
+            </Button>
+          </div>
         </Col>
         {/* Text Col */}
         <Col
@@ -60,11 +67,11 @@ export const DeliveryCard = () => {
         >
           <div>
             <h1>
-              Check out our <br />
-              <strong>Menu </strong>
-              We have <br />
-              <strong>Something</strong> for <br />
-              <strong>Everyone</strong>
+              We are Now <br />
+              Offering <strong>Free Delivery </strong>
+              <br />
+              <strong>with UberEats</strong> for <br />
+              Orders Over $20
             </h1>
             <br />
             <p>
@@ -73,7 +80,7 @@ export const DeliveryCard = () => {
             </p>
             <Button className="mt-2" variant="dark" size="lg">
               <strong>
-                <i>Go To Menu</i>
+                <i>Delivery</i>
               </strong>
             </Button>
           </div>
