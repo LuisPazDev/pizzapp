@@ -1,29 +1,20 @@
 {
   "files": {
     "main.css": "/pizzapp/static/css/main.952f8120.css",
-    "main.js": "/pizzapp/static/js/main.4b0ced91.js",
-    "static/media/pizzacard3.png": "/pizzapp/static/media/pizzacard3.45c3e948e704c59a9a5b.png",
-    "static/media/pizzacard2.png": "/pizzapp/static/media/pizzacard2.140f216b5ac61083aec0.png",
-    "static/media/pizzamenu.png": "/pizzapp/static/media/pizzamenu.7098074c589abc42bee8.png",
+    "main.js": "/pizzapp/static/js/main.0603a30d.js",
     "static/media/aboutuspage.png": "/pizzapp/static/media/aboutuspage.04f2b86fd7d36bab5bf6.png",
     "static/media/aboutus.png": "/pizzapp/static/media/aboutus.67dbc15b409c320c171e.png",
-    "static/media/pizzaslide.png": "/pizzapp/static/media/pizzaslide.16dee6ef6912b9850775.png",
-    "static/media/desserts.png": "/pizzapp/static/media/desserts.e8957e302692f680db8e.png",
-    "static/media/drinks.png": "/pizzapp/static/media/drinks.8438b520c251642c639f.png",
-    "static/media/dessertslide.png": "/pizzapp/static/media/dessertslide.8561cf3cd6b84659931f.png",
+    "static/media/delivery.png": "/pizzapp/static/media/delivery.51555640825591b912f2.png",
     "static/media/menupizzas.png": "/pizzapp/static/media/menupizzas.45a5da133d2c484bf03a.png",
-    "static/media/drinkslide.png": "/pizzapp/static/media/drinkslide.c610745ca0453cf2b068.png",
     "static/media/menudesserts.png": "/pizzapp/static/media/menudesserts.be88cb6bf734d6abd5ec.png",
-    "static/media/hiring.png": "/pizzapp/static/media/hiring.def6e22fb83b6d42eac1.png",
     "static/media/menudrinks.png": "/pizzapp/static/media/menudrinks.0a85e4e0f61354c3745e.png",
     "index.html": "/pizzapp/index.html",
-    "static/media/divider.svg": "/pizzapp/static/media/divider.bbc24698b825b7cad47df742441bcf88.svg",
     "static/media/cart.svg": "/pizzapp/static/media/cart.217c69527b46689f27c736c2722bd53c.svg",
     "main.952f8120.css.map": "/pizzapp/static/css/main.952f8120.css.map",
-    "main.4b0ced91.js.map": "/pizzapp/static/js/main.4b0ced91.js.map"
+    "main.0603a30d.js.map": "/pizzapp/static/js/main.0603a30d.js.map"
   },
   "entrypoints": [
     "static/css/main.952f8120.css",
-    "static/js/main.4b0ced91.js"
+    "static/js/main.0603a30d.js"
   ]
 }
