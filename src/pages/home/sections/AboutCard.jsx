@@ -10,7 +10,7 @@ import {
   Image,
 } from "react-bootstrap";
 
-import aboutus from "../../assets/aboutus.png";
+import aboutus from "../assets/aboutus.png";
 
 export const AboutCard = () => {
   return (

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { collection, onSnapshot, query } from "firebase/firestore";
-import { db } from "../../../../components/Firebase";
+import { db } from "../../../components/Firebase";
 
 import { Container, Badge, Button, Row, Col, Carousel } from "react-bootstrap";
 
-export const SeeMenuCard = () => {
+export const HomeHeader = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {

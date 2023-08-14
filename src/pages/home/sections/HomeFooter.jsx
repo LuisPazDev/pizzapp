@@ -1,9 +1,16 @@
-import logoluispazdev from "../../assets/logoluispazdev.png";
+import { Container } from "react-bootstrap";
+import logoluispazdev from "../assets/logoluispazdev.png";
 
 export const HomeFooter = () => {
   return (
-    <>
-      <hr />
+    <Container
+      fluid
+      style={{
+        backgroundColor: "black",
+        color: "white",
+      }}
+      className="text-center pt-3 pb-3"
+    >
       <div className="mt-2">
         <h6>
           <strong>
@@ -24,6 +31,6 @@ export const HomeFooter = () => {
           <i>© 2022 All rights reserved </i>
         </p>
       </div>
-    </>
+    </Container>
   );
 };
