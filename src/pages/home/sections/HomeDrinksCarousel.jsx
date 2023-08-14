@@ -12,23 +12,7 @@ import {
   Badge,
 } from "react-bootstrap";
 
-export const MenuCarousel = () => {
-  // Pizza list from Firebase
-  const [pizzaList, setPizzaList] = useState([]);
-
-  useEffect(() => {
-    const q = query(collection(db, "menu"));
-    onSnapshot(q, (querySnapshot) => {
-      setPizzaList(
-        querySnapshot.docs.map((item) => ({
-          id: item.id,
-          data: item.data(),
-        }))
-      );
-    });
-  }, []);
-
-  // Drinks list from Firebase
+export const HomeDrinksCarousel = () => {
   const [drinkList, setDrinkList] = useState([]);
 
   useEffect(() => {
@@ -43,28 +27,13 @@ export const MenuCarousel = () => {
     });
   }, []);
 
-  // Desserts list from Firebase
-  const [dessertList, setDessertList] = useState([]);
-
-  useEffect(() => {
-    const q = query(collection(db, "desserts"));
-    onSnapshot(q, (querySnapshot) => {
-      setDessertList(
-        querySnapshot.docs.map((item) => ({
-          id: item.id,
-          data: item.data(),
-        }))
-      );
-    });
-  }, []);
-
   return (
-    <Container fluid className="ps-5 pt-3 pb-3 pe-5">
+    <Container fluid className="ps-5 pe-5">
       <Row>
         {/* Carousel showing Pizza cards   */}
-        <Col xs={12} md={6} className="mt-4 mb-4 text-center">
+        <Col xs={12} md={6} className="mt-4 mb-4 p-4 text-center">
           <Carousel>
-            {pizzaList.map((item) => (
+            {drinkList.map((item) => (
               <Carousel.Item key={item.id}>
                 <img
                   className="d-block w-100"
@@ -75,15 +44,21 @@ export const MenuCarousel = () => {
             ))}
           </Carousel>
         </Col>
-        <Col className="mt-4 mb-4 d-flex flex-column justify-content-center">
+        <Col className="mt-4 mb-4 p-4 d-flex flex-column align-items-center justify-content-center border-dark border-bottom border-2">
           <div>
-            <h4 className="mb-3">
-              <Badge bg="dark">Welcome</Badge>
-            </h4>
+            <h6 className="mb-3">
+              <i>
+                <u>Perfect Drinks</u>
+              </i>
+            </h6>
             <h2>
-              Try our <br />
-              <b>Fabuoloses Pizzas</b>
-              <br /> and enjoy
+              <i>
+                We Have <b> Perfect </b>
+                <br />
+                <b> Drinks </b> to enjoy
+                <br />
+                with your pizza
+              </i>
             </h2>
 
             <br />
@@ -94,7 +69,7 @@ export const MenuCarousel = () => {
             <div>
               <Button className="mt-3" variant="dark" size="lg">
                 <strong>
-                  <i>Menu</i>
+                  <i>See More</i>
                 </strong>
               </Button>
             </div>

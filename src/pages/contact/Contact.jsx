@@ -51,6 +51,7 @@ export function Contact() {
           </div>
         </Col>
       </Row>
+
       <Row className="justify-content-center">
         <Card style={{ maxWidth: "40rem" }} border="dark" className="p-3">
           <Form className="mt-auto mb-auto" id="form" onSubmit={handleSubmit}>

@@ -38,7 +38,7 @@ export const NavBar = () => {
         <Navbar
           key={expand}
           expand={expand}
-          className="sticky-top bg-light border-dark border-bottom border-2 p-3"
+          className="sticky-top bg-light border-dark border-bottom border-2 p-2"
         >
           <Navbar.Brand href="#">
             <img src={logo} alt="logo" />
