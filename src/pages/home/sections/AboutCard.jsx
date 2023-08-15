@@ -1,28 +1,24 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Container,
-  Card,
-  Button,
-  Badge,
-  Row,
-  Col,
-  Image,
-} from "react-bootstrap";
+import { Container, Button, Badge, Row, Col, Image } from "react-bootstrap";
 
 import aboutus from "../assets/aboutus.png";
 
 export const AboutCard = () => {
   return (
-    <Container fluid style={{}} className="ps-5 mt-4 mb-4">
+    <Container fluid>
       <Row>
         {/* Text Col */}
         <Col
           xs={12}
           md={6}
-          className="mt-4 mb-4 d-flex flex-column justify-content-center"
+          className="p-4 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
+            <h5 className="mb-3">
+              <i>
+                <u>About Us</u>
+              </i>
+            </h5>
             <h1>
               We are a Family <br />
               <strong>Owned </strong>
@@ -44,7 +40,7 @@ export const AboutCard = () => {
         </Col>
         {/* Image Col */}
         <Col xs={12} md={6}>
-          <Image fluid rounded src={aboutus} />
+          <Image fluid src={aboutus} />
         </Col>
       </Row>
     </Container>

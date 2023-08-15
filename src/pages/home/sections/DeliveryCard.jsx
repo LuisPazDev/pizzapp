@@ -4,18 +4,20 @@ import delivery from "../assets/delivery.png";
 
 export const DeliveryCard = () => {
   return (
-    <Container>
-      <Row className="mt-2 mb-4">
+    <Container fluid>
+      <Row>
         {/* Image Col */}
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className="p-4">
           <Image fluid src={delivery} />
         </Col>
         {/* Text Col */}
         <Col
-          style={{ backgroundColor: "rgba(250, 124, 6, 0.863)" }}
+          style={{
+            backgroundColor: "rgba(250, 124, 6, 0.863)",
+          }}
           xs={12}
           md={6}
-          className="d-flex flex-column justify-content-center align-items-center"
+          className="p-4 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
             <h1>

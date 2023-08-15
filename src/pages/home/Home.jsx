@@ -3,21 +3,17 @@ import {
   AboutCard,
   DeliveryCard,
   HomeFooter,
-  HomePizzaCarousel,
+  HomeMenuCarousel,
   ReservationCard,
-  HomeDrinksCarousel,
-  HomeDessertsCarousel,
 } from "./sections";
 
 export const Home = () => {
   return (
     <>
       <HomeHeader />
-      <HomePizzaCarousel />
-      <HomeDrinksCarousel />
-      <HomeDessertsCarousel />
-      <ReservationCard />
+      <HomeMenuCarousel />
       <DeliveryCard />
+      <ReservationCard />
       <AboutCard />
       <HomeFooter />
     </>

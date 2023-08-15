@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../components/Firebase";
 
-import { Container, Button, Row, Col, Card, Form } from "react-bootstrap";
+import { Container, Button, Row, Col, Image, Form } from "react-bootstrap";
+
+import reservation from "../assets/reservation.png";
 
 export const ReservationCard = () => {
   const [input, setInput] = useState({});
@@ -33,85 +35,114 @@ export const ReservationCard = () => {
   };
 
   return (
-    <Container
-      fluid
-      style={{ backgroundColor: "rgba(250, 124, 6, 0.863)" }}
-      className="ps-5 pe-5"
-    >
+    <Container fluid>
       <Row>
         {/* Text Col */}
         <Col
           xs={12}
           md={6}
-          className="mt-4 mb-4 d-flex flex-column justify-content-center"
+          className="d-flex flex-column align-items-center justify-content-center p-5"
         >
-          ,
-          <Card style={{ maxWidth: "40rem" }} border="dark" className="p-3">
-            <Form className="mt-auto mb-auto" id="form" onSubmit={handleSubmit}>
-              <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Label>
-                  <p>
-                    <strong>
-                      <i>NAME</i>
-                    </strong>
-                  </p>
-                </Form.Label>
-                <Form.Control
-                  onChange={handleChange}
-                  name="name"
-                  type="text"
-                  placeholder="Enter your Name"
-                />
-              </Form.Group>
+          <div className="mb-4">
+            <h5 className="mb-3">
+              <i>
+                <u>Reservations</u>
+              </i>
+            </h5>
+          </div>
+        </Col>
+        {/* Image Col */}
+        <Col className="d-flex align-items-center justify-content-center">
+          <Form onSubmit={handleSubmit} id="form">
+            <Row
+              xs={1}
+              md={2}
+              className="d-flex align-items-center justify-content-center p-4"
+            >
+              {/* Name Field */}
+              <Col className="mb-3 d-flex flex-column align-items-center justify-content-center ">
+                <Row></Row>
+                <div>
+                  <h1>
+                    Book A Table <b>Now!</b>
+                  </h1>
+                </div>
 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>
-                  <h6>
-                    <strong>
-                      <i>EMAIL</i>
-                    </strong>
-                  </h6>
-                </Form.Label>
-                <Form.Control
-                  onChange={handleChange}
-                  name="email"
-                  type="email"
-                  placeholder="Enter email"
-                />
-              </Form.Group>
+                <Form.Group controlId="formBasicName">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="name"
+                    type="text"
+                    placeholder="Name"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Phone Field */}
+              <Col className="mb-3  d-flex align-items-center justify-content-center">
+                <Form.Group controlId="formBasicPhone">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="phone"
+                    type="text"
+                    placeholder="Phone"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Email Field */}
+              <Col className="mb-3 d-flex align-items-center justify-content-center">
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Guests Field */}
+              <Col className="mb-3  d-flex align-items-center justify-content-center">
+                <Form.Group controlId="formBasicGuests">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="guests"
+                    type="text"
+                    placeholder="Guests"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Time Field */}
+              <Col className="mb-3 d-flex align-items-center justify-content-center">
+                <Form.Group controlId="formBasicTime">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="time"
+                    type="text"
+                    placeholder="Time"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Date Field */}
+              <Col className="mb-3 d-flex align-items-center justify-content-center">
+                <Form.Group controlId="formBasicDate">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="date"
+                    type="text"
+                    placeholder="Date"
+                  />
+                </Form.Group>
+              </Col>
 
-              <Form.Group className="mb-3" controlId="formBasicDescription">
-                <Form.Label>
-                  <h6>
-                    <strong>
-                      <i>MESSAGE</i>
-                    </strong>
-                  </h6>
-                </Form.Label>
-                <Form.Control
-                  onChange={handleChange}
-                  name="comment"
-                  className="input-comment"
-                  type="text"
-                  placeholder="Leave a Message here"
-                />
-              </Form.Group>
-
-              <div className="text-center">
-                <Button
-                  variant="dark"
-                  className="mt-3 mb-3"
-                  size="lg"
-                  type="submit"
-                >
-                  Send
+              <div className="p-4">
+                <Button variant="dark" size="lg" type="submit">
+                  <strong>
+                    <i>Book</i>
+                  </strong>
                 </Button>
               </div>
-            </Form>
-          </Card>
+            </Row>
+          </Form>
         </Col>
-        {/* Carousel Col */}
-        <Col xs={12} md={6} className="mt-4 mb-4 text-center"></Col>
       </Row>
     </Container>
   );

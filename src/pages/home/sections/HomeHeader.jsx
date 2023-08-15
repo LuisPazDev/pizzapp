@@ -24,14 +24,14 @@ export const HomeHeader = () => {
     <Container
       fluid
       style={{ backgroundColor: "rgba(250, 124, 6, 0.863)" }}
-      className="ps-5 pe-5"
+      className=""
     >
       <Row>
         {/* Text Col */}
         <Col
           xs={12}
           md={6}
-          className="mt-4 mb-4 d-flex flex-column justify-content-center"
+          className="mt-4 mb-4 p-4 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
             <h4 className="mb-3">
@@ -58,7 +58,7 @@ export const HomeHeader = () => {
           </div>
         </Col>
         {/* Carousel Col */}
-        <Col xs={12} md={6} className="mt-4 mb-4 text-center">
+        <Col xs={12} md={6} className="text-center p-4">
           <Carousel fade>
             {list.map((item) => (
               <Carousel.Item key={item.id}>
