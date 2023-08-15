@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/pizzapp/static/css/main.952f8120.css",
-    "main.js": "/pizzapp/static/js/main.7d2eea4f.js",
+    "main.js": "/pizzapp/static/js/main.60456083.js",
     "static/media/aboutuspage.png": "/pizzapp/static/media/aboutuspage.04f2b86fd7d36bab5bf6.png",
     "static/media/aboutus.png": "/pizzapp/static/media/aboutus.67dbc15b409c320c171e.png",
+    "static/media/reservation.png": "/pizzapp/static/media/reservation.ac8c9f61ab0445703334.png",
     "static/media/delivery.png": "/pizzapp/static/media/delivery.51555640825591b912f2.png",
     "static/media/menupizzas.png": "/pizzapp/static/media/menupizzas.45a5da133d2c484bf03a.png",
     "static/media/menudesserts.png": "/pizzapp/static/media/menudesserts.be88cb6bf734d6abd5ec.png",
@@ -11,10 +12,10 @@
     "index.html": "/pizzapp/index.html",
     "static/media/cart.svg": "/pizzapp/static/media/cart.217c69527b46689f27c736c2722bd53c.svg",
     "main.952f8120.css.map": "/pizzapp/static/css/main.952f8120.css.map",
-    "main.7d2eea4f.js.map": "/pizzapp/static/js/main.7d2eea4f.js.map"
+    "main.60456083.js.map": "/pizzapp/static/js/main.60456083.js.map"
   },
   "entrypoints": [
     "static/css/main.952f8120.css",
-    "static/js/main.7d2eea4f.js"
+    "static/js/main.60456083.js"
   ]
 }
