@@ -6,10 +6,6 @@ export const DeliveryCard = () => {
   return (
     <Container fluid>
       <Row>
-        {/* Image Col */}
-        <Col xs={12} md={6} className="p-4">
-          <Image fluid src={delivery} />
-        </Col>
         {/* Text Col */}
         <Col
           style={{
@@ -17,9 +13,9 @@ export const DeliveryCard = () => {
           }}
           xs={12}
           md={6}
-          className="p-4 d-flex flex-column align-items-center justify-content-center"
+          className="p-5 d-flex flex-column align-items-center justify-content-center"
         >
-          <div>
+          <div className="ms-4">
             <h1>
               We are <b className="text-white">Now </b> <br />
               Offering Free
@@ -39,6 +35,10 @@ export const DeliveryCard = () => {
               </strong>
             </Button>
           </div>
+        </Col>
+        {/* Image Col */}
+        <Col className="border border-dark" xs={12} md={6}>
+          <Image fluid src={delivery} />
         </Col>
       </Row>
     </Container>

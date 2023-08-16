@@ -11,7 +11,7 @@ export const AboutCard = () => {
         <Col
           xs={12}
           md={6}
-          className="p-4 d-flex flex-column align-items-center justify-content-center"
+          className="p-5 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
             <h5 className="mb-3">
@@ -39,7 +39,7 @@ export const AboutCard = () => {
           </div>
         </Col>
         {/* Image Col */}
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className="p-5">
           <Image fluid src={aboutus} />
         </Col>
       </Row>

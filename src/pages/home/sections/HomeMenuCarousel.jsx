@@ -67,7 +67,7 @@ export const HomeMenuCarousel = () => {
           </div>
         </Col>
         {/* Carousel showing Pizza cards   */}
-        <Col xs={12} md={6} className="text-center p-4">
+        <Col xs={12} md={6} className="p-4">
           <Carousel>
             <Carousel.Item>
               <img
