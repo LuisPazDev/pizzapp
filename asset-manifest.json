@@ -1,21 +1,24 @@
 {
   "files": {
     "main.css": "/pizzapp/static/css/main.952f8120.css",
-    "main.js": "/pizzapp/static/js/main.60456083.js",
+    "main.js": "/pizzapp/static/js/main.0e6762c6.js",
     "static/media/aboutuspage.png": "/pizzapp/static/media/aboutuspage.04f2b86fd7d36bab5bf6.png",
     "static/media/aboutus.png": "/pizzapp/static/media/aboutus.67dbc15b409c320c171e.png",
-    "static/media/reservation.png": "/pizzapp/static/media/reservation.ac8c9f61ab0445703334.png",
     "static/media/delivery.png": "/pizzapp/static/media/delivery.51555640825591b912f2.png",
     "static/media/menupizzas.png": "/pizzapp/static/media/menupizzas.45a5da133d2c484bf03a.png",
     "static/media/menudesserts.png": "/pizzapp/static/media/menudesserts.be88cb6bf734d6abd5ec.png",
     "static/media/menudrinks.png": "/pizzapp/static/media/menudrinks.0a85e4e0f61354c3745e.png",
+    "static/media/customercard2.png": "/pizzapp/static/media/customercard2.19fe6b6d24c572eac95f.png",
+    "static/media/customercard1.png": "/pizzapp/static/media/customercard1.5a54a81494bcad219da1.png",
+    "static/media/customercard3.png": "/pizzapp/static/media/customercard3.d82072bb17e10fd2f0fa.png",
+    "static/media/stars.svg": "/pizzapp/static/media/stars.2651608c5650489dc28478bba1568d95.svg",
     "index.html": "/pizzapp/index.html",
     "static/media/cart.svg": "/pizzapp/static/media/cart.217c69527b46689f27c736c2722bd53c.svg",
     "main.952f8120.css.map": "/pizzapp/static/css/main.952f8120.css.map",
-    "main.60456083.js.map": "/pizzapp/static/js/main.60456083.js.map"
+    "main.0e6762c6.js.map": "/pizzapp/static/js/main.0e6762c6.js.map"
   },
   "entrypoints": [
     "static/css/main.952f8120.css",
-    "static/js/main.60456083.js"
+    "static/js/main.0e6762c6.js"
   ]
 }
