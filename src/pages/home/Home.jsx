@@ -5,6 +5,8 @@ import {
   HomeFooter,
   HomeMenuCarousel,
   ReservationCard,
+  TestimonialsCard,
+  OurStrengthCard,
 } from "./sections";
 
 export const Home = () => {
@@ -12,8 +14,10 @@ export const Home = () => {
     <>
       <HomeHeader />
       <HomeMenuCarousel />
+      <OurStrengthCard />
       <DeliveryCard />
       <ReservationCard />
+      <TestimonialsCard />
       <AboutCard />
       <HomeFooter />
     </>

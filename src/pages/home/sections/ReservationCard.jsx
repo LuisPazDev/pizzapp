@@ -5,7 +5,6 @@ import { db } from "../../../components/Firebase";
 import {
   Container,
   Image,
-  Carousel,
   Button,
   Row,
   Col,
@@ -13,10 +12,7 @@ import {
   Card,
 } from "react-bootstrap";
 
-import card1 from "../assets/customercard1.png";
-import card2 from "../assets/customercard2.png";
-import card3 from "../assets/customercard3.png";
-import stars from "../assets/stars.svg";
+import reservation from "../assets/reservation.png";
 
 export const ReservationCard = () => {
   const [input, setInput] = useState({});
@@ -157,76 +153,7 @@ export const ReservationCard = () => {
           md={6}
           className="d-flex flex-column align-items-center justify-content-center mt-5"
         >
-          <div className="text-start mb-4">
-            <h5 className="mb-3">
-              <i>
-                <u>Our Customer Feedback</u>
-              </i>
-            </h5>
-            <h1>Client Testimonials</h1>
-          </div>
-          <Carousel>
-            <Carousel.Item>
-              <Card style={{ width: "18rem" }} className="text-center">
-                <Image
-                  roundedCircle
-                  className="ms-auto me-auto mt-3"
-                  style={{ width: "100px", height: "100px" }}
-                  src={card1}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <i>Sandra Sanz</i>
-                  </Card.Title>
-                  <Card.Text>
-                    "lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    lorem ipsum dolor sit amet."
-                  </Card.Text>
-                  <Image src={stars} />
-                </Card.Body>
-              </Card>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Card style={{ width: "18rem" }} className="text-center">
-                <Image
-                  roundedCircle
-                  className="ms-auto me-auto mt-3"
-                  style={{ width: "100px", height: "100px" }}
-                  src={card2}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <i>Johan Doe</i>
-                  </Card.Title>
-                  <Card.Text>
-                    "lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    lorem ipsum dolor sit amet."
-                  </Card.Text>
-                  <Image src={stars} />
-                </Card.Body>
-              </Card>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Card style={{ width: "18rem" }} className="text-center">
-                <Image
-                  roundedCircle
-                  className="ms-auto me-auto mt-3"
-                  style={{ width: "100px", height: "100px" }}
-                  src={card3}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <i>Alex Smith</i>
-                  </Card.Title>
-                  <Card.Text>
-                    "lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    lorem ipsum dolor sit amet."
-                  </Card.Text>
-                  <Image src={stars} />
-                </Card.Body>
-              </Card>
-            </Carousel.Item>
-          </Carousel>
+          <Image src={reservation} fluid />
         </Col>
       </Row>
     </Container>

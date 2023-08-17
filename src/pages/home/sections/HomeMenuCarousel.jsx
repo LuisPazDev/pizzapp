@@ -70,6 +70,11 @@ export const HomeMenuCarousel = () => {
         <Col xs={12} md={6} className="p-4">
           <Carousel>
             <Carousel.Item>
+              <h6>
+                <i>
+                  <Badge bg="dark"> Fabulous Pizzaz</Badge>
+                </i>
+              </h6>
               <img
                 className="d-block w-100"
                 src="https://res.cloudinary.com/dxctvkec9/image/upload/v1690675176/napolipizza_steaxd.png"
@@ -77,6 +82,11 @@ export const HomeMenuCarousel = () => {
               />
             </Carousel.Item>
             <Carousel.Item>
+              <h6>
+                <i>
+                  <Badge bg="dark"> Perfect Drinks </Badge>
+                </i>
+              </h6>
               <img
                 className="d-block w-100"
                 src="https://res.cloudinary.com/dxctvkec9/image/upload/v1690678273/papayajuice_srllga.png"
@@ -84,6 +94,11 @@ export const HomeMenuCarousel = () => {
               />
             </Carousel.Item>
             <Carousel.Item>
+              <h6>
+                <i>
+                  <Badge bg="dark"> Delicious Desserts </Badge>
+                </i>
+              </h6>
               <img
                 className="d-block w-100"
                 src="https://res.cloudinary.com/dxctvkec9/image/upload/v1690983380/cake_xn3frn.png"
