@@ -10,9 +10,10 @@ import {
   Col,
   Form,
   Card,
+  Badge,
 } from "react-bootstrap";
 
-import reservation from "../assets/reservation.png";
+import slicepizza from "../assets/slicepizza.png";
 
 export const ReservationCard = () => {
   const [input, setInput] = useState({});
@@ -42,16 +43,13 @@ export const ReservationCard = () => {
   };
 
   return (
-    <Container
-      fluid
-      className="ps-5 pe-5 d-flex flex-column justify-content-center align-items-center"
-    >
-      <Row>
+    <Container fluid className="p-5">
+      <Row className="p-5">
         {/* Form Col */}
         <Col
-          className="d-flex flex-column justify-content-center align-items-start mt-5"
+          className="d-flex flex-column justify-content-center align-items-start "
           xs={12}
-          md={6}
+          md={7}
         >
           <div className="text-start">
             <h5 className="mb-3">
@@ -63,15 +61,11 @@ export const ReservationCard = () => {
               Book A Table <b>Now!</b>
             </h1>
           </div>
-          <Card className="mt-4 p-3">
+          <Card className="mt-4">
             <Form onSubmit={handleSubmit} id="form">
-              <Row
-                xs={1}
-                md={2}
-                className="d-flex align-items-center justify-content-center mt-3"
-              >
+              <Row xs={1} md={2} className="p-4">
                 {/* Name Field */}
-                <Col className="mb-3 d-flex flex-column align-items-center justify-content-center ">
+                <Col className="mb-3">
                   <Form.Group controlId="formBasicName">
                     <Form.Control
                       onChange={handleChange}
@@ -82,7 +76,7 @@ export const ReservationCard = () => {
                   </Form.Group>
                 </Col>
                 {/* Phone Field */}
-                <Col className="mb-3  d-flex align-items-center justify-content-center">
+                <Col className="mb-3">
                   <Form.Group controlId="formBasicPhone">
                     <Form.Control
                       onChange={handleChange}
@@ -93,7 +87,7 @@ export const ReservationCard = () => {
                   </Form.Group>
                 </Col>
                 {/* Email Field */}
-                <Col className="mb-3 d-flex align-items-center justify-content-center">
+                <Col className="mb-3">
                   <Form.Group controlId="formBasicEmail">
                     <Form.Control
                       onChange={handleChange}
@@ -104,7 +98,7 @@ export const ReservationCard = () => {
                   </Form.Group>
                 </Col>
                 {/* Guests Field */}
-                <Col className="mb-3  d-flex align-items-center justify-content-center">
+                <Col className="mb-3">
                   <Form.Group controlId="formBasicGuests">
                     <Form.Control
                       onChange={handleChange}
@@ -115,7 +109,7 @@ export const ReservationCard = () => {
                   </Form.Group>
                 </Col>
                 {/* Time Field */}
-                <Col className="mb-3 d-flex align-items-center justify-content-center">
+                <Col className="mb-3">
                   <Form.Group controlId="formBasicTime">
                     <Form.Control
                       onChange={handleChange}
@@ -126,7 +120,7 @@ export const ReservationCard = () => {
                   </Form.Group>
                 </Col>
                 {/* Date Field */}
-                <Col className="mb-3 d-flex align-items-center justify-content-center">
+                <Col className="mb-3/">
                   <Form.Group controlId="formBasicDate">
                     <Form.Control
                       onChange={handleChange}
@@ -147,13 +141,13 @@ export const ReservationCard = () => {
             </Form>
           </Card>
         </Col>
-        {/* Testimonial Cards Col */}
+        {/* Image Col */}
         <Col
           xs={12}
-          md={6}
+          md={5}
           className="d-flex flex-column align-items-center justify-content-center mt-5"
         >
-          <Image src={reservation} fluid />
+          <Image fluid src={slicepizza} />
         </Col>
       </Row>
     </Container>

@@ -39,7 +39,7 @@ export const AboutCard = () => {
           </div>
         </Col>
         {/* Image Col */}
-        <Col xs={12} md={6} className="p-5">
+        <Col xs={12} md={6}>
           <Image fluid src={aboutus} />
         </Col>
       </Row>

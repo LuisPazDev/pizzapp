@@ -8,23 +8,35 @@ import staff from "../assets/team.svg";
 
 export const OurStrengthCard = () => {
   return (
-    <Container fluid className="p-5 d-flex flex-column ">
-      <div className="text-start mb-4">
-        <h5 className="mb-3">
-          <i>
-            <u>Our Strength</u>
-          </i>
-        </h5>
-        <h1>Why We Are The Best</h1>
-      </div>
-      <Row>
+    <Container
+      fluid
+      style={{
+        backgroundColor: "#F8F8F8",
+      }}
+      className="p-5 d-flex flex-column"
+    >
+      <Row className="p-5">
+        <div className="text-start mb-5">
+          <h5 className="mb-3">
+            <i>
+              <u>Our Strength</u>
+            </i>
+          </h5>
+          <h1>We Are The Best</h1>
+        </div>
         {/* First Card */}
         <Col
           xs={12}
           md={3}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
-          <Card style={{ width: "16rem" }} className="text-start border-0">
+          <Card
+            style={{
+              backgroundColor: "#F8F8F8",
+              width: "14rem",
+            }}
+            className="text-start border-0"
+          >
             <Image
               className="ms-3"
               style={{
@@ -50,7 +62,13 @@ export const OurStrengthCard = () => {
           md={3}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
-          <Card style={{ width: "16rem" }} className="text-start border-0">
+          <Card
+            style={{
+              backgroundColor: "#F8F8F8",
+              width: "14rem",
+            }}
+            className="text-start border-0"
+          >
             <Image
               className="ms-3"
               style={{ width: "50px", height: "50px" }}
@@ -73,7 +91,13 @@ export const OurStrengthCard = () => {
           md={3}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
-          <Card style={{ width: "16rem" }} className="text-start border-0">
+          <Card
+            style={{
+              backgroundColor: "#F8F8F8",
+              width: "14rem",
+            }}
+            className="text-start border-0"
+          >
             <Image
               className="ms-3"
               style={{ width: "50px", height: "50px" }}
@@ -96,7 +120,13 @@ export const OurStrengthCard = () => {
           md={3}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
-          <Card style={{ width: "16rem" }} className="text-start border-0">
+          <Card
+            style={{
+              backgroundColor: "#F8F8F8",
+              width: "14rem",
+            }}
+            className="text-start border-0"
+          >
             <Image
               className="ms-3"
               style={{ width: "50px", height: "50px" }}

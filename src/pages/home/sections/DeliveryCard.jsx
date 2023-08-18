@@ -23,12 +23,15 @@ export const DeliveryCard = () => {
         >
           <div className="ms-4">
             <h1>
-              We are <b className="text-white">Now </b> <br />
-              Offering Free
+              <b className="text-white">Now </b>
+              We Offer
               <br />
-              <strong className="text-white">Delivery </strong>
-              <strong>with UberEats</strong> <br />
-              on Orders <b className="text-white">Over $20 </b>
+              Free
+              <strong className="text-white"> Delivery </strong>
+              <br />
+              <strong>with UberEats</strong>
+              <br />
+              Orders <b className="text-white">Over $20 </b>
             </h1>
             <br />
             <p>

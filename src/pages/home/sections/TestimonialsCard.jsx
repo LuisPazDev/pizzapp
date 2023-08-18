@@ -8,23 +8,29 @@ import stars from "../assets/stars.svg";
 
 export const TestimonialsCard = () => {
   return (
-    <Container fluid className="p-5 d-flex flex-column ">
-      <div className="text-start mb-4">
-        <h5 className="mb-3">
-          <i>
-            <u>Our Customer Feedback</u>
-          </i>
-        </h5>
-        <h1>Client Testimonials</h1>
-      </div>
-      <Row>
+    <Container
+      fluid
+      style={{
+        backgroundColor: "#F8F8F8",
+      }}
+      className="p-5 d-flex flex-column "
+    >
+      <Row className="p-5">
+        <div className="text-start mb-4">
+          <h5 className="mb-3">
+            <i>
+              <u>Our Customer Feedback</u>
+            </i>
+          </h5>
+          <h1>Client Testimonials</h1>
+        </div>
         {/* First Card */}
         <Col
           xs={12}
           md={4}
-          className="d-flex flex-column justify-content-center align-items-center mb-4"
+          className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
-          <Card style={{ width: "18rem" }} className="text-center">
+          <Card style={{ width: "16rem" }} className="text-center">
             <Image
               roundedCircle
               className="ms-auto me-auto mt-3"
@@ -47,9 +53,9 @@ export const TestimonialsCard = () => {
         <Col
           xs={12}
           md={4}
-          className="d-flex flex-column justify-content-center align-items-center mb-4"
+          className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
-          <Card style={{ width: "18rem" }} className="text-center">
+          <Card style={{ width: "16rem" }} className="text-center">
             <Image
               roundedCircle
               className="ms-auto me-auto mt-3"
@@ -72,9 +78,9 @@ export const TestimonialsCard = () => {
         <Col
           xs={12}
           md={4}
-          className="d-flex flex-column justify-content-center align-items-center mb-4"
+          className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
-          <Card style={{ width: "18rem" }} className="text-center">
+          <Card style={{ width: "16rem" }} className="text-center">
             <Image
               roundedCircle
               className="ms-auto me-auto mt-3"
