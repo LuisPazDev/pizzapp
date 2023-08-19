@@ -31,7 +31,11 @@ export const AboutCard = () => {
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <Button className="mt-2" variant="dark" size="lg">
+            <Button
+              className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
+              variant="dark"
+              size="lg"
+            >
               <strong>
                 <i>Know More</i>
               </strong>

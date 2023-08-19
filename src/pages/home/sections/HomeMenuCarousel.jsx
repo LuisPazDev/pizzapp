@@ -44,9 +44,9 @@ export const HomeMenuCarousel = () => {
             </h5>
             <h2>
               <i>
-                Try our <b> Fabulous </b>
+                Enjoy our <b> Fabulous </b>
                 <br />
-                <b> Pizzas </b> enjoy a
+                <b> Pizzas </b> have a
                 <br />
                 <b> Perferct Drink </b> or
                 <br />
@@ -60,7 +60,11 @@ export const HomeMenuCarousel = () => {
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
             <div>
-              <Button className="mt-3" variant="dark" size="lg">
+              <Button
+                className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
+                variant="dark"
+                size="lg"
+              >
                 <Link to="/menu">
                   <strong>
                     <i>Menu</i>
@@ -72,7 +76,7 @@ export const HomeMenuCarousel = () => {
         </Col>
         {/* Carousel showing Pizza cards   */}
         <Col xs={12} md={6} className="p-4">
-          <Carousel>
+          <Carousel indicators={false}>
             <Carousel.Item>
               <h6>
                 <i>

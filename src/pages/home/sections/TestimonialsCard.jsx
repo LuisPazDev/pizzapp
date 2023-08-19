@@ -16,7 +16,7 @@ export const TestimonialsCard = () => {
       className="p-5 d-flex flex-column "
     >
       <Row className="p-5">
-        <div className="text-start mb-4">
+        <div className="text-start mb-5">
           <h5 className="mb-3">
             <i>
               <u>Our Customer Feedback</u>

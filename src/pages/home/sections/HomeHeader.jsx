@@ -34,12 +34,13 @@ export const HomeHeader = () => {
           className="mt-4 mb-4 p-4 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
-            <h4 className="mb-3">
+            <h3 className="mb-3">
               <Badge bg="dark">Welcome</Badge>
-            </h4>
+            </h3>
             <h1>
-              Handmade, With <br />
-              an Extra Pinch <br />
+              <b className="text-white">Pizza </b>
+              Handmade, <br />
+              With an Extra Pinch <br />
               of <b className="text-white"> Love</b> and{" "}
               <b className="text-white">Care </b>
             </h1>
@@ -49,7 +50,11 @@ export const HomeHeader = () => {
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
             <div>
-              <Button className="mt-3" variant="dark" size="lg">
+              <Button
+                className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
+                variant="dark"
+                size="lg"
+              >
                 <strong>
                   <i>Order Now</i>
                 </strong>
@@ -59,10 +64,11 @@ export const HomeHeader = () => {
         </Col>
         {/* Carousel Col */}
         <Col xs={12} md={6} className="text-center p-4">
-          <Carousel fade>
+          <Carousel fade controls={false} indicators={false}>
             {list.map((item) => (
               <Carousel.Item key={item.id}>
                 <img
+                  style={{ maxHeight: "600px" }}
                   className="d-block w-100"
                   src={item.data.img}
                   alt="First slide"

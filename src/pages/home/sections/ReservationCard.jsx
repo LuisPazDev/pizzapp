@@ -44,14 +44,14 @@ export const ReservationCard = () => {
 
   return (
     <Container fluid className="p-5">
-      <Row className="p-5">
+      <Row>
         {/* Form Col */}
         <Col
-          className="d-flex flex-column justify-content-center align-items-start "
+          className="d-flex flex-column justify-content-center align-items-center "
           xs={12}
-          md={7}
+          md={6}
         >
-          <div className="text-start">
+          <div className="text-start mb-5">
             <h5 className="mb-3">
               <i>
                 <u>Reservations</u>
@@ -61,90 +61,92 @@ export const ReservationCard = () => {
               Book A Table <b>Now!</b>
             </h1>
           </div>
-          <Card className="mt-4">
-            <Form onSubmit={handleSubmit} id="form">
-              <Row xs={1} md={2} className="p-4">
-                {/* Name Field */}
-                <Col className="mb-3">
-                  <Form.Group controlId="formBasicName">
-                    <Form.Control
-                      onChange={handleChange}
-                      name="name"
-                      type="text"
-                      placeholder="Name"
-                    />
-                  </Form.Group>
-                </Col>
-                {/* Phone Field */}
-                <Col className="mb-3">
-                  <Form.Group controlId="formBasicPhone">
-                    <Form.Control
-                      onChange={handleChange}
-                      name="phone"
-                      type="text"
-                      placeholder="Phone"
-                    />
-                  </Form.Group>
-                </Col>
-                {/* Email Field */}
-                <Col className="mb-3">
-                  <Form.Group controlId="formBasicEmail">
-                    <Form.Control
-                      onChange={handleChange}
-                      name="email"
-                      type="email"
-                      placeholder="Email"
-                    />
-                  </Form.Group>
-                </Col>
-                {/* Guests Field */}
-                <Col className="mb-3">
-                  <Form.Group controlId="formBasicGuests">
-                    <Form.Control
-                      onChange={handleChange}
-                      name="guests"
-                      type="text"
-                      placeholder="Guests"
-                    />
-                  </Form.Group>
-                </Col>
-                {/* Time Field */}
-                <Col className="mb-3">
-                  <Form.Group controlId="formBasicTime">
-                    <Form.Control
-                      onChange={handleChange}
-                      name="time"
-                      type="text"
-                      placeholder="Time"
-                    />
-                  </Form.Group>
-                </Col>
-                {/* Date Field */}
-                <Col className="mb-3/">
-                  <Form.Group controlId="formBasicDate">
-                    <Form.Control
-                      onChange={handleChange}
-                      name="date"
-                      type="text"
-                      placeholder="Date"
-                    />
-                  </Form.Group>
-                </Col>
-                <div className="text-center mt-3">
-                  <Button variant="dark" size="lg" type="submit">
-                    <strong>
-                      <i>Book</i>
-                    </strong>
-                  </Button>
-                </div>
-              </Row>
-            </Form>
-          </Card>
+          <Form
+            onSubmit={handleSubmit}
+            id="form"
+            className="d-flex flex-column justify-content-center align-items-center border border-dark mt-3 p-3"
+          >
+            <Row xs={1} md={2} className="p-3">
+              {/* Name Field */}
+              <Col className="mb-3">
+                <Form.Group controlId="formBasicName">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="name"
+                    type="text"
+                    placeholder="Name"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Phone Field */}
+              <Col className="mb-3">
+                <Form.Group controlId="formBasicPhone">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="phone"
+                    type="text"
+                    placeholder="Phone"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Email Field */}
+              <Col className="mb-3">
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Guests Field */}
+              <Col className="mb-3">
+                <Form.Group controlId="formBasicGuests">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="guests"
+                    type="text"
+                    placeholder="Guests"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Time Field */}
+              <Col className="mb-3">
+                <Form.Group controlId="formBasicTime">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="time"
+                    type="text"
+                    placeholder="Time"
+                  />
+                </Form.Group>
+              </Col>
+              {/* Date Field */}
+              <Col className="mb-3">
+                <Form.Group controlId="formBasicDate">
+                  <Form.Control
+                    onChange={handleChange}
+                    name="date"
+                    type="text"
+                    placeholder="Date"
+                  />
+                </Form.Group>
+              </Col>
+              <div className="mt-4 text-center">
+                <Button variant="dark" size="lg" type="submit">
+                  <strong>
+                    <i>Book</i>
+                  </strong>
+                </Button>
+              </div>
+            </Row>
+          </Form>
         </Col>
         {/* Image Col */}
         <Col
           xs={12}
-          md={5}
+          md={6}
           className="d-flex flex-column align-items-center justify-content-center mt-5"
         >
           <Image fluid src={slicepizza} />
