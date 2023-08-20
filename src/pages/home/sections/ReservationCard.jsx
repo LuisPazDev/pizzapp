@@ -1,17 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../components/Firebase";
-import {
-  Container,
-  Image,
-  Button,
-  Row,
-  Col,
-  Form,
-  Card,
-  Badge,
-} from "react-bootstrap";
+
+import { Container, Image, Button, Row, Col, Form } from "react-bootstrap";
 
 import slicepizza from "../assets/slicepizza.png";
 

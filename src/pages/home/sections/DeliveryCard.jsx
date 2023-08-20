@@ -1,8 +1,21 @@
-import { Button, Badge, Row, Col, Container, Image } from "react-bootstrap";
+import { useState, useEffect, useRef } from "react";
+import { Button, Row, Col, Container, Image } from "react-bootstrap";
+import { useInView } from "react-intersection-observer";
 
 import delivery from "../assets/delivery.png";
 
 export const DeliveryCard = () => {
+  const [isAnimated, setIsAnimated] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setIsAnimated(true);
+    }
+  }, [inView]);
+
   return (
     <Container
       fluid
@@ -51,7 +64,15 @@ export const DeliveryCard = () => {
         </Col>
         {/* Image Col */}
         <Col xs={12} md={6}>
-          <Image fluid src={delivery} />
+          <div ref={ref}>
+            <Image
+              fluid
+              src={delivery}
+              className={`${
+                isAnimated ? "animate__animated animate__backInRight" : "none"
+              } animate__delay-2s`}
+            />
+          </div>
         </Col>
       </Row>
     </Container>

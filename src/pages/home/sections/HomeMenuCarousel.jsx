@@ -78,43 +78,49 @@ export const HomeMenuCarousel = () => {
         <Col xs={12} md={6} className="p-4">
           <Carousel indicators={false}>
             <Carousel.Item>
-              <h6>
-                <i>
-                  <Badge bg="dark"> Fabulous Pizzaz</Badge>
-                </i>
-              </h6>
               <Image
                 roundedCircle
                 className="d-block w-100"
                 src={pizzaslide}
                 alt="First slide"
               />
+              <div className="text-center">
+                <h6>
+                  <i>
+                    <Badge bg="dark"> Fabulous Pizzaz</Badge>
+                  </i>
+                </h6>
+              </div>
             </Carousel.Item>
             <Carousel.Item>
-              <h6>
-                <i>
-                  <Badge bg="dark"> Perfect Drinks </Badge>
-                </i>
-              </h6>
               <Image
                 roundedCircle
                 className="d-block w-100"
                 src={drinkslide}
                 alt="First slide"
               />
+              <div className="text-center">
+                <h6>
+                  <i>
+                    <Badge bg="dark"> Perfect Drinks </Badge>
+                  </i>
+                </h6>
+              </div>
             </Carousel.Item>
             <Carousel.Item>
-              <h6>
-                <i>
-                  <Badge bg="dark"> Delicious Desserts </Badge>
-                </i>
-              </h6>
               <Image
                 roundedCircle
                 className="d-block w-100"
                 src={dessertslide}
                 alt="First slide"
               />
+              <div className="text-center">
+                <h6>
+                  <i>
+                    <Badge bg="dark"> Delicious Desserts</Badge>
+                  </i>
+                </h6>
+              </div>
             </Carousel.Item>
           </Carousel>
         </Col>

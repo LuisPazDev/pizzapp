@@ -4,6 +4,7 @@ import App from "./App";
 import { HashRouter } from "react-router-dom";
 import { CartProvider } from "./context/CartProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css";
 import "./styles/styles.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
