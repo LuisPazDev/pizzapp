@@ -3,6 +3,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../components/Firebase";
 import { useInView } from "react-intersection-observer";
 import Swal from "sweetalert2";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 import { Container, Image, Button, Row, Col, Form } from "react-bootstrap";
 
@@ -11,8 +13,13 @@ import slicepizza from "../assets/slicepizza.png";
 export const ReservationCard = () => {
   const [input, setInput] = useState({});
 
+  const [date, setDate] = useState(null);
+
+  const minDate = new Date(); // Today's date
+  const maxDate = new Date("2025-12-31"); // Maximum date allowed
+
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 1,
     triggerOnce: true,
   });
 
@@ -130,11 +137,14 @@ export const ReservationCard = () => {
               {/* Date Field */}
               <Col className="mb-3">
                 <Form.Group controlId="formBasicDate">
-                  <Form.Control
-                    onChange={handleChange}
+                  <DatePicker
+                    selected={date}
+                    onChange={(date) => setDate(date)}
                     name="date"
-                    type="text"
-                    placeholder="Date"
+                    placeholderText="Date"
+                    required
+                    minDate={minDate}
+                    maxDate={maxDate}
                   />
                 </Form.Group>
               </Col>
@@ -166,7 +176,7 @@ export const ReservationCard = () => {
             fluid
             src={slicepizza}
             className={`${
-              inView ? "animate__animated animate__flip animate__delay-3s" : ""
+              inView ? "animate__animated animate__flip animate__delay-2s" : ""
             }`}
           />
         </Col>
