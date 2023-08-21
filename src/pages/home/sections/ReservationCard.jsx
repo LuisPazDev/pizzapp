@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../components/Firebase";
+import { useInView } from "react-intersection-observer";
 import Swal from "sweetalert2";
 
 import { Container, Image, Button, Row, Col, Form } from "react-bootstrap";
@@ -9,6 +10,11 @@ import slicepizza from "../assets/slicepizza.png";
 
 export const ReservationCard = () => {
   const [input, setInput] = useState({});
+
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -39,7 +45,7 @@ export const ReservationCard = () => {
   };
 
   return (
-    <Container fluid className="p-5">
+    <Container fluid className="">
       <Row>
         {/* Form Col */}
         <Col
@@ -47,7 +53,7 @@ export const ReservationCard = () => {
           xs={12}
           md={6}
         >
-          <div className="text-start mb-5">
+          <div className="text-start mb-5 mt-4">
             <h5 className="mb-3">
               <i>
                 <u>Reservations</u>
@@ -144,11 +150,23 @@ export const ReservationCard = () => {
         </Col>
         {/* Image Col */}
         <Col
+          ref={ref}
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/dxctvkec9/image/upload/v1692626989/bgreservation_gywqzv.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
           xs={12}
           md={6}
           className="d-flex flex-column align-items-center justify-content-center mt-5"
         >
-          <Image fluid src={slicepizza} />
+          <Image
+            hidden={!inView}
+            fluid
+            src={slicepizza}
+            className={`${inView ? "animate__animated animate__flip" : ""}`}
+          />
         </Col>
       </Row>
     </Container>

@@ -28,7 +28,7 @@ export const DeliveryCard = () => {
           className="p-3 d-flex flex-column align-items-center
           justify-content-center"
         >
-          <div className="ms-4">
+          <div className="ms-4 mt-4">
             <h1>
               <b className="text-white">Now </b>
               Oferring
@@ -50,9 +50,11 @@ export const DeliveryCard = () => {
               variant="dark"
               size="lg"
             >
-              <strong>
-                <i>Delivery</i>
-              </strong>
+              <a href="https://www.ubereats.com/" target="_blank">
+                <strong>
+                  <i>Delivery</i>
+                </strong>
+              </a>
             </Button>
           </div>
         </Col>
@@ -60,6 +62,7 @@ export const DeliveryCard = () => {
         <Col xs={12} md={6}>
           <div ref={ref}>
             <Image
+              hidden={!inView}
               fluid
               src={delivery}
               className={`${

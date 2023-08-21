@@ -14,8 +14,8 @@ export const Home = () => {
     <>
       <HomeHeader />
       <HomeMenuCarousel />
-      <OurStrengthCard />
       <DeliveryCard />
+      <OurStrengthCard />
       <ReservationCard />
       <TestimonialsCard />
       <AboutCard />
