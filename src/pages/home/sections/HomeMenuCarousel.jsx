@@ -78,12 +78,14 @@ export const HomeMenuCarousel = () => {
         <Col xs={12} md={6} className="p-4">
           <Carousel indicators={false}>
             <Carousel.Item>
-              <Image
-                roundedCircle
-                className="d-block w-100"
-                src={pizzaslide}
-                alt="First slide"
-              />
+              <Link to="/menu/pizzas">
+                <Image
+                  roundedCircle
+                  className="d-block w-100"
+                  src={pizzaslide}
+                  alt="First slide"
+                />
+              </Link>
               <div className="text-center">
                 <h6>
                   <i>
@@ -93,12 +95,14 @@ export const HomeMenuCarousel = () => {
               </div>
             </Carousel.Item>
             <Carousel.Item>
-              <Image
-                roundedCircle
-                className="d-block w-100"
-                src={drinkslide}
-                alt="First slide"
-              />
+              <Link to="/menu/drinks">
+                <Image
+                  roundedCircle
+                  className="d-block w-100"
+                  src={drinkslide}
+                  alt="First slide"
+                />
+              </Link>
               <div className="text-center">
                 <h6>
                   <i>
@@ -108,12 +112,14 @@ export const HomeMenuCarousel = () => {
               </div>
             </Carousel.Item>
             <Carousel.Item>
-              <Image
-                roundedCircle
-                className="d-block w-100"
-                src={dessertslide}
-                alt="First slide"
-              />
+              <Link to="/menu/desserts">
+                <Image
+                  roundedCircle
+                  className="d-block w-100"
+                  src={dessertslide}
+                  alt="First slide"
+                />
+              </Link>
               <div className="text-center">
                 <h6>
                   <i>

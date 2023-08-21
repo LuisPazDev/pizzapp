@@ -34,13 +34,14 @@ export const HomeHeader = () => {
           className="mt-4 mb-4 p-4 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
-            <h3 className="mb-3">
+            <h4 className="mb-3">
               <Badge bg="dark">Welcome</Badge>
-            </h3>
+            </h4>
             <h1>
-              <b className="text-white">Pizza </b>
-              Handmade, <br />
-              With an Extra Pinch <br />
+              <b className="text-white">Best Pizza </b> in Town
+              <br />
+              Handmade, With <br />
+              an Extra Pinch <br />
               of <b className="text-white"> Love</b> and{" "}
               <b className="text-white">Care </b>
             </h1>
@@ -55,9 +56,11 @@ export const HomeHeader = () => {
                 variant="dark"
                 size="lg"
               >
-                <strong>
-                  <i>Order Now</i>
-                </strong>
+                <Link to="/menu">
+                  <strong>
+                    <i>Order Now</i>
+                  </strong>
+                </Link>
               </Button>
             </div>
           </div>
