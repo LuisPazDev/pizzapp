@@ -66,7 +66,9 @@ export const DeliveryCard = () => {
               fluid
               src={delivery}
               className={`${
-                inView ? "animate__animated animate__fadeInRight" : ""
+                inView
+                  ? "animate__animated animate__fadeInRight animate__delay-2s"
+                  : ""
               }`}
             />
           </div>

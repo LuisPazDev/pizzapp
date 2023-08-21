@@ -66,7 +66,9 @@ export const AboutCard = () => {
             hidden={!inView}
             src={aboutus}
             className={`${
-              inView ? "animate__animated animate__lightSpeedInRight" : ""
+              inView
+                ? "animate__animated animate__lightSpeedInRight animate__delay-2s"
+                : ""
             }`}
           />
         </Col>
