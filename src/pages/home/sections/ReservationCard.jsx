@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../components/Firebase";
+import Swal from "sweetalert2";
 
 import { Container, Image, Button, Row, Col, Form } from "react-bootstrap";
 
@@ -24,9 +24,13 @@ export const ReservationCard = () => {
     event.preventDefault();
     console.log(input);
     try {
-      const comment = collection(db, "contact");
-      const res = await addDoc(comment, input);
-      alert("Comment added successfully");
+      const reservation = collection(db, "reservations");
+      const res = await addDoc(reservation, input);
+      Swal.fire({
+        icon: "success",
+        title: "Reservation Successful!",
+        text: "We look forward to seeing you!",
+      });
       clearForm();
       return res;
     } catch {
@@ -67,6 +71,7 @@ export const ReservationCard = () => {
                     name="name"
                     type="text"
                     placeholder="Name"
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -78,6 +83,7 @@ export const ReservationCard = () => {
                     name="phone"
                     type="text"
                     placeholder="Phone"
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -89,6 +95,7 @@ export const ReservationCard = () => {
                     name="email"
                     type="email"
                     placeholder="Email"
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -125,14 +132,14 @@ export const ReservationCard = () => {
                   />
                 </Form.Group>
               </Col>
-              <div className="mt-4 text-center">
-                <Button variant="dark" size="lg" type="submit">
-                  <strong>
-                    <i>Book</i>
-                  </strong>
-                </Button>
-              </div>
             </Row>
+            <div className="mt-4 text-center">
+              <Button variant="dark" size="lg" type="submit">
+                <strong>
+                  <i>Book</i>
+                </strong>
+              </Button>
+            </div>
           </Form>
         </Col>
         {/* Image Col */}
