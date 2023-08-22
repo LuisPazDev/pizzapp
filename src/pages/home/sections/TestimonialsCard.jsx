@@ -15,15 +15,16 @@ export const TestimonialsCard = () => {
       }}
       className="p-5 d-flex flex-column "
     >
-      <Row className="p-5">
-        <div className="text-start mb-5">
+      <Row>
+        {/* Text Col */}
+        <Col xs={12} className="p-5 mb-5">
           <h5 className="mb-3">
             <i>
               <u>Our Customer Feedback</u>
             </i>
           </h5>
           <h1>Client Testimonials</h1>
-        </div>
+        </Col>
         {/* First Card */}
         <Col
           xs={12}

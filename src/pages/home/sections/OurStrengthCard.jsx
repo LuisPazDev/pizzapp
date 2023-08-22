@@ -13,17 +13,17 @@ export const OurStrengthCard = () => {
       style={{
         backgroundColor: "#F8F8F8",
       }}
-      className="p-5 d-flex flex-column"
+      className="p-5"
     >
       <Row className="p-5">
-        <div className="text-start mb-5">
+        <Col xs={12} className="mb-5 text-start">
           <h5 className="mb-3">
             <i>
               <u>Our Strength</u>
             </i>
           </h5>
           <h1>We Are The Best</h1>
-        </div>
+        </Col>
         {/* First Card */}
         <Col
           xs={12}

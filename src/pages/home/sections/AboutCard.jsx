@@ -11,13 +11,13 @@ export const AboutCard = () => {
   });
 
   return (
-    <Container fluid>
-      <Row className="ps-5">
+    <Container fluid className="ps-5">
+      <Row>
         {/* Text Col */}
         <Col
           xs={12}
           md={6}
-          className="pe-4 d-flex flex-column align-items-start justify-content-center"
+          className="ps-5 pe-5 d-flex flex-column align-items-start justify-content-center"
         >
           <div>
             <h5 className="mb-3">

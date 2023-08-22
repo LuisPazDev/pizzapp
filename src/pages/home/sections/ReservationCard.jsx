@@ -64,6 +64,7 @@ export const ReservationCard = () => {
             </h1>
           </div>
           <Form
+            style={{ width: "80%" }}
             onSubmit={handleSubmit}
             id="form"
             className="d-flex flex-column justify-content-center align-items-center border border-dark mt-3 p-3"
