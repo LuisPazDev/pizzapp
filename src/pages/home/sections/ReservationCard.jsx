@@ -3,6 +3,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../components/Firebase";
 import { useInView } from "react-intersection-observer";
 import Swal from "sweetalert2";
+import DateTime from "react-datetime";
+import "react-datetime/css/react-datetime.css";
 
 import { Container, Image, Button, Row, Col, Form } from "react-bootstrap";
 
@@ -10,6 +12,9 @@ import slicepizza from "../assets/slicepizza.png";
 
 export const ReservationCard = () => {
   const [input, setInput] = useState({});
+
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
 
   const { ref, inView } = useInView({
     threshold: 1,
@@ -45,13 +50,13 @@ export const ReservationCard = () => {
   };
 
   return (
-    <Container fluid className="">
+    <Container fluid className="ps-5">
       <Row>
         {/* Form Col */}
         <Col
-          className="d-flex flex-column justify-content-center align-items-center "
+          className="d-flex flex-column justify-content-center align-items-start ps-5 "
           xs={12}
-          md={6}
+          md={7}
         >
           <div className="text-start mb-5 mt-4">
             <h5 className="mb-3">
@@ -64,7 +69,7 @@ export const ReservationCard = () => {
             </h1>
           </div>
           <Form
-            style={{ width: "80%" }}
+            style={{ width: "70%" }}
             onSubmit={handleSubmit}
             id="form"
             className="d-flex flex-column justify-content-center align-items-center border border-dark mt-3 p-3"
@@ -120,17 +125,37 @@ export const ReservationCard = () => {
               {/* Time Field */}
               <Col className="mb-3">
                 <Form.Group controlId="formBasicTime">
-                  <Form.Control
-                    onChange={handleChange}
-                    name="time"
-                    type="text"
-                    placeholder="Time"
+                  <DateTime
+                    value={selectedTime}
+                    onChange={(time) => setSelectedTime(time)}
+                    dateFormat={false}
+                    timeFormat="HH:mm"
+                    inputProps={{
+                      placeholder: "Select a time",
+                      required: true,
+                    }}
                   />
                 </Form.Group>
               </Col>
               {/* Date Field */}
               <Col className="mb-3">
-                <Form.Group controlId="formBasicDate"></Form.Group>
+                <Form.Group controlId="formBasicDate">
+                  <DateTime
+                    value={selectedDate}
+                    onChange={(date) => setSelectedDate(date)}
+                    dateFormat="DD/MM/YYYY"
+                    timeFormat={false}
+                    inputProps={{
+                      placeholder: "Select a date",
+                      required: true,
+                    }}
+                    isValidDate={(currentDate) => {
+                      // Disable dates before today
+                      const yesterday = DateTime.moment().subtract(1, "day");
+                      return currentDate.isAfter(yesterday);
+                    }}
+                  />
+                </Form.Group>
               </Col>
             </Row>
             <div className="mt-4 text-center">
@@ -152,7 +177,7 @@ export const ReservationCard = () => {
             backgroundPosition: "center",
           }}
           xs={12}
-          md={6}
+          md={5}
           className="d-flex flex-column align-items-center justify-content-center mt-5"
         >
           <Image

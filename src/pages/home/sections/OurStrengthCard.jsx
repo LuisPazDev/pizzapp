@@ -15,8 +15,8 @@ export const OurStrengthCard = () => {
       }}
       className="p-5"
     >
-      <Row className="p-5">
-        <Col xs={12} className="mb-5 text-start">
+      <Row className="p-3">
+        <Col xs={12} className="mb-5 p-5">
           <h5 className="mb-3">
             <i>
               <u>Our Strength</u>
@@ -24,42 +24,10 @@ export const OurStrengthCard = () => {
           </h5>
           <h1>We Are The Best</h1>
         </Col>
-        {/* First Card */}
-        <Col
-          xs={12}
-          md={3}
-          className="d-flex flex-column justify-content-center align-items-center mb-4"
-        >
-          <Card
-            style={{
-              backgroundColor: "#F8F8F8",
-              width: "14rem",
-            }}
-            className="text-start border-0"
-          >
-            <Image
-              className="ms-3"
-              style={{
-                width: "50px",
-                height: "50px",
-              }}
-              src={fresh}
-            />
-            <Card.Body>
-              <Card.Title>
-                <i>Fresh Food</i>
-              </Card.Title>
-              <Card.Text>
-                "lorem ipsum dolor sit amet, consectetur adipiscing elit lorem
-                ipsum dolor sit amet."
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
         {/*  Second Card */}
         <Col
           xs={12}
-          md={3}
+          md={4}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
           <Card
@@ -88,7 +56,7 @@ export const OurStrengthCard = () => {
         {/* Third Card */}
         <Col
           xs={12}
-          md={3}
+          md={4}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
           <Card
@@ -117,7 +85,7 @@ export const OurStrengthCard = () => {
         {/* Fourth Card */}
         <Col
           xs={12}
-          md={3}
+          md={4}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
           <Card

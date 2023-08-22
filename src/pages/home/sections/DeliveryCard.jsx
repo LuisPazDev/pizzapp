@@ -25,10 +25,10 @@ export const DeliveryCard = () => {
           }}
           xs={12}
           md={6}
-          className="p-3 d-flex flex-column align-items-center
+          className="p-4 d-flex flex-column align-items-center
           justify-content-center"
         >
-          <div className="ms-4 mt-4">
+          <div className="mt-4">
             <h1>
               <b className="text-white">Now </b>
               Oferring

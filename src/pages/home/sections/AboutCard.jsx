@@ -11,7 +11,7 @@ export const AboutCard = () => {
   });
 
   return (
-    <Container fluid className="ps-5">
+    <Container fluid>
       <Row>
         {/* Text Col */}
         <Col
