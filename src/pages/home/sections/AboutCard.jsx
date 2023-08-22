@@ -12,18 +12,12 @@ export const AboutCard = () => {
 
   return (
     <Container fluid>
-      <Row>
+      <Row className="ps-5">
         {/* Text Col */}
         <Col
           xs={12}
           md={6}
-          style={{
-            backgroundImage:
-              "url('https://res.cloudinary.com/dxctvkec9/image/upload/v1692628414/bgaboutcard_ydw4if.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          className="p-5 d-flex flex-column align-items-center justify-content-center"
+          className="pe-4 d-flex flex-column align-items-start justify-content-center"
         >
           <div>
             <h5 className="mb-3">
@@ -34,9 +28,9 @@ export const AboutCard = () => {
 
             <h1>
               We are a Family <br />
-              <strong className="text-white">Owned </strong>
+              <strong>Owned </strong>
               Restaurant <br />
-              <strong className="text-white">Serving</strong> Since <br />
+              <strong>Serving</strong> Since <br />
               <strong>2017</strong>
             </h1>
             <br />
@@ -60,16 +54,31 @@ export const AboutCard = () => {
           </div>
         </Col>
         {/* Image Col */}
-        <Col xs={12} md={6} ref={ref}>
+        <Col
+          xs={12}
+          md={6}
+          ref={ref}
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/dxctvkec9/image/upload/v1692626989/bgreservation_gywqzv.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <Image
             fluid
             hidden={!inView}
             src={aboutus}
             className={`${
               inView
-                ? "animate__animated animate__lightSpeedInRight animate__delay-2s"
+                ? "animate__animated animate__fadeInRight animate__delay-2s"
                 : ""
             }`}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "https://via.placeholder.com/400x300";
+            }}
+            alt="About Us"
           />
         </Col>
       </Row>
