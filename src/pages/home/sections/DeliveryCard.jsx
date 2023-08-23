@@ -17,7 +17,7 @@ export const DeliveryCard = () => {
         backgroundColor: "#FA8D28",
       }}
     >
-      <Row>
+      <Row className="ps-3 pe-3">
         {/* Text Col */}
         <Col
           style={{
@@ -25,10 +25,15 @@ export const DeliveryCard = () => {
           }}
           xs={12}
           md={6}
-          className="p-4 d-flex flex-column align-items-center
+          className="mt-5 mb-5 d-flex flex-column align-items-center
           justify-content-center"
         >
           <div className="mt-4">
+            <h5 className="mb-3">
+              <i>
+                <u>Free Delivery</u>
+              </i>
+            </h5>
             <h1>
               <b className="text-white">Now </b>
               Oferring
@@ -45,17 +50,19 @@ export const DeliveryCard = () => {
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <Button
-              className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
-              variant="dark"
-              size="lg"
-            >
-              <a href="https://www.ubereats.com/" target="_blank">
-                <strong>
-                  <i>Delivery</i>
-                </strong>
-              </a>
-            </Button>
+            <div className="mt-5">
+              <Button
+                className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
+                variant="dark"
+                size="lg"
+              >
+                <a href="https://www.ubereats.com/" target="_blank">
+                  <strong>
+                    <i>Delivery</i>
+                  </strong>
+                </a>
+              </Button>
+            </div>
           </div>
         </Col>
         {/* Image Col */}

@@ -10,21 +10,16 @@ export const TestimonialsCard = () => {
   return (
     <Container
       fluid
+      className="d-flex flex-column justify-content-center align-items-center"
       style={{
         backgroundColor: "#F8F8F8",
       }}
-      className="p-5 d-flex flex-column "
     >
-      <Row>
-        {/* Text Col */}
-        <Col xs={12} className="p-5 mb-5">
-          <h5 className="mb-3">
-            <i>
-              <u>Our Customer Feedback</u>
-            </i>
-          </h5>
-          <h1>Client Testimonials</h1>
-        </Col>
+      <div className="mt-5 mb-5">
+        <h1>Client Testimonials</h1>
+      </div>
+
+      <Row className="mt-4 mb-4">
         {/* First Card */}
         <Col
           xs={12}

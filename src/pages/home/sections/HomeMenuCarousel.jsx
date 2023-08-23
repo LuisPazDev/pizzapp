@@ -33,9 +33,9 @@ export const HomeMenuCarousel = () => {
   }, []);
 
   return (
-    <Container fluid className="ps-5 pe-5">
-      <Row>
-        <Col className="mt-4 mb-4 p-4 d-flex flex-column align-items-center justify-content-center">
+    <Container fluid>
+      <Row className="ps-3 pe-3">
+        <Col className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center">
           <div>
             <h5 className="mb-3">
               <i>
@@ -59,7 +59,7 @@ export const HomeMenuCarousel = () => {
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <div>
+            <div className="mt-5">
               <Button
                 className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
                 variant="dark"
@@ -75,7 +75,7 @@ export const HomeMenuCarousel = () => {
           </div>
         </Col>
         {/* Carousel showing Pizza cards   */}
-        <Col xs={12} md={6} className="p-4">
+        <Col xs={12} md={6}>
           <Carousel indicators={false}>
             <Carousel.Item>
               <Link to="/menu/pizzas">
@@ -86,13 +86,6 @@ export const HomeMenuCarousel = () => {
                   alt="First slide"
                 />
               </Link>
-              <div className="text-center">
-                <h6>
-                  <i>
-                    <Badge bg="dark"> Fabulous Pizzaz</Badge>
-                  </i>
-                </h6>
-              </div>
             </Carousel.Item>
             <Carousel.Item>
               <Link to="/menu/drinks">
@@ -103,13 +96,6 @@ export const HomeMenuCarousel = () => {
                   alt="First slide"
                 />
               </Link>
-              <div className="text-center">
-                <h6>
-                  <i>
-                    <Badge bg="dark"> Perfect Drinks </Badge>
-                  </i>
-                </h6>
-              </div>
             </Carousel.Item>
             <Carousel.Item>
               <Link to="/menu/desserts">
@@ -120,13 +106,6 @@ export const HomeMenuCarousel = () => {
                   alt="First slide"
                 />
               </Link>
-              <div className="text-center">
-                <h6>
-                  <i>
-                    <Badge bg="dark"> Delicious Desserts</Badge>
-                  </i>
-                </h6>
-              </div>
             </Carousel.Item>
           </Carousel>
         </Col>

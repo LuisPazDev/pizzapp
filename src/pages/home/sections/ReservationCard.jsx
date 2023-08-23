@@ -50,13 +50,13 @@ export const ReservationCard = () => {
   };
 
   return (
-    <Container fluid className="ps-5">
-      <Row>
+    <Container fluid>
+      <Row className="ps-3 pe-3">
         {/* Form Col */}
         <Col
-          className="d-flex flex-column justify-content-center align-items-start ps-5 "
+          className="mt-5 mb-5 d-flex flex-column justify-content-center align-items-center mb-5"
           xs={12}
-          md={7}
+          md={6}
         >
           <div className="text-start mb-5 mt-4">
             <h5 className="mb-3">
@@ -69,7 +69,7 @@ export const ReservationCard = () => {
             </h1>
           </div>
           <Form
-            style={{ width: "70%" }}
+            style={{ width: "80%" }}
             onSubmit={handleSubmit}
             id="form"
             className="d-flex flex-column justify-content-center align-items-center border border-dark mt-3 p-3"
@@ -158,7 +158,7 @@ export const ReservationCard = () => {
                 </Form.Group>
               </Col>
             </Row>
-            <div className="mt-4 text-center">
+            <div className="mt-4 mb-4 text-center">
               <Button variant="dark" size="lg" type="submit">
                 <strong>
                   <i>Book</i>
@@ -167,18 +167,13 @@ export const ReservationCard = () => {
             </div>
           </Form>
         </Col>
+
         {/* Image Col */}
         <Col
           ref={ref}
-          style={{
-            backgroundImage:
-              "url('https://res.cloudinary.com/dxctvkec9/image/upload/v1692626989/bgreservation_gywqzv.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
           xs={12}
-          md={5}
-          className="d-flex flex-column align-items-center justify-content-center mt-5"
+          md={6}
+          className="d-flex flex-column align-items-center justify-content-center mt-5 mb-5"
         >
           <Image
             hidden={!inView}

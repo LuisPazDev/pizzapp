@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Card, Col, Row, Image } from "react-bootstrap";
 
-import fresh from "../assets/vegan.svg";
 import food from "../assets/food.svg";
 import delivery from "../assets/delivery.svg";
 import staff from "../assets/team.svg";
@@ -10,20 +9,16 @@ export const OurStrengthCard = () => {
   return (
     <Container
       fluid
+      className="d-flex flex-column justify-content-center align-items-center"
       style={{
         backgroundColor: "#F8F8F8",
       }}
-      className="p-5"
     >
-      <Row className="p-3">
-        <Col xs={12} className="mb-5 p-5">
-          <h5 className="mb-3">
-            <i>
-              <u>Our Strength</u>
-            </i>
-          </h5>
-          <h1>We Are The Best</h1>
-        </Col>
+      <div className="mt-5 mb-5">
+        <h1>Why Choose Us</h1>
+      </div>
+
+      <Row className="mt-4 mb-4">
         {/*  Second Card */}
         <Col
           xs={12}
@@ -33,7 +28,7 @@ export const OurStrengthCard = () => {
           <Card
             style={{
               backgroundColor: "#F8F8F8",
-              width: "14rem",
+              width: "16rem",
             }}
             className="text-start border-0"
           >
@@ -62,7 +57,7 @@ export const OurStrengthCard = () => {
           <Card
             style={{
               backgroundColor: "#F8F8F8",
-              width: "14rem",
+              width: "16rem",
             }}
             className="text-start border-0"
           >
@@ -91,7 +86,7 @@ export const OurStrengthCard = () => {
           <Card
             style={{
               backgroundColor: "#F8F8F8",
-              width: "14rem",
+              width: "16rem",
             }}
             className="text-start border-0"
           >

@@ -17,7 +17,7 @@ export const AboutCard = () => {
         <Col
           xs={12}
           md={6}
-          className="ps-5 pe-5 d-flex flex-column align-items-start justify-content-center"
+          className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
             <h5 className="mb-3">
@@ -41,7 +41,7 @@ export const AboutCard = () => {
           </div>
           <div>
             <Button
-              className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
+              className="mt-4 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
               variant="dark"
               size="lg"
             >

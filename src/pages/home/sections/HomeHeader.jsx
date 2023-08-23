@@ -21,24 +21,22 @@ export const HomeHeader = () => {
   }, []);
 
   return (
-    <Container
-      fluid
-      style={{ backgroundColor: "rgba(250, 124, 6, 0.863)" }}
-      className=""
-    >
-      <Row>
+    <Container fluid style={{ backgroundColor: "rgba(250, 124, 6, 0.863)" }}>
+      <Row className="ps-3 pe-3">
         {/* Text Col */}
         <Col
           xs={12}
           md={6}
-          className="mt-4 mb-4 p-4 d-flex flex-column align-items-center justify-content-center"
+          className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
             <h4 className="mb-3">
               <Badge bg="dark">Welcome</Badge>
             </h4>
             <h1>
-              <b className="text-white">Best Pizza </b> in Town
+              We Serve the
+              <br />
+              <b className="text-white"> Best Pizza </b> in Town
               <br />
               Handmade, With <br />
               an Extra Pinch <br />
@@ -50,7 +48,7 @@ export const HomeHeader = () => {
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <div>
+            <div className="mt-5">
               <Button
                 className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
                 variant="dark"
@@ -66,7 +64,7 @@ export const HomeHeader = () => {
           </div>
         </Col>
         {/* Carousel Col */}
-        <Col xs={12} md={6} className="text-center p-4">
+        <Col xs={12} md={6} className="text-center">
           <Carousel fade controls={false} indicators={false}>
             {list.map((item) => (
               <Carousel.Item key={item.id}>
