@@ -56,7 +56,8 @@ export const ReservationCard = () => {
         <Col
           className="mt-5 mb-5 d-flex flex-column justify-content-center align-items-center mb-5"
           xs={12}
-          md={6}
+          md={12}
+          lg={6}
         >
           <div className="text-start mb-5 mt-4">
             <h5 className="mb-3">
@@ -172,7 +173,8 @@ export const ReservationCard = () => {
         <Col
           ref={ref}
           xs={12}
-          md={6}
+          md={12}
+          lg={6}
           className="d-flex flex-column align-items-center justify-content-center mt-5 mb-5"
         >
           <Image

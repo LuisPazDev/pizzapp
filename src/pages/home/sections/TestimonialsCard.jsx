@@ -23,7 +23,8 @@ export const TestimonialsCard = () => {
         {/* First Card */}
         <Col
           xs={12}
-          md={4}
+          md={12}
+          lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
           <Card style={{ width: "16rem" }} className="text-center">
@@ -48,7 +49,8 @@ export const TestimonialsCard = () => {
         {/*  Second Card */}
         <Col
           xs={12}
-          md={4}
+          md={12}
+          lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
           <Card style={{ width: "16rem" }} className="text-center">
@@ -73,7 +75,8 @@ export const TestimonialsCard = () => {
         {/* Third Card */}
         <Col
           xs={12}
-          md={4}
+          md={12}
+          lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
           <Card style={{ width: "16rem" }} className="text-center">

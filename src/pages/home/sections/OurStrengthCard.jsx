@@ -22,7 +22,9 @@ export const OurStrengthCard = () => {
         {/*  Second Card */}
         <Col
           xs={12}
-          md={4}
+          sm={12}
+          md={12}
+          lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
           <Card
@@ -51,7 +53,9 @@ export const OurStrengthCard = () => {
         {/* Third Card */}
         <Col
           xs={12}
-          md={4}
+          sm={12}
+          md={12}
+          lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
           <Card
@@ -80,7 +84,9 @@ export const OurStrengthCard = () => {
         {/* Fourth Card */}
         <Col
           xs={12}
-          md={4}
+          sm={12}
+          md={12}
+          lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
           <Card

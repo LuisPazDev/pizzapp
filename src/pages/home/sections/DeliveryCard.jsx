@@ -24,8 +24,10 @@ export const DeliveryCard = () => {
             backgroundColor: "#FA8D28",
           }}
           xs={12}
-          md={6}
-          className="mt-5 mb-5 d-flex flex-column align-items-center
+          sm={12}
+          md={12}
+          lg={6}
+          className="mt-5 mb-3 d-flex flex-column align-items-center
           justify-content-center"
         >
           <div className="mt-4">
@@ -50,7 +52,7 @@ export const DeliveryCard = () => {
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <div className="mt-5">
+            <div className="mt-4">
               <Button
                 className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
                 variant="dark"
@@ -66,7 +68,13 @@ export const DeliveryCard = () => {
           </div>
         </Col>
         {/* Image Col */}
-        <Col xs={12} md={6}>
+        <Col
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          className="d-flex flex-column align-items-center justify-content-center"
+        >
           <div ref={ref}>
             <Image
               hidden={!inView}

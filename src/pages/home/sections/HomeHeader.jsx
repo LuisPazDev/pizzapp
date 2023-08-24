@@ -26,7 +26,8 @@ export const HomeHeader = () => {
         {/* Text Col */}
         <Col
           xs={12}
-          md={6}
+          md={12}
+          lg={6}
           className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
@@ -48,7 +49,7 @@ export const HomeHeader = () => {
               Lorem ipsum, dolor sit amet consectetur <br />
               adipisicing elit. Vel at ratione facere tenetur.
             </p>
-            <div className="mt-5">
+            <div className="mt-4">
               <Button
                 className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
                 variant="dark"
@@ -64,12 +65,11 @@ export const HomeHeader = () => {
           </div>
         </Col>
         {/* Carousel Col */}
-        <Col xs={12} md={6} className="text-center">
+        <Col xs={12} md={12} lg={6}>
           <Carousel fade controls={false} indicators={false}>
             {list.map((item) => (
               <Carousel.Item key={item.id}>
                 <img
-                  style={{ maxHeight: "600px" }}
                   className="d-block w-100"
                   src={item.data.img}
                   alt="First slide"

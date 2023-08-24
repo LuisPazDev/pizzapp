@@ -16,7 +16,8 @@ export const AboutCard = () => {
         {/* Text Col */}
         <Col
           xs={12}
-          md={6}
+          md={12}
+          lg={6}
           className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
@@ -56,8 +57,10 @@ export const AboutCard = () => {
         {/* Image Col */}
         <Col
           xs={12}
-          md={6}
+          md={12}
+          lg={6}
           ref={ref}
+          className="d-flex flex-column align-items-center justify-content-center"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dxctvkec9/image/upload/v1692626989/bgreservation_gywqzv.png')",

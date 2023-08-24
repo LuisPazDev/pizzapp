@@ -35,7 +35,12 @@ export const HomeMenuCarousel = () => {
   return (
     <Container fluid>
       <Row className="ps-3 pe-3">
-        <Col className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center">
+        <Col
+          xs={12}
+          md={12}
+          lg={6}
+          className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center"
+        >
           <div>
             <h5 className="mb-3">
               <i>
@@ -75,7 +80,7 @@ export const HomeMenuCarousel = () => {
           </div>
         </Col>
         {/* Carousel showing Pizza cards   */}
-        <Col xs={12} md={6}>
+        <Col xs={12} md={12} lg={6}>
           <Carousel indicators={false}>
             <Carousel.Item>
               <Link to="/menu/pizzas">
