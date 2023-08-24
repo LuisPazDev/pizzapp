@@ -31,24 +31,27 @@ export const HomeHeader = () => {
           className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
-            <h4 className="mb-3">
-              <Badge bg="dark">Welcome</Badge>
-            </h4>
-            <h1>
-              We Serve the
+            <i>
+              <h4 className="mb-3">
+                <Badge bg="dark">Welcome</Badge>
+              </h4>
+              <h1>
+                <b className="text-white">We </b> Serve the
+                <br />
+                <b className="text-white"> Best Pizza </b> in Town
+                <br />
+                Handmade, With <br />
+                an Extra Pinch <br />
+                of <b className="text-white"> Love</b> and{" "}
+                <b className="text-white">Care </b>
+              </h1>
               <br />
-              <b className="text-white"> Best Pizza </b> in Town
-              <br />
-              Handmade, With <br />
-              an Extra Pinch <br />
-              of <b className="text-white"> Love</b> and{" "}
-              <b className="text-white">Care </b>
-            </h1>
-            <br />
-            <p>
-              Lorem ipsum, dolor sit amet consectetur <br />
-              adipisicing elit. Vel at ratione facere tenetur.
-            </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur <br />
+                adipisicing elit. Vel at ratione facere tenetur.
+              </p>
+            </i>
+
             <div className="mt-4">
               <Button
                 className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
@@ -70,7 +73,7 @@ export const HomeHeader = () => {
             {list.map((item) => (
               <Carousel.Item key={item.id}>
                 <img
-                  className="d-block w-100"
+                  className="d-block w-100 p-2"
                   src={item.data.img}
                   alt="First slide"
                 />

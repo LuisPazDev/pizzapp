@@ -31,27 +31,30 @@ export const DeliveryCard = () => {
           justify-content-center"
         >
           <div className="mt-4">
-            <h5 className="mb-3">
-              <i>
-                <u>Free Delivery</u>
-              </i>
-            </h5>
-            <h1>
-              <b className="text-white">Now </b>
-              Oferring
+            <i>
+              <h5 className="mb-3">
+                <i>
+                  <u>Free Delivery</u>
+                </i>
+              </h5>
+              <h1>
+                <b className="text-white">Now </b>
+                Oferring
+                <br />
+                Free
+                <strong className="text-white"> Delivery </strong>
+                <br />
+                <strong>with UberEats on</strong>
+                <br />
+                Orders <b className="text-white">Over $20 </b>
+              </h1>
               <br />
-              Free
-              <strong className="text-white"> Delivery </strong>
-              <br />
-              <strong>with UberEats on</strong>
-              <br />
-              Orders <b className="text-white">Over $20 </b>
-            </h1>
-            <br />
-            <p>
-              Lorem ipsum, dolor sit amet consectetur <br />
-              adipisicing elit. Vel at ratione facere tenetur.
-            </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur <br />
+                adipisicing elit. Vel at ratione facere tenetur.
+              </p>
+            </i>
+
             <div className="mt-4">
               <Button
                 className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
@@ -77,12 +80,16 @@ export const DeliveryCard = () => {
         >
           <div ref={ref}>
             <Image
+              style={{
+                maxWidthidth: "500px",
+                maxHeight: "500px",
+              }}
               hidden={!inView}
               fluid
               src={delivery}
               className={`${
                 inView
-                  ? "animate__animated animate__fadeInRight animate__delay-2s"
+                  ? "animate__animated animate__fadeInRight animate__delay-1s"
                   : ""
               }`}
             />

@@ -26,19 +26,20 @@ export const AboutCard = () => {
                 <u>About Us</u>
               </i>
             </h5>
-
-            <h1>
-              We are a Family <br />
-              <strong>Owned </strong>
-              Restaurant <br />
-              <strong>Serving</strong> Since <br />
-              <strong>2017</strong>
-            </h1>
-            <br />
-            <p>
-              Lorem ipsum, dolor sit amet consectetur <br />
-              adipisicing elit. Vel at ratione facere tenetur.
-            </p>
+            <i>
+              <h1>
+                We are a Family <br />
+                <strong>Owned </strong>
+                Restaurant <br />
+                <strong>Serving</strong> Since <br />
+                <strong>2017</strong>
+              </h1>
+              <br />
+              <p>
+                Lorem ipsum, dolor sit amet consectetur <br />
+                adipisicing elit. Vel at ratione facere tenetur.
+              </p>
+            </i>
           </div>
           <div>
             <Button
@@ -74,7 +75,7 @@ export const AboutCard = () => {
             src={aboutus}
             className={`${
               inView
-                ? "animate__animated animate__fadeInRight animate__delay-2s"
+                ? "animate__animated animate__fadeInRight animate__delay-1s"
                 : ""
             }`}
             onError={(e) => {

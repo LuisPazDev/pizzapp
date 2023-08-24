@@ -1,4 +1,4 @@
-import React from "react";
+import { useInView } from "react-intersection-observer";
 import { Container, Card, Col, Row, Image } from "react-bootstrap";
 
 import card1 from "../assets/customercard1.png";
@@ -7,6 +7,11 @@ import card3 from "../assets/customercard3.png";
 import stars from "../assets/stars.svg";
 
 export const TestimonialsCard = () => {
+  const { ref, inView } = useInView({
+    freezeOnceVisible: true,
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Container
       fluid
@@ -22,12 +27,22 @@ export const TestimonialsCard = () => {
       <Row className="mt-4 mb-4">
         {/* First Card */}
         <Col
+          ref={ref}
           xs={12}
           md={12}
           lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
-          <Card style={{ width: "16rem" }} className="text-center">
+          <Card
+            style={{ width: "16rem" }}
+            hidden={!inView}
+            fluid
+            className={`${
+              inView
+                ? "text-center animate__animated animate__fadeInRight animate__slow"
+                : "text-center"
+            }`}
+          >
             <Image
               roundedCircle
               className="ms-auto me-auto mt-3"
@@ -53,7 +68,16 @@ export const TestimonialsCard = () => {
           lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
-          <Card style={{ width: "16rem" }} className="text-center">
+          <Card
+            style={{ width: "16rem" }}
+            hidden={!inView}
+            fluid
+            className={`${
+              inView
+                ? "text-center animate__animated animate__fadeInRight animate__slow animate__delay-1s"
+                : "text-center"
+            }`}
+          >
             <Image
               roundedCircle
               className="ms-auto me-auto mt-3"
@@ -79,7 +103,16 @@ export const TestimonialsCard = () => {
           lg={4}
           className="d-flex flex-column justify-content-center align-items-center mb-5"
         >
-          <Card style={{ width: "16rem" }} className="text-center">
+          <Card
+            style={{ width: "16rem" }}
+            hidden={!inView}
+            fluid
+            className={`${
+              inView
+                ? "text-center animate__animated animate__fadeInRight animate__slow animate__delay-2s"
+                : "text-center"
+            }`}
+          >
             <Image
               roundedCircle
               className="ms-auto me-auto mt-3"

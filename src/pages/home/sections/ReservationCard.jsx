@@ -51,7 +51,7 @@ export const ReservationCard = () => {
 
   return (
     <Container fluid>
-      <Row className="ps-3 pe-3">
+      <Row className="ps-3 ">
         {/* Form Col */}
         <Col
           className="mt-5 mb-5 d-flex flex-column justify-content-center align-items-center mb-5"
@@ -171,20 +171,24 @@ export const ReservationCard = () => {
 
         {/* Image Col */}
         <Col
-          ref={ref}
           xs={12}
           md={12}
           lg={6}
-          className="d-flex flex-column align-items-center justify-content-center mt-5 mb-5"
+          ref={ref}
+          className="d-flex flex-column align-items-center justify-content-center"
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/dxctvkec9/image/upload/v1692626989/bgreservation_gywqzv.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
           <Image
             hidden={!inView}
             fluid
             src={slicepizza}
             className={`${
-              inView
-                ? "animate__animated animate__backInRight animate__flip animate__delay-2s"
-                : ""
+              inView ? "animate__animated animate__flip animate__delay-2s" : ""
             }`}
           />
         </Col>
