@@ -21,6 +21,11 @@ export const Menu = () => {
           className="d-flex flex-column align-items-center justify-content-center"
         >
           <Image
+            fluid
+            style={{
+              width: "400px",
+              height: "400px",
+            }}
             src="https://res.cloudinary.com/dxctvkec9/image/upload/v1692889790/pizzaslide_lowaps.png"
             alt="Menu Pizzas"
           />

@@ -34,7 +34,7 @@ export const NavBar = () => {
 
   return (
     <>
-      {["md"].map((expand) => (
+      {["lg"].map((expand) => (
         <Navbar
           key={expand}
           expand={expand}
