@@ -8,10 +8,12 @@ import {
   Card,
   Button,
   Badge,
+  Image,
   Row,
   Col,
   DropdownButton,
   Dropdown,
+  Container,
 } from "react-bootstrap";
 
 export const MenuPizzas = () => {
@@ -29,12 +31,6 @@ export const MenuPizzas = () => {
       );
     });
   }, []);
-
-  // show button when hover on card
-  const [showButton, setShowButton] = useState(null);
-
-  const handleShowButton = (item) => setShowButton(item);
-  const handleNoShowButton = () => setShowButton(null);
 
   // add to cart button functionality to set local storage
   const [cart, setCart, handleAddToCartToast] = useContext(CartContext);
@@ -74,107 +70,104 @@ export const MenuPizzas = () => {
   };
 
   return (
-    <Row className="text-center mb-4">
-      <Row>
-        <div className="mt-4">
-          <h3>
-            <Badge pill bg="dark">
-              <strong>
-                <i>PIZZAS</i>
-              </strong>
-            </Badge>
-          </h3>
-          <p>
-            <i>Choose your favorite pizza</i>
-          </p>
+    <Container style={{ backgroundColor: "#F8F8F8" }}>
+      <Row className="text-center mb-4">
+        <Row>
+          <div className="mt-4">
+            <h2>
+              <Badge pill bg="dark">
+                <strong>
+                  <i>PIZZAS</i>
+                </strong>
+              </Badge>
+            </h2>
+            <p>
+              <i>Choose your favorite pizza</i>
+            </p>
+          </div>
+        </Row>
+
+        <div className="text-center mt-3">
+          <DropdownButton
+            id="dropdown-basic-button"
+            title=" MENU  "
+            variant="dark"
+          >
+            <Dropdown.Item>
+              <Link className="text-black" to="/menu/drinks">
+                <strong>
+                  <i>DRINKS</i>
+                </strong>
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <Link className="text-black" to="/menu/desserts">
+                <strong>
+                  <i>DESSERTS</i>
+                </strong>
+              </Link>
+            </Dropdown.Item>
+          </DropdownButton>
         </div>
-      </Row>
 
-      <div className="text-center mt-3">
-        <DropdownButton
-          id="dropdown-basic-button"
-          title=" MENU  "
-          variant="dark"
-        >
-          <Dropdown.Item>
-            <Link className="text-black" to="/menu/drinks">
-              <strong>
-                <i>DRINKS</i>
-              </strong>
-            </Link>
-          </Dropdown.Item>
-          <Dropdown.Item>
-            <Link className="text-black" to="/menu/desserts">
-              <strong>
-                <i>DESSERTS</i>
-              </strong>
-            </Link>
-          </Dropdown.Item>
-        </DropdownButton>
-      </div>
-
-      <Row xs={1} md={3} lg={3} className="mt-4 mb-4">
-        {list.map((item) => (
-          <Col className="mt-3 mb-3" key={item.id}>
-            <Card
-              style={{ maxWidth: "18rem" }}
-              onMouseEnter={() => handleShowButton(item.id)}
-              onMouseLeave={handleNoShowButton}
-              border="dark border-2"
-              className="text-center ms-auto me-auto rounded-start"
-            >
-              <Card.Img
-                className="img-fluid"
-                variant="top"
-                src={item.data.img}
-              />
-              <Card.Body
-                style={{
-                  backgroundColor: "#FF914D",
-                  borderTop: "solid 2px black",
-                }}
+        <Row xs={1} md={2} lg={2} xl={3} className="mt-5">
+          {list.map((item) => (
+            <Col className="d-flex flex-column justify-content-center align-items-center mb-5">
+              <Card
+                key={item.id}
+                style={{ width: "16rem" }}
+                border="dark border-1"
+                className="text-start rounded-start"
               >
-                <Card.Title>
-                  <h3>
-                    <Badge
-                      pill
-                      bg="light"
-                      className="text-dark border border-2 border-dark"
-                    >
-                      <b>
-                        <i>{item.data.name}</i>
-                      </b>
-                    </Badge>
-                  </h3>
-                </Card.Title>
-                <Card.Text>
-                  <h5>
-                    <strong>
-                      <b>
-                        <i> $ {item.data.price}</i>
-                      </b>
-                    </strong>
-                  </h5>
-                  <p>
-                    <i>{item.data.ingredients}</i>
-                  </p>
-                </Card.Text>
-                {showButton === item.id ? (
+                <Card.Img
+                  className="img-fluid"
+                  variant="top"
+                  src={item.data.img}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <Row className="d-flex flex-row align-items-center">
+                      <Col xs={9}>
+                        <h4>
+                          <b>
+                            <i>{item.data.name} </i>
+                          </b>
+                        </h4>
+                      </Col>
+                      <Col xs={3}>
+                        <h5 className="text-danger">
+                          <b>
+                            <i>${item.data.price}</i>
+                          </b>
+                        </h5>
+                      </Col>
+                    </Row>
+                  </Card.Title>
+                  <Card.Text>
+                    <Image
+                      style={{ width: "100px", height: "50px" }}
+                      src="https://res.cloudinary.com/dxctvkec9/image/upload/v1693075961/stars_jzlgeg.png"
+                    />
+                    <p>
+                      <i>{item.data.ingredients}</i>
+                    </p>
+                  </Card.Text>
+
                   <Button
                     size="lg"
                     variant="dark"
                     onClick={() => handleAddToCart(item)}
                   >
                     <strong>
-                      <i>ORDER</i>
+                      <i>ORDER NOW </i>
                     </strong>
                   </Button>
-                ) : null}
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </Row>
-    </Row>
+    </Container>
   );
 };

@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <>
       <Row xs={1} sm={1} md={1} className="ms-auto text-center mt-4">
-        <Row className="mt-2 mb-4">
+        <Row className="mt-4 mb-4">
           <Col xs={12} md={12} lg={12} className="mb-4">
             <div>
               <h3 className="text-center">

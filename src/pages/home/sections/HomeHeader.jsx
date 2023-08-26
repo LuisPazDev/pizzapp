@@ -5,7 +5,7 @@ import { Container, Badge, Button, Row, Col, Image } from "react-bootstrap";
 export const HomeHeader = () => {
   const { ref, inView } = useInView({
     freezeOnceVisible: true,
-    threshold: 0.5,
+    threshold: 1,
     triggerOnce: true,
   });
 
