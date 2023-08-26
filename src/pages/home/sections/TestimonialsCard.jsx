@@ -9,7 +9,7 @@ import stars from "../assets/stars.svg";
 export const TestimonialsCard = () => {
   const { ref, inView } = useInView({
     freezeOnceVisible: true,
-    threshold: 0.5,
+    threshold: 1,
     triggerOnce: true,
   });
   return (
@@ -39,7 +39,7 @@ export const TestimonialsCard = () => {
             fluid
             className={`${
               inView
-                ? "text-center animate__animated animate__fadeInRight animate__slow"
+                ? "text-center animate__animated animate__fadeInRight"
                 : "text-center"
             }`}
           >
@@ -70,11 +70,11 @@ export const TestimonialsCard = () => {
         >
           <Card
             style={{ width: "16rem" }}
-            hidden={!inView}
             fluid
+            hidden={!inView}
             className={`${
               inView
-                ? "text-center animate__animated animate__fadeInRight animate__slow animate__delay-1s"
+                ? "text-center animate__animated animate__fadeInRight animate__delay-1s"
                 : "text-center"
             }`}
           >
@@ -109,7 +109,7 @@ export const TestimonialsCard = () => {
             fluid
             className={`${
               inView
-                ? "text-center animate__animated animate__fadeInRight animate__slow animate__delay-2s"
+                ? "text-center animate__animated animate__fadeInRight animate__delay-2s"
                 : "text-center"
             }`}
           >

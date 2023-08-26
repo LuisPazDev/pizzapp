@@ -188,7 +188,9 @@ export const ReservationCard = () => {
             fluid
             src={slicepizza}
             className={`${
-              inView ? "animate__animated animate__flip animate__delay-2s" : ""
+              inView
+                ? "animate__animated animate__fadeInRight animate__flip animate__delay-1s"
+                : ""
             }`}
           />
         </Col>

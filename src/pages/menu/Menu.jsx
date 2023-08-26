@@ -22,11 +22,11 @@ export const Menu = () => {
         >
           <Image
             fluid
+            src="https://res.cloudinary.com/dxctvkec9/image/upload/v1692889790/pizzaslide_lowaps.png"
             style={{
               width: "400px",
               height: "400px",
             }}
-            src="https://res.cloudinary.com/dxctvkec9/image/upload/v1692889790/pizzaslide_lowaps.png"
             alt="Menu Pizzas"
           />
         </Col>
@@ -35,7 +35,12 @@ export const Menu = () => {
           className="d-flex flex-column align-items-center justify-content-center"
         >
           <Image
+            fluid
             src="https://res.cloudinary.com/dxctvkec9/image/upload/v1692889773/drinkslide_wkueyw.png"
+            style={{
+              width: "400px",
+              height: "400px",
+            }}
             alt="Menu Drinks"
           />
         </Col>
@@ -44,7 +49,12 @@ export const Menu = () => {
           className="d-flex flex-column align-items-center justify-content-center"
         >
           <Image
+            fluid
             src="https://res.cloudinary.com/dxctvkec9/image/upload/v1692889797/dessertslide_nfjynh.png"
+            style={{
+              width: "400px",
+              height: "400px",
+            }}
             alt="Menu Desserts"
           />
         </Col>

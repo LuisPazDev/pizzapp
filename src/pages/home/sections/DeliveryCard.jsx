@@ -1,5 +1,5 @@
-import { Button, Row, Col, Container, Image } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
+import { Button, Row, Col, Container, Image } from "react-bootstrap";
 
 import delivery from "../assets/delivery.png";
 
@@ -72,6 +72,7 @@ export const DeliveryCard = () => {
         </Col>
         {/* Image Col */}
         <Col
+          ref={ref}
           xs={12}
           sm={12}
           md={12}

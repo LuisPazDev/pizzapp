@@ -1,24 +1,13 @@
-import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { collection, onSnapshot, query } from "firebase/firestore";
-import { db } from "../../../components/Firebase";
-
-import { Container, Badge, Button, Row, Col, Carousel } from "react-bootstrap";
+import { Container, Badge, Button, Row, Col, Image } from "react-bootstrap";
 
 export const HomeHeader = () => {
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-    const q = query(collection(db, "menu"));
-    onSnapshot(q, (querySnapshot) => {
-      setList(
-        querySnapshot.docs.map((item) => ({
-          id: item.id,
-          data: item.data(),
-        }))
-      );
-    });
-  }, []);
+  const { ref, inView } = useInView({
+    freezeOnceVisible: true,
+    threshold: 0.5,
+    triggerOnce: true,
+  });
 
   return (
     <Container fluid style={{ backgroundColor: "rgba(250, 124, 6, 0.863)" }}>
@@ -67,19 +56,25 @@ export const HomeHeader = () => {
             </div>
           </div>
         </Col>
-        {/* Carousel Col */}
-        <Col xs={12} md={12} lg={6}>
-          <Carousel fade controls={false} indicators={false}>
-            {list.map((item) => (
-              <Carousel.Item key={item.id}>
-                <img
-                  className="d-block w-100 p-2"
-                  src={item.data.img}
-                  alt="First slide"
-                />
-              </Carousel.Item>
-            ))}
-          </Carousel>
+        {/* Img Col */}
+        <Col
+          ref={ref}
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          className="d-flex flex-column align-items-center justify-content-center"
+        >
+          <div ref={ref}>
+            <Image
+              hidden={!inView}
+              fluid
+              src="https://res.cloudinary.com/dxctvkec9/image/upload/v1693068888/mainpizza_ykaelu.png"
+              className={`${
+                inView ? "animate__animated animate__backInRight" : ""
+              }`}
+            />
+          </div>
         </Col>
       </Row>
     </Container>

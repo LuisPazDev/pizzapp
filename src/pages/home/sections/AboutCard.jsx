@@ -71,6 +71,10 @@ export const AboutCard = () => {
         >
           <Image
             fluid
+            style={{
+              maxWidthidth: "500px",
+              maxHeight: "500px",
+            }}
             hidden={!inView}
             src={aboutus}
             className={`${

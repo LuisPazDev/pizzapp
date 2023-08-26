@@ -1,4 +1,4 @@
-import React from "react";
+import { useInView } from "react-intersection-observer";
 import { Container, Card, Col, Row, Image } from "react-bootstrap";
 
 import food from "../assets/food.svg";
@@ -6,6 +6,12 @@ import delivery from "../assets/delivery.svg";
 import staff from "../assets/team.svg";
 
 export const OurStrengthCard = () => {
+  const { ref, inView } = useInView({
+    freezeOnceVisible: true,
+    threshold: 1,
+    triggerOnce: true,
+  });
+
   return (
     <Container
       fluid
@@ -21,6 +27,7 @@ export const OurStrengthCard = () => {
       <Row className="mt-4 mb-4">
         {/*  Second Card */}
         <Col
+          ref={ref}
           xs={12}
           sm={12}
           md={12}
@@ -28,11 +35,16 @@ export const OurStrengthCard = () => {
           className="d-flex flex-column justify-content-center align-items-center mb-4"
         >
           <Card
+            hidden={!inView}
             style={{
               backgroundColor: "#F8F8F8",
               width: "16rem",
             }}
-            className="text-start border-0"
+            className={`${
+              inView
+                ? "text-start border-0 animate__animated animate__fadeInRight"
+                : "text-start border-0"
+            }`}
           >
             <Image
               className="ms-3"
@@ -63,7 +75,12 @@ export const OurStrengthCard = () => {
               backgroundColor: "#F8F8F8",
               width: "16rem",
             }}
-            className="text-start border-0"
+            hidden={!inView}
+            className={`${
+              inView
+                ? "text-start border-0 animate__animated animate__fadeInRight animate__delay-1s"
+                : "text-start border-0"
+            }`}
           >
             <Image
               className="ms-3"
@@ -94,7 +111,12 @@ export const OurStrengthCard = () => {
               backgroundColor: "#F8F8F8",
               width: "16rem",
             }}
-            className="text-start border-0"
+            hidden={!inView}
+            className={`${
+              inView
+                ? "text-start border-0 animate__animated animate__fadeInRight animate__delay-2s"
+                : "text-start border-0"
+            }`}
           >
             <Image
               className="ms-3"

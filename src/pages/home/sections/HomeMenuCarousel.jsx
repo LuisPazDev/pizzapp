@@ -4,10 +4,6 @@ import { collection, onSnapshot, query } from "firebase/firestore";
 import { db } from "../../../components/Firebase";
 import { Carousel, Button, Container, Row, Col, Image } from "react-bootstrap";
 
-import pizzaslide from "../assets/pizzaslide.png";
-import drinkslide from "../assets/drinkslide.png";
-import dessertslide from "../assets/dessertslide.png";
-
 export const HomeMenuCarousel = () => {
   // Pizza list from Firebase
   const [pizzaList, setPizzaList] = useState([]);
@@ -80,9 +76,9 @@ export const HomeMenuCarousel = () => {
             <Carousel.Item>
               <Link to="/menu/pizzas">
                 <Image
-                  roundedCircle
+                  fluid
                   className="d-block w-100"
-                  src={pizzaslide}
+                  src="https://res.cloudinary.com/dxctvkec9/image/upload/v1692889790/pizzaslide_lowaps.png"
                   alt="First slide"
                 />
               </Link>
@@ -90,9 +86,9 @@ export const HomeMenuCarousel = () => {
             <Carousel.Item>
               <Link to="/menu/drinks">
                 <Image
-                  roundedCircle
+                  fluid
                   className="d-block w-100"
-                  src={drinkslide}
+                  src="https://res.cloudinary.com/dxctvkec9/image/upload/v1692889773/drinkslide_wkueyw.png"
                   alt="First slide"
                 />
               </Link>
@@ -100,9 +96,9 @@ export const HomeMenuCarousel = () => {
             <Carousel.Item>
               <Link to="/menu/desserts">
                 <Image
-                  roundedCircle
+                  fluid
                   className="d-block w-100"
-                  src={dessertslide}
+                  src="https://res.cloudinary.com/dxctvkec9/image/upload/v1692889797/dessertslide_nfjynh.png"
                   alt="First slide"
                 />
               </Link>
