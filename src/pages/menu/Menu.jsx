@@ -41,11 +41,21 @@ export const Menu = () => {
                 variant="top"
                 src="https://res.cloudinary.com/dxctvkec9/image/upload/v1693071715/pizzasmenu_waowce.png"
               />
+              <Card.Title className="text-center mt-3">
+                <h3>
+                  <strong>
+                    <i> Pizzas </i>
+                  </strong>
+                </h3>
+                <small>
+                  <i> Choose your favorite Pizza </i>
+                </small>
+              </Card.Title>
               <Card.Body className="d-flex flex-column align-items-center justify-content-center">
-                <Button size="lg" variant="dark">
+                <Button className="mt-3" size="lg" variant="dark">
                   <Link to="/menu/pizzas">
                     <strong>
-                      <i> Pizzas </i>
+                      <i> SEE MORE </i>
                     </strong>
                   </Link>
                 </Button>
@@ -64,11 +74,21 @@ export const Menu = () => {
                 variant="top"
                 src="https://res.cloudinary.com/dxctvkec9/image/upload/v1693071546/drinksmenu_p2duzb.png"
               />
+              <Card.Title className="text-center mt-3">
+                <h3>
+                  <strong>
+                    <i> Drinks </i>
+                  </strong>
+                </h3>
+                <small>
+                  <i> Choose your favorite Drink </i>
+                </small>
+              </Card.Title>
               <Card.Body className="d-flex flex-column align-items-center justify-content-center">
-                <Button size="lg" variant="dark">
-                  <Link to="/menu/drinks">
+                <Button className="mt-3" size="lg" variant="dark">
+                  <Link to="/menu/pizzas">
                     <strong>
-                      <i> Drinks </i>
+                      <i> SEE MORE </i>
                     </strong>
                   </Link>
                 </Button>
@@ -87,11 +107,21 @@ export const Menu = () => {
                 variant="top"
                 src="https://res.cloudinary.com/dxctvkec9/image/upload/v1693071853/dessertsmenu_g1odmn.png"
               />
+              <Card.Title className="text-center mt-3">
+                <h3>
+                  <strong>
+                    <i> Desserts </i>
+                  </strong>
+                </h3>
+                <small>
+                  <i> Choose your favorite Dessert </i>
+                </small>
+              </Card.Title>
               <Card.Body className="d-flex flex-column align-items-center justify-content-center">
-                <Button size="lg" variant="dark">
-                  <Link to="/menu/desserts">
+                <Button className="mt-3" size="lg" variant="dark">
+                  <Link to="/menu/pizzas">
                     <strong>
-                      <i> Desserts </i>
+                      <i> SEE MORE </i>
                     </strong>
                   </Link>
                 </Button>

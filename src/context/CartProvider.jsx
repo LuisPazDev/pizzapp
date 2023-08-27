@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { CartContext } from "./CartContext";
-import { Toast, Button, Container } from "react-bootstrap";
+import { Toast, Button, Container, Row, Col } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 
-import cartImg from "../assets/cart.svg";
+import cartImg from "../assets/cart.png";
 
 export const CartProvider = ({ children }) => {
   // get data from local storage and show it in cart
@@ -52,35 +52,18 @@ export const CartProvider = ({ children }) => {
               position: "fixed",
               bottom: 20,
               right: 20,
-              width: 140,
+              width: 80,
+              height: 80,
               zIndex: 9999,
             }}
+            className="d-flex justify-content-center align-items-center rounded-circle"
           >
-            <Toast.Header closeButton={false}>
-              <h6 className="mt-2">
-                <strong>
-                  <i>My Order</i>
-                </strong>
-              </h6>
-              <small className="cart-quantity rounded-pill ms-3">
+            <Toast.Header closeButton={false} className="position-relative">
+              <img src={cartImg} alt="cart" width="55" height="55" />
+              <small className="cart-quantity rounded-pill position-absolute top-1 mt-4 ms-4">
                 {cartItems}{" "}
               </small>
             </Toast.Header>
-            <Toast.Body>
-              <p>
-                <strong className="me-auto">
-                  {" "}
-                  <i>Total :{" $" + cartTotal.toFixed(2)}</i>
-                </strong>
-              </p>
-              <Button variant="dark" size="sm">
-                <Link to="/cart">
-                  <strong>
-                    <i>CHECK OUT</i>
-                  </strong>
-                </Link>
-              </Button>
-            </Toast.Body>
           </Toast>
         )
       }

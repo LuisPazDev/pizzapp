@@ -73,7 +73,7 @@ export const MenuPizzas = () => {
     <Container style={{ backgroundColor: "#F8F8F8" }}>
       <Row className="text-center mb-4">
         <Row>
-          <div className="mt-4">
+          <div className="mt-5">
             <h2>
               <Badge pill bg="dark">
                 <strong>
@@ -87,7 +87,7 @@ export const MenuPizzas = () => {
           </div>
         </Row>
 
-        <div className="text-center mt-3">
+        <div className="text-center mt-4">
           <DropdownButton
             id="dropdown-basic-button"
             title=" MENU  "

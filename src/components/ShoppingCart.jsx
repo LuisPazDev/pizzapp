@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { CartContext } from "../context/CartContext";
-import { Table, Button, Badge } from "react-bootstrap";
+import { Table, Button, Badge, Container } from "react-bootstrap";
 
 export const ShoppingCart = React.memo(() => {
   // get cart items from CartContext (context/CartContext.jsx)
@@ -58,15 +58,15 @@ export const ShoppingCart = React.memo(() => {
   };
 
   return (
-    <>
+    <Container className="text-center">
       <div className="mt-5">
-        <h3>
+        <h2>
           <Badge pill bg="dark">
             <strong>
               <i>CART</i>
             </strong>
           </Badge>
-        </h3>
+        </h2>
       </div>
       {
         // if cart is empty show message else show table
@@ -76,10 +76,10 @@ export const ShoppingCart = React.memo(() => {
             <p>
               <i>Go to our menu and start your order Now!</i>
             </p>
-            <Button className="mt-3" variant="dark" size="lg">
+            <Button className="mt-5" variant="dark" size="lg">
               <Link to="/menu">
                 <strong>
-                  <i>MENU</i>
+                  <i>START YOUR ORDER</i>
                 </strong>
               </Link>
             </Button>
@@ -94,10 +94,9 @@ export const ShoppingCart = React.memo(() => {
           >
             <thead>
               <tr>
-                <th></th>
+                <th>Item</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -157,6 +156,6 @@ export const ShoppingCart = React.memo(() => {
           </Table>
         )
       }
-    </>
+    </Container>
   );
 });
