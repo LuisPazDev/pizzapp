@@ -52,7 +52,7 @@ export const Menu = () => {
                 </small>
               </Card.Title>
               <Card.Body className="d-flex flex-column align-items-center justify-content-center">
-                <Button className="mt-3" size="lg" variant="dark">
+                <Button className="mt-3 mb-3" size="lg" variant="dark">
                   <Link to="/menu/pizzas">
                     <strong>
                       <i> SEE MORE </i>
@@ -85,8 +85,8 @@ export const Menu = () => {
                 </small>
               </Card.Title>
               <Card.Body className="d-flex flex-column align-items-center justify-content-center">
-                <Button className="mt-3" size="lg" variant="dark">
-                  <Link to="/menu/pizzas">
+                <Button className="mt-3 mb-3" size="lg" variant="dark">
+                  <Link to="/menu/drinks">
                     <strong>
                       <i> SEE MORE </i>
                     </strong>
@@ -118,8 +118,8 @@ export const Menu = () => {
                 </small>
               </Card.Title>
               <Card.Body className="d-flex flex-column align-items-center justify-content-center">
-                <Button className="mt-3" size="lg" variant="dark">
-                  <Link to="/menu/pizzas">
+                <Button className="mt-3 mb-3" size="lg" variant="dark">
+                  <Link to="/menu/desserts">
                     <strong>
                       <i> SEE MORE </i>
                     </strong>

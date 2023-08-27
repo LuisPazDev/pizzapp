@@ -79,7 +79,7 @@ export const ShoppingCart = React.memo(() => {
             <Button className="mt-5" variant="dark" size="lg">
               <Link to="/menu">
                 <strong>
-                  <i>START YOUR ORDER</i>
+                  <i>Start Order Here</i>
                 </strong>
               </Link>
             </Button>

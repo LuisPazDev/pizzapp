@@ -1,11 +1,11 @@
 import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
-import { Nav, Navbar, Offcanvas, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, Offcanvas } from "react-bootstrap";
 
 // Assets & Styles
 import logo from "../assets/pizzapplogo.png";
-import cartImg from "../assets/cart.svg";
+import cartImg from "../assets/cart.png";
 
 export const NavBar = () => {
   // offcanvas navbar

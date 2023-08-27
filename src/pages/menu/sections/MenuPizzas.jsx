@@ -96,14 +96,14 @@ export const MenuPizzas = () => {
             <Dropdown.Item>
               <Link className="text-black" to="/menu/drinks">
                 <strong>
-                  <i>DRINKS</i>
+                  <i>Drinks</i>
                 </strong>
               </Link>
             </Dropdown.Item>
             <Dropdown.Item>
               <Link className="text-black" to="/menu/desserts">
                 <strong>
-                  <i>DESSERTS</i>
+                  <i>Desserts</i>
                 </strong>
               </Link>
             </Dropdown.Item>
@@ -135,15 +135,15 @@ export const MenuPizzas = () => {
                         </h4>
                       </Col>
                       <Col xs={3}>
-                        <h5 className="text-danger">
+                        <h6 className="text-danger">
                           <b>
                             <i>${item.data.price}</i>
                           </b>
-                        </h5>
+                        </h6>
                       </Col>
                     </Row>
                   </Card.Title>
-                  <Card.Text>
+                  <Card.Text className="text-center">
                     <Image
                       style={{ width: "100px", height: "50px" }}
                       src="https://res.cloudinary.com/dxctvkec9/image/upload/v1693075961/stars_jzlgeg.png"
@@ -151,17 +151,17 @@ export const MenuPizzas = () => {
                     <p>
                       <i>{item.data.ingredients}</i>
                     </p>
+                    <Button
+                      className="mt-2 mb-2"
+                      size="lg"
+                      variant="dark"
+                      onClick={() => handleAddToCart(item)}
+                    >
+                      <strong>
+                        <i> ORDER NOW </i>
+                      </strong>
+                    </Button>
                   </Card.Text>
-
-                  <Button
-                    size="lg"
-                    variant="dark"
-                    onClick={() => handleAddToCart(item)}
-                  >
-                    <strong>
-                      <i>ORDER NOW </i>
-                    </strong>
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
