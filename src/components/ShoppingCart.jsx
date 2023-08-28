@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { CartContext } from "../context/CartContext";
-import { Table, Button, Badge, Container } from "react-bootstrap";
+import { Table, Button, Badge, Container, Row, Col } from "react-bootstrap";
 
 export const ShoppingCart = React.memo(() => {
   // get cart items from CartContext (context/CartContext.jsx)
@@ -86,11 +86,11 @@ export const ShoppingCart = React.memo(() => {
           </div>
         ) : (
           <Table
-            style={{ maxWidth: "80%", margin: "auto" }}
+            style={{ maxWidth: "90%", margin: "auto" }}
             striped
             bordered
             hover
-            className="mt-4"
+            className="mt-5"
           >
             <thead>
               <tr>
@@ -136,6 +136,17 @@ export const ShoppingCart = React.memo(() => {
                   </h6>
                 </td>
               </tr>
+              <tr>
+                <td colSpan="4">
+                  <Button size="md" variant="primary" className="mt-2 mb-2">
+                    <Link to="/menu">
+                      <strong>
+                        <i>Keep Ordering</i>
+                      </strong>
+                    </Link>
+                  </Button>
+                </td>
+              </tr>
             </tbody>
             <tfoot>
               <tr>
@@ -144,10 +155,10 @@ export const ShoppingCart = React.memo(() => {
                     size="lg"
                     variant="dark"
                     onClick={() => handlePayOrder()}
-                    className="mt-4"
+                    className="mt-2 mb-2"
                   >
                     <strong>
-                      <i>PAY ORDER</i>
+                      <i>Pay Order </i>
                     </strong>
                   </Button>
                 </td>

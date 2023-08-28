@@ -70,7 +70,7 @@ export const MenuDesserts = () => {
   };
 
   return (
-    <Container style={{ backgroundColor: "#F8F8F8" }}>
+    <Container fluid style={{ backgroundColor: "#F8F8F8" }}>
       <Row className="text-center mb-4">
         <Row>
           <div className="mt-5">
@@ -135,11 +135,13 @@ export const MenuDesserts = () => {
                         </h4>
                       </Col>
                       <Col xs={3}>
-                        <h6 className="text-danger">
-                          <b>
-                            <i>${item.data.price}</i>
-                          </b>
-                        </h6>
+                        <strong>
+                          <h5 className="text-danger">
+                            <b>
+                              <i>${item.data.price}</i>
+                            </b>
+                          </h5>
+                        </strong>
                       </Col>
                     </Row>
                   </Card.Title>

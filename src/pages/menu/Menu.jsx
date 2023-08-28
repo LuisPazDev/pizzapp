@@ -4,6 +4,7 @@ import { Button, Row, Col, Badge, Container, Card } from "react-bootstrap";
 export const Menu = () => {
   return (
     <Container
+      fluid
       style={{
         backgroundColor: "#F8F8F8",
       }}
@@ -28,7 +29,7 @@ export const Menu = () => {
           </Col>
         </Row>
 
-        <Row className="mt-4 mb-4">
+        <Row className="mt-2 mb-4">
           {/* Pizzas */}
           <Col
             xs={12}

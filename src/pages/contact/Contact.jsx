@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { db } from "../../components/Firebase";
 import { addDoc, collection } from "firebase/firestore";
 import {
@@ -31,7 +32,11 @@ export function Contact() {
     try {
       const comment = collection(db, "contact");
       const res = await addDoc(comment, input);
-      alert("Comment added successfully");
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "We will get back to you as soon as possible",
+      });
       clearForm();
       return res;
     } catch {
@@ -65,6 +70,7 @@ export function Contact() {
       </Row>
 
       <Form
+        style={{ backgroundColor: "white" }}
         className="mt-3 border border-dark rounded p-4"
         id="form"
         onSubmit={handleSubmit}
@@ -80,6 +86,7 @@ export function Contact() {
                 </h6>
               </Form.Label>
               <Form.Control
+                className="border border-dark"
                 onChange={handleChange}
                 name="name"
                 type="text"
@@ -99,6 +106,7 @@ export function Contact() {
                 </h6>
               </Form.Label>
               <Form.Control
+                className="border border-dark"
                 onChange={handleChange}
                 name="email"
                 type="email"
@@ -118,9 +126,9 @@ export function Contact() {
                 </h6>
               </Form.Label>
               <Form.Control
+                className="border border-dark input-comment"
                 onChange={handleChange}
                 name="comment"
-                className="input-comment"
                 type="text"
                 placeholder="Leave your Message here"
                 required
@@ -136,7 +144,7 @@ export function Contact() {
               type="submit"
             >
               <strong>
-                <i>SEND</i>
+                <i>Send</i>
               </strong>
             </Button>
           </div>
@@ -145,12 +153,12 @@ export function Contact() {
 
       <Row className="ms-auto me-auto mt-5 mb-5">
         <Col xs={12} md={12} lg={12} className="text-center">
-          <Link to="/menu">
+          <Link to="/">
             <h5 className="text-center text-black">
               Go to{" "}
               <strong>
                 <i>
-                  <u> MENU </u>
+                  <u> HOME </u>
                 </i>
               </strong>
             </h5>
