@@ -17,7 +17,7 @@ export const HomeHeader = () => {
           xs={12}
           md={12}
           lg={6}
-          className="mt-5 mb-5 d-flex flex-column align-items-center justify-content-center"
+          className="mt-4 d-flex flex-column align-items-center justify-content-center"
         >
           <div>
             <i>
@@ -41,7 +41,7 @@ export const HomeHeader = () => {
               </p>
             </i>
 
-            <div className="mt-4">
+            <div className="mt-3 mb-3">
               <Button
                 className="mt-3 mx-auto d-block d-md-inline-block mb-3 mb-md-0"
                 variant="dark"
@@ -69,6 +69,7 @@ export const HomeHeader = () => {
             <Image
               hidden={!inView}
               fluid
+              style={{ width: "500px" }}
               src="https://res.cloudinary.com/dxctvkec9/image/upload/v1693068888/mainpizza_ykaelu.png"
               className={`${
                 inView ? "animate__animated animate__backInRight" : ""

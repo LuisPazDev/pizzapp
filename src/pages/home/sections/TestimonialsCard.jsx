@@ -39,7 +39,7 @@ export const TestimonialsCard = () => {
             fluid
             className={`${
               inView
-                ? "text-center animate__animated animate__fadeInRight"
+                ? "text-center animate__animated animate__fadeInRight animate__delay-1s"
                 : "text-center"
             }`}
           >
@@ -74,7 +74,7 @@ export const TestimonialsCard = () => {
             hidden={!inView}
             className={`${
               inView
-                ? "text-center animate__animated animate__fadeInRight animate__delay-1s"
+                ? "text-center animate__animated animate__fadeInRight animate__delay-2s"
                 : "text-center"
             }`}
           >
@@ -109,7 +109,7 @@ export const TestimonialsCard = () => {
             fluid
             className={`${
               inView
-                ? "text-center animate__animated animate__fadeInRight animate__delay-2s"
+                ? "text-center animate__animated animate__fadeInRight animate__delay-3s"
                 : "text-center"
             }`}
           >

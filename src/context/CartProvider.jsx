@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { CartContext } from "./CartContext";
-import { Toast, Button, Container, Row, Col } from "react-bootstrap";
+import { Toast, Image } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 
 import cartImg from "../assets/cart.png";
@@ -52,18 +52,19 @@ export const CartProvider = ({ children }) => {
               position: "fixed",
               bottom: 20,
               right: 20,
-              width: 80,
-              height: 80,
+              width: "auto",
               zIndex: 9999,
             }}
-            className="d-flex justify-content-center align-items-center rounded-circle"
+            className="d-flex justify-content-center align-items-center p-3 rounded-pill shadow-lg"
           >
-            <Toast.Header closeButton={false} className="position-relative">
-              <img src={cartImg} alt="cart" width="55" height="55" />
-              <small className="cart-quantity rounded-pill position-absolute top-1 mt-4 ms-4">
-                {cartItems}{" "}
-              </small>
-            </Toast.Header>
+            <Link to="/cart">
+              <Toast.Header closeButton={false} className="position-relative">
+                <Image src={cartImg} alt="cart" width="50" height="50" />
+                <small className="cart-quantity rounded-pill position-absolute top-1 mt-4 ms-4">
+                  {cartItems}{" "}
+                </small>
+              </Toast.Header>
+            </Link>
           </Toast>
         )
       }

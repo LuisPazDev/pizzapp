@@ -6,7 +6,15 @@ import Swal from "sweetalert2";
 import DateTime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 
-import { Container, Image, Button, Row, Col, Form } from "react-bootstrap";
+import {
+  Container,
+  Image,
+  Button,
+  Row,
+  Col,
+  Form,
+  DropdownButton,
+} from "react-bootstrap";
 
 import slicepizza from "../assets/slicepizza.png";
 
@@ -14,7 +22,6 @@ export const ReservationCard = () => {
   const [input, setInput] = useState({});
 
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null);
 
   const { ref, inView } = useInView({
     threshold: 1,
@@ -126,16 +133,16 @@ export const ReservationCard = () => {
               {/* Time Field */}
               <Col className="mb-3">
                 <Form.Group controlId="formBasicTime">
-                  <DateTime
-                    value={selectedTime}
-                    onChange={(time) => setSelectedTime(time)}
-                    dateFormat={false}
-                    timeFormat="HH:mm"
-                    inputProps={{
-                      placeholder: "Select a time",
-                      required: true,
-                    }}
-                  />
+                  <DropdownButton
+                    title="Select a time"
+                    variant="light"
+                    className="w-100"
+                  >
+                    <DropdownButton.Item>11:00 AM</DropdownButton.Item>
+                    <DropdownButton.Item>12:00 PM</DropdownButton.Item>
+                    <DropdownButton.Item>1:00 PM</DropdownButton.Item>
+                    <DropdownButton.Item>2:00 PM</DropdownButton.Item>
+                  </DropdownButton>
                 </Form.Group>
               </Col>
               {/* Date Field */}
@@ -162,7 +169,7 @@ export const ReservationCard = () => {
             <div className="mt-4 mb-4 text-center">
               <Button variant="dark" size="lg" type="submit">
                 <strong>
-                  <i>Book</i>
+                  <i>Book Now</i>
                 </strong>
               </Button>
             </div>
@@ -186,6 +193,7 @@ export const ReservationCard = () => {
           <Image
             hidden={!inView}
             fluid
+            style={{ width: "95%" }}
             src={slicepizza}
             className={`${
               inView

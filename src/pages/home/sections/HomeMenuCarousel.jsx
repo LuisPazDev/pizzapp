@@ -63,7 +63,7 @@ export const HomeMenuCarousel = () => {
               >
                 <Link to="/menu">
                   <strong>
-                    <i>Menu</i>
+                    <i> See Menu</i>
                   </strong>
                 </Link>
               </Button>
@@ -71,8 +71,8 @@ export const HomeMenuCarousel = () => {
           </div>
         </Col>
         {/* Carousel showing Pizza cards   */}
-        <Col className="p-3" xs={12} md={12} lg={6}>
-          <Carousel indicators={false}>
+        <Col xs={12} md={12} lg={6}>
+          <Carousel>
             <Carousel.Item>
               <Link to="/menu/pizzas">
                 <Image
