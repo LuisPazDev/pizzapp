@@ -22,7 +22,11 @@ export const HomeFooter = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={logoluispazdev} alt="logo" style={{ height: 50 }} />
+          <img
+            src={logoluispazdev}
+            alt="logo"
+            style={{ width: "100px", height: "50px" }}
+          />
         </a>
       </div>
 

@@ -23,6 +23,8 @@ export const ReservationCard = () => {
 
   const [selectedDate, setSelectedDate] = useState(null);
 
+  const [selectedTime, setSelectedTime] = useState("");
+
   const { ref, inView } = useInView({
     threshold: 1,
     triggerOnce: true,
@@ -130,21 +132,6 @@ export const ReservationCard = () => {
                   />
                 </Form.Group>
               </Col>
-              {/* Time Field */}
-              <Col className="mb-3">
-                <Form.Group controlId="formBasicTime">
-                  <DropdownButton
-                    title="Select a time"
-                    variant="light"
-                    className="w-100"
-                  >
-                    <DropdownButton.Item>11:00 AM</DropdownButton.Item>
-                    <DropdownButton.Item>12:00 PM</DropdownButton.Item>
-                    <DropdownButton.Item>1:00 PM</DropdownButton.Item>
-                    <DropdownButton.Item>2:00 PM</DropdownButton.Item>
-                  </DropdownButton>
-                </Form.Group>
-              </Col>
               {/* Date Field */}
               <Col className="mb-3">
                 <Form.Group controlId="formBasicDate">
@@ -165,6 +152,7 @@ export const ReservationCard = () => {
                   />
                 </Form.Group>
               </Col>
+              {/* Time Field */}
             </Row>
             <div className="mt-4 mb-4 text-center">
               <Button variant="dark" size="lg" type="submit">
@@ -175,7 +163,6 @@ export const ReservationCard = () => {
             </div>
           </Form>
         </Col>
-
         {/* Image Col */}
         <Col
           xs={12}
