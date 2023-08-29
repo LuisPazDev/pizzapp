@@ -25,12 +25,11 @@ export const HomeFooter = () => {
           <img
             src={logoluispazdev}
             alt="logo"
-            style={{ width: "100px", height: "50px" }}
+            style={{ width: "150px", height: "50px" }}
           />
         </a>
       </div>
-
-      <div>
+      <div className="mt-2">
         <p>
           <i>© 2022 All rights reserved </i>
         </p>
