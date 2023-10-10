@@ -63,11 +63,11 @@ export const ReservationCard = () => {
             <Row className='ps-3 '>
                 {/* Form Col */}
                 <Col
-                    className='mt-5 mb-5 d-flex flex-column justify-content-center align-items-center mb-5'
+                    className='mt-5 mb-5 d-flex flex-column justify-content-center align-items-center'
                     xs={12}
                     md={12}
                     lg={6}>
-                    <div className='text-start mb-5 mt-4'>
+                    <div className='text-start mb-3 mt-3'>
                         <h5 className='mb-3'>
                             <i>
                                 <u>Reservations</u>
@@ -85,6 +85,15 @@ export const ReservationCard = () => {
                         onSubmit={handleSubmit}
                         id='form'
                         className='d-flex flex-column justify-content-center align-items-center border border-dark mt-3 p-3'>
+                        <div className='text-center mb-2'>
+                            <h4>
+                                <i>
+                                    <strong>
+                                        <u>Reservation Details</u>
+                                    </strong>
+                                </i>
+                            </h4>
+                        </div>
                         <Row xs={1} md={2} className='p-3'>
                             {/* Name Field */}
                             <Col className='mb-3'>
@@ -162,8 +171,19 @@ export const ReservationCard = () => {
                                 </Form.Group>
                             </Col>
                             {/* Time Field */}
+                            <Col className='mb-3'>
+                                <Form.Group controlId='formBasicEmail'>
+                                    <Form.Control
+                                        onChange={handleChange}
+                                        name='time'
+                                        type='text'
+                                        placeholder='Time'
+                                        required
+                                    />
+                                </Form.Group>
+                            </Col>
                         </Row>
-                        <div className='mt-4 mb-4 text-center'>
+                        <div className='mt-2 mb-3 text-center'>
                             <Button variant='dark' size='lg' type='submit'>
                                 <strong>
                                     <i>Book Now</i>
@@ -178,13 +198,7 @@ export const ReservationCard = () => {
                     md={12}
                     lg={6}
                     ref={ref}
-                    className='d-flex flex-column align-items-center justify-content-center'
-                    style={{
-                        backgroundImage:
-                            "url('https://res.cloudinary.com/dxctvkec9/image/upload/v1692626989/bgreservation_gywqzv.png')",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                    }}>
+                    className='d-flex flex-column align-items-center justify-content-center mt-4 mb-4'>
                     <Image
                         hidden={!inView}
                         fluid

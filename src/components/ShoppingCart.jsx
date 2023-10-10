@@ -1,8 +1,10 @@
 import React, { useEffect, useContext, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import Swal from "sweetalert2"
+import { db } from "./Firebase"
+import { collection, addDoc } from "firebase/firestore"
 import { CartContext } from "../context/CartContext"
-import { Table, Button, Badge, Container, Row, Col } from "react-bootstrap"
+import { Table, Button, Badge, Container, Form, Modal } from "react-bootstrap"
 
 export const ShoppingCart = React.memo(() => {
     // get cart items from CartContext (context/CartContext.jsx)
@@ -10,6 +12,21 @@ export const ShoppingCart = React.memo(() => {
 
     // calculate total price and sale taxes (4%) of cart items
     const [totalPrice, setTotalPrice] = useState(0)
+
+    // show modal when order is placed
+    const [showModal, setShowModal] = useState(false)
+
+    const [input, setInput] = useState({})
+
+    const handleChange = (event) => {
+        const name = event.target.name
+        const value = event.target.value
+        setInput((values) => ({ ...values, [name]: value }))
+    }
+
+    const clearForm = () => {
+        document.getElementById("form").reset()
+    }
 
     // retrieve cart items from localStorage
     const retrieveCartItems = () => {
@@ -39,22 +56,46 @@ export const ShoppingCart = React.memo(() => {
         setTotalPrice(totalPrice + saleTaxes)
     }, [cart])
 
-    // fuction to payOrder button and clear cart
-    const navigate = useNavigate()
+    const order = {
+        items: cart.map((item) => ({
+            name: item.data.name,
+            price: item.data.price,
+            quantity: item.quantity,
+        })),
+        totalPrice: totalPrice.toFixed(2),
+        saleTaxes: (totalPrice * 0.04).toFixed(2),
+        clientInfo: input,
+        timestamp: new Date(),
+    }
 
-    const handlePayOrder = () => {
-        Swal.fire({
-            title: "Order Placed",
-            text: "Thank you for your purchase",
-            icon: "success",
-            timer: 1500,
-            showConfirmButton: false,
-        })
-        localStorage.removeItem("cart")
-        setCart([])
-        setTimeout(() => {
-            navigate("/")
-        }, 1600)
+    const handlePayOrder = async () => {
+        // Check if all required fields are filled out
+        if (!input.name || !input.email || !input.address) {
+            Swal.fire({
+                icon: "error",
+                title: "Please fill out all required fields",
+                showConfirmButton: false,
+                timer: 1500,
+            })
+            return
+        }
+        try {
+            const orders = collection(db, "orders")
+            const res = await addDoc(orders, order)
+            Swal.fire({
+                icon: "success",
+                title: "Order Placed Successful!",
+                text: "Thank you for ordering with Us!",
+                showConfirmButton: false,
+                timer: 1500,
+            })
+            localStorage.removeItem("cart")
+            setCart([])
+            setShowModal(false)
+            clearForm()
+        } catch (error) {
+            console.error("Error placing order:", error)
+        }
     }
 
     return (
@@ -157,10 +198,10 @@ export const ShoppingCart = React.memo(() => {
                                     <Button
                                         size='lg'
                                         variant='dark'
-                                        onClick={() => handlePayOrder()}
+                                        onClick={() => setShowModal(true)}
                                         className='mt-2 mb-2'>
                                         <strong>
-                                            <i>Pay Order </i>
+                                            <i> Pay Order </i>
                                         </strong>
                                     </Button>
                                 </td>
@@ -169,6 +210,128 @@ export const ShoppingCart = React.memo(() => {
                     </Table>
                 )
             }
+            <Modal
+                show={showModal}
+                style={{
+                    backgroundColor: "rgba(0,0,0,0.5)",
+                }}
+                backdrop='static'
+                centered>
+                <Modal.Header>
+                    <Modal.Title>Client Information</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form
+                        onSubmit={(event) => {
+                            event.preventDefault()
+                            handlePayOrder()
+                        }}
+                        style={{
+                            maxWidth: "90%",
+                            margin: "auto",
+                        }}>
+                        <Form.Group className='mb-3' controlId='formBasicName'>
+                            <Form.Label>
+                                <strong>
+                                    <i>Name</i>
+                                </strong>
+                            </Form.Label>
+                            <Form.Control
+                                type='name'
+                                placeholder='Enter name'
+                                onChange={handleChange}
+                                name='name'
+                                required
+                            />
+                        </Form.Group>
+                        <Form.Group className='mb-3' controlId='formBasicEmail'>
+                            <Form.Label>
+                                <strong>
+                                    <i>Email</i>
+                                </strong>
+                            </Form.Label>
+                            <Form.Control
+                                type='email'
+                                placeholder='Enter email'
+                                onChange={handleChange}
+                                name='email'
+                                required
+                            />
+                            <Form.Text className='text-muted'>
+                                We'll never share your email with anyone else.
+                            </Form.Text>
+                        </Form.Group>
+                        <Form.Group
+                            className='mb-3'
+                            controlId='formBasicAddress'>
+                            <Form.Label>
+                                <strong>
+                                    <i>Address</i>
+                                </strong>
+                            </Form.Label>
+                            <Form.Control
+                                type='address'
+                                placeholder='Enter address'
+                                onChange={handleChange}
+                                name='address'
+                                required
+                            />
+                        </Form.Group>
+                    </Form>
+
+                    <div className='mt-4'>
+                        <h5>
+                            <strong>
+                                <i>
+                                    <u>Order Details</u>
+                                </i>
+                            </strong>
+                        </h5>
+                        <Table>
+                            <tbody>
+                                {cart.map((item) => (
+                                    <tr key={item.id}>
+                                        <td colSpan='3'>{item.data.name}</td>
+                                        <td>${item.data.price}</td>
+                                    </tr>
+                                ))}
+                                <tr>
+                                    <td colSpan='2'>Tax (4%):</td>
+                                    <td></td>
+                                    <td>${(totalPrice * 0.04).toFixed(2)}</td>
+                                </tr>
+                                <tr>
+                                    <td colSpan='2'>
+                                        <strong>
+                                            <i>TOTAL:</i>
+                                        </strong>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <h6>
+                                            <strong>
+                                                <i>${totalPrice.toFixed(2)}</i>
+                                            </strong>
+                                        </h6>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
+
+                    <div className='text-center'>
+                        <Button
+                            size='lg'
+                            variant='dark'
+                            className='mt-3'
+                            onClick={handlePayOrder}>
+                            <strong>
+                                <i>Confirm Order</i>
+                            </strong>
+                        </Button>
+                    </div>
+                </Modal.Body>
+            </Modal>
         </Container>
     )
 })
