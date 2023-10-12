@@ -30,11 +30,11 @@ export const HomeMenuCarousel = () => {
                     className='mt-5 mb-5 d-flex flex-column align-items-center justify-content-center'>
                     <div>
                         <i>
-                            <h5 className='mb-3'>
+                            <h4 className='mb-3'>
                                 <i>
                                     <u>Our Menu</u>
                                 </i>
-                            </h5>
+                            </h4>
                             <h2>
                                 <i>
                                     Enjoy our <b> Fabulous </b>

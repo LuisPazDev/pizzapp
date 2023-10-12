@@ -25,7 +25,7 @@ export const HomeHeader = () => {
                             <h4 className='mb-3'>
                                 <Badge bg='dark'>Welcome</Badge>
                             </h4>
-                            <h1>
+                            <h2>
                                 <b className='text-white'>We </b> Serve the
                                 <br />
                                 <b className='text-white'> Best Pizza </b> in
@@ -35,7 +35,7 @@ export const HomeHeader = () => {
                                 an Extra Pinch <br />
                                 of <b className='text-white'> Love</b> and{" "}
                                 <b className='text-white'>Care </b>
-                            </h1>
+                            </h2>
                             <br />
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur <br />

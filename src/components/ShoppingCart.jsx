@@ -210,17 +210,23 @@ export const ShoppingCart = React.memo(() => {
                     </Table>
                 )
             }
-            <Modal
-                show={showModal}
-                style={{
-                    backgroundColor: "rgba(0,0,0,0.5)",
-                }}
-                backdrop='static'
-                centered>
-                <Modal.Header>
-                    <Modal.Title>Client Information</Modal.Title>
+            <Modal show={showModal} backdrop='static' centered>
+                <Modal.Header
+                    style={{
+                        backgroundColor: "#FFBD59",
+                    }}
+                    closeButton
+                    onClick={() => setShowModal(false)}>
+                    <Modal.Title>
+                        <u>
+                            <i>Client Information</i>
+                        </u>
+                    </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body
+                    style={{
+                        backgroundColor: "#f8f9fa",
+                    }}>
                     <Form
                         onSubmit={(event) => {
                             event.preventDefault()
@@ -276,6 +282,22 @@ export const ShoppingCart = React.memo(() => {
                                 name='address'
                                 required
                             />
+                        </Form.Group>
+                        <Form.Group className='mb-4' controlId='formPayment'>
+                            <Form.Label>
+                                <strong>
+                                    <i>Payment</i>
+                                </strong>
+                            </Form.Label>
+                            <Form.Select
+                                name='payment'
+                                onChange={handleChange}
+                                required>
+                                <option value=''>Select Payment Method</option>
+                                <option value='debit card'>Debit Card</option>
+                                <option value='credit card'>Credit Card</option>
+                                <option value='paypal'>Paypal</option>
+                            </Form.Select>
                         </Form.Group>
                     </Form>
 

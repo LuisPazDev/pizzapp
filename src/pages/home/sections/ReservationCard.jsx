@@ -59,7 +59,9 @@ export const ReservationCard = () => {
     }
 
     return (
-        <Container fluid>
+        <Container
+            fluid
+            style={{ backgroundColor: "rgba(250, 124, 6, 0.863)" }}>
             <Row className='ps-3 '>
                 {/* Form Col */}
                 <Col
@@ -68,31 +70,45 @@ export const ReservationCard = () => {
                     md={12}
                     lg={6}>
                     <div className='text-start mb-3 mt-3'>
-                        <h5 className='mb-3'>
+                        <h4 className='mb-3'>
                             <i>
                                 <u>Reservations</u>
                             </i>
-                        </h5>
-                        <h1>
-                            Book A Table <b>Now!</b>
-                        </h1>
+                        </h4>
+                        <h2>
+                            <b className='text-white'>Book </b> a Table
+                            <b className='text-white'> Now!</b> <br />
+                            and <b className='text-white'>Enjoy</b> our{" "}
+                            <b className='text-white'>Delicious</b> <br />
+                            Pizzas come <b className='text-white'>Hungry</b>
+                            <br />
+                            and Leave <b className='text-white'>Happy</b>
+                        </h2>
                     </div>
+                </Col>
+                {/* form Col */}
+                <Col
+                    xs={12}
+                    md={12}
+                    lg={6}
+                    ref={ref}
+                    className='d-flex flex-column align-items-center justify-content-center mt-4 mb-4'>
                     <Form
                         style={{
                             width: "80%",
-                            backgroundColor: "#FFBD59",
+                            backgroundColor: "#F8F8F8",
                         }}
                         onSubmit={handleSubmit}
                         id='form'
-                        className='d-flex flex-column justify-content-center align-items-center border border-dark mt-3 p-3'>
+                        className='d-flex flex-column justify-content-center align-items-center border border-light mt-3 p-3'>
                         <div className='text-center mb-2'>
-                            <h4>
+                            <h5>
                                 <i>
                                     <strong>
                                         <u>Reservation Details</u>
                                     </strong>
                                 </i>
-                            </h4>
+                            </h5>
                         </div>
                         <Row xs={1} md={2} className='p-3'>
                             {/* Name Field */}
@@ -191,25 +207,6 @@ export const ReservationCard = () => {
                             </Button>
                         </div>
                     </Form>
-                </Col>
-                {/* Image Col */}
-                <Col
-                    xs={12}
-                    md={12}
-                    lg={6}
-                    ref={ref}
-                    className='d-flex flex-column align-items-center justify-content-center mt-4 mb-4'>
-                    <Image
-                        hidden={!inView}
-                        fluid
-                        style={{ width: "95%" }}
-                        src={slicepizza}
-                        className={`${
-                            inView
-                                ? "animate__animated animate__fadeInRight animate__flip animate__delay-1s"
-                                : ""
-                        }`}
-                    />
                 </Col>
             </Row>
         </Container>
