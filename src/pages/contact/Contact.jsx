@@ -68,6 +68,15 @@ export function Contact() {
                 className='mt-3 border border-dark rounded p-4'
                 id='form'
                 onSubmit={handleSubmit}>
+                <div className='text-center mb-5'>
+                    <h4>
+                        <strong>
+                            <u>
+                                <i>Send us a Message</i>
+                            </u>
+                        </strong>
+                    </h4>
+                </div>
                 <Row>
                     <Col xs={12} md={6} lg={6} className='mb-3'>
                         <Form.Group controlId='formBasicName'>
@@ -119,7 +128,9 @@ export function Contact() {
                                 </h6>
                             </Form.Label>
                             <Form.Control
-                                className='border border-dark input-comment'
+                                as='textarea'
+                                rows={3}
+                                className='border border-dark'
                                 onChange={handleChange}
                                 name='comment'
                                 type='text'
